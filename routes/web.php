@@ -54,3 +54,7 @@ Route::get('/blog-details', function () {
         'route' => 'blog-details'
     ]);
 })->name('blog-details');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
