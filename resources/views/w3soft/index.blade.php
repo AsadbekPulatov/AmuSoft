@@ -20,7 +20,7 @@
             <div class="hero__item set-bg" data-setbg="{{asset('assets/img/hero/hero-1.jpg')}}">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                    phphp    <div class="col-lg-6">
                             <div class="hero__text">
                                 <span>For website and video editing</span>
                                 <h2>Videographer’s Portfolio</h2>

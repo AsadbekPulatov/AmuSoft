@@ -10,8 +10,8 @@
                     </a>
                 </li>
                 <li class="nav-item {{ request()->routeIs('admin.posts.index') ? 'active' : '' }} ">
-{{--                    <a href="{{route('admin.posts.index')}}">--}}
-                    <a href="#">
+                    <a href="{{route('posts.index')}}">
+{{--                    <a href="#">--}}
                         <i class="fas fa-pen-square"></i>
                         <p>Новости</p>
                     </a>
