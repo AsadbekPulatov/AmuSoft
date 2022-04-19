@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label for="description">Текст</label>
-                            <textarea class="form-control" name="description_ru" id="description" rows="10"></textarea>
+                            <textarea class="form-control" name="description" id="description" rows="10"></textarea>
                         </div>
 
                         <div class="form-group">

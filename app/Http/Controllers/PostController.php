@@ -1,8 +1,9 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -38,13 +39,25 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $id =  Post::OrderBy('id', 'DESC')->first()->id;
+        $id++;
+
         $post = $request->validate([
             'title' => 'required',
             'description' => 'required',
             'img' => 'required|image|mimes:jpg,jpeg,png,gif'
         ]);
 
-        Post::create($post);
+        $img="post-".$id.".jpg";
+        $path="assets/img/post/";
+        $request->img->move($path,$img);
+
+
+        Post::create([
+            'title'=>$request['title'],
+            'description'=>$request['description'],
+            'img'=>$img
+        ]);
             return redirect()->route('posts.index');
 
 
@@ -81,12 +94,23 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $postt=$request->validate([
-           'title'=>'required',
-           'description'=>'required',
-           'img'=>'required'
+
+        $id=$post->id;
+//        dd($id);
+        $img="post-".$id.".jpg";
+        $path="assets/img/post/";
+        $request->img->move($path,$img);
+
+//        $postt=$request->validate([
+//           'title'=>$request['title'],
+//           'description'=>$request['description'],
+//           'img'=>$img
+//       ]);
+       $post->update([
+           'title'=>$request['title'],
+           'description'=>$request['description'],
+           'img'=>$img
        ]);
-       $post->update($postt);
        return  redirect()->route('posts.index');
     }
 
@@ -98,6 +122,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        $img=$post->img;
+        File::delete(public_path('assets/img/post/'.$img));
         $post->delete();
         return  redirect()->route('posts.index');
     }
