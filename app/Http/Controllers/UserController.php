@@ -1,10 +1,9 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SaveUserRequest;
 use App\Models\User;
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -80,12 +79,8 @@ class UserController extends Controller
      */
     public function update(SaveUserRequest $request, User $user)
     {
-        if (File::exists(public_path('post/profile-'.$user->id)) && $request->img != 'profile.jpg'){
-            File::delete(public_path('post/profile'.$user->id));
-        }
-        $img = 'profile-'.$user->id;
+        $img = 'profile-'.$user->id.'.jpg';
         $path = 'asset/img/profile/';
-//        dd($request->img);
         $request->img->move($path, $img);
         $user->update([
             'name' => $request['name'],

@@ -37,7 +37,7 @@
         <div class="logo-header" data-background-color="blue">
 
 {{--            <a href="{{route('admin.home')}}" class="logo">--}}
-            <a href="#" class="logo">
+            <a href="{{ route('home') }}" class="logo">
                 <p class="navbar-brand" style="color: white">Админ панель</p>
             </a>
             <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"

@@ -3,19 +3,18 @@
     <div class="container-fluid">
 
         <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-
-
+{{--            {{ $img = \App\Models\User::find(\Illuminate\Support\Facades\Auth::id()) }}--}}
             <li class="nav-item dropdown hidden-caret">
                 <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                     <div class="avatar-sm">
-                        <img src="{{asset('asset/img/profile/profile.jpg')}}" alt="..." class="avatar-img rounded-circle">
+                        <img src="{{asset('asset/img/profile/'.\Illuminate\Support\Facades\Auth::user()->img)}}" alt="..." class="avatar-img rounded-circle">
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-user animated fadeIn">
                     <div class="dropdown-user-scroll scrollbar-outer">
                         <li>
                             <div class="user-box">
-                                <div class="avatar-lg"><img src="{{asset('asset/img/profile/profile.jpg')}}" alt="image profile" class="avatar-img rounded"></div>
+                                <div class="avatar-lg"><img src="{{asset('asset/img/profile/'.\Illuminate\Support\Facades\Auth::user()->img) }}" alt="image profile" class="avatar-img rounded"></div>
                                 <div class="u-text">
                                     <h4>{{Auth::user()->name}}</h4>
 
