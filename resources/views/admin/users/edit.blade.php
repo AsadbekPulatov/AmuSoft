@@ -21,7 +21,7 @@
                     @endif
 
 
-                    <form action="{{route('admin.users.update',$user)}}" method="POST" accept-charset="UTF-8">
+                    <form action="{{route('users.update',$user)}}" method="POST" accept-charset="UTF-8">
                         @csrf
                         @method('PUT')
                     <div class="form-group">
