@@ -63,4 +63,5 @@ Auth::routes([
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('posts',\App\Http\Controllers\PostController::class);
 Route::resource('users', UserController::class);
