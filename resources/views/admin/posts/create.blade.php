@@ -26,12 +26,12 @@
                         @csrf
                         <div class="form-group">
                             <label for="header_ru">Титу</label>
-                            <input type="text" name="header_ru" class="form-control" id="header_ru" placeholder="Титул">
+                            <input type="text" name="title" class="form-control" id="header_ru" placeholder="Титул">
                         </div>
 
                         <div class="form-group">
                             <label for="description">Текст</label>
-                            <textarea class="form-control" name="description_ru" id="description" rows="10"></textarea>
+                            <textarea class="form-control" name="description" id="description" rows="10"></textarea>
                         </div>
 
                         <div class="form-group">
