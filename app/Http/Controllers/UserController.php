@@ -82,6 +82,7 @@ class UserController extends Controller
         $img = 'profile-'.$user->id.'.jpg';
         $path = 'asset/img/profile/';
         $request->img->move($path, $img);
+//        dd($img);
         $user->update([
             'name' => $request['name'],
             'email' => $request['email'],
