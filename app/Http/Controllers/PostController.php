@@ -39,7 +39,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $id =  Post::OrderBy('id', 'DESC')->first()->id;
+        $post =  Post::OrderBy('id', 'DESC')->first();
+        if ($post == NULL) $id = 0;
+        else $id = $post->id;
         $id++;
 
         $post = $request->validate([

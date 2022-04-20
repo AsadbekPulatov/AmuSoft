@@ -9,7 +9,6 @@
                     <div class="col-9"><h1 class="card-title">Пользователь</h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('users.edit',['user' => $user->id])}}">
-                        <a class="btn btn-primary" href="{{route('users.edit',[1])}}">
                             <span class="btn-label">
                                 <i class="fa fa-pen"></i>
                             </span>
