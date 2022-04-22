@@ -41,7 +41,7 @@
                         <input type="password" name="password_confirmation" class="form-control" id="pwd_confirm">
                     </div>
                     <div class="form-group">
-                        <label for="img">Select:</label>
+                        <label for="img">Выбор изображения</label>
                         <input type="file" name="img" class="form-control" id="img">
                     </div>
                     <button type="submit" class="btn btn-primary">Сохранить</button>

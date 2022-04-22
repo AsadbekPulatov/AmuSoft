@@ -1,313 +1,99 @@
 @extends('layouts.master')
+@section('hero')
+    <div class="col-12 text-center">
+        <h1 class="text-white animated zoomIn">About Us</h1>
+        <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+            </ol>
+        </nav>
+    </div>
+@endsection
 @section('content')
 
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option spad set-bg" data-setbg="{{asset('assets/img/breadcrumb-bg.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>About us</h2>
-                        <div class="breadcrumb__links">
-                            <a href="#">Home</a>
-                            <span>About</span>
-                        </div>
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
+    <!-- Full Screen Search End -->
 
-    <!-- About Section Begin -->
-    <section class="about spad">
-        <div class="container">
-            <div class="row">
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container px-lg-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="section-title position-relative mb-4 pb-2">
+                        <h6 class="position-relative text-primary ps-4">About Us</h6>
+                        <h2 class="mt-2">The best SEO solution with 10 years of experience</h2>
+                    </div>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Award Winning</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional Staff</h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fair Prices</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-4">
+                        <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
+                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
                 <div class="col-lg-6">
-                    <div class="about__pic">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="about__pic__item about__pic__item--large set-bg"
-                                    data-setbg="{{asset('assets/img/about/about-1.jpg')}}"></div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="about__pic__item set-bg" data-setbg="{{asset('assets/img/about/about-2.jpg')}}"></div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="about__pic__item set-bg" data-setbg="{{asset('assets/img/about/about-3.jpg')}}"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about__text">
-                        <div class="section-title">
-                            <span>About videograph</span>
-                            <h2>WHo we are?</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="services__item">
-                                    <div class="services__item__icon">
-                                        <img src="{{asset('assets/img/icons/si-3.png')}}" alt="">
-                                    </div>
-                                    <h4>Video distribution</h4>
-                                    <p>Whether you’re halfway through the editing process, or you.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="services__item">
-                                    <div class="services__item__icon">
-                                        <img src="{{asset('assets/img/icons/si-4.png')}}" alt="">
-                                    </div>
-                                    <h4>Video hosting</h4>
-                                    <p>Whether you’re halfway through the editing process, or you.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about__text__desc">
-                            <p>Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service
-                                production company specializing in commercial, broadcast, tourism & action sport video
-                                production services has been featured.</p>
-                        </div>
-                    </div>
+                    <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{{asset('assets/img/about.jpg')}}">
                 </div>
             </div>
         </div>
-    </section>
-    <!-- About Section End -->
+    </div>
+    <!-- About End -->
 
-    <!-- Testimonial Section Begin -->
-    <section class="testimonial spad set-bg" data-setbg="{{asset('assets/img/testimonial-bg.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title center-title">
-                        <span>Loved By Clients</span>
-                        <h2>What clients say?</h2>
+
+    <!-- Newsletter Start -->
+    <div class="container-xxl bg-primary newsletter my-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container px-lg-5">
+            <div class="row align-items-center" style="height: 250px;">
+                <div class="col-12 col-md-6">
+                    <h3 class="text-white">Ready to get started</h3>
+                    <small class="text-white">Diam elitr est dolore at sanctus nonumy.</small>
+                    <div class="position-relative w-100 mt-3">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email" style="height: 48px;">
+                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="testimonial__slider owl-carousel">
-                    <div class="col-lg-4">
-                        <div class="testimonial__item">
-                            <div class="testimonial__text">
-                                <p>Delivers such a great service that it can benefit all kinds of people from any number
-                                    of industries.</p>
-                            </div>
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="{{asset('assets/img/testimonial/ta-1.jpg')}}" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Krista Attorn</h5>
-                                    <span>Web Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial__item">
-                            <div class="testimonial__text">
-                                <p>Videographer delivers such a great service that it can benefit all kinds of people
-                                    from any number.</p>
-                            </div>
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="{{asset('assets/img/testimonial/ta-2.jpg')}}" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Krista Attorn</h5>
-                                    <span>Web Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial__item">
-                            <div class="testimonial__text">
-                                <p>Videographer delivers such a great service that it can benefit all kinds of people
-                                    from any number.</p>
-                            </div>
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="{{asset('assets/img/testimonial/ta-3.jpg')}}" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Krista Attorn</h5>
-                                    <span>Web Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial__item">
-                            <div class="testimonial__text">
-                                <p>Delivers such a great service that it can benefit all kinds of people from any number
-                                    of industries.</p>
-                            </div>
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="{{asset('assets/img/testimonial/ta-4.jpg')}}" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Krista Attorn</h5>
-                                    <span>Web Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial__item">
-                            <div class="testimonial__text">
-                                <p>Videographer delivers such a great service that it can benefit all kinds of people
-                                    from any number.</p>
-                            </div>
-                            <div class="testimonial__author">
-                                <div class="testimonial__author__pic">
-                                    <img src="{{asset('assets/img/testimonial/ta-2.jpg')}}" alt="">
-                                </div>
-                                <div class="testimonial__author__text">
-                                    <h5>Krista Attorn</h5>
-                                    <span>Web Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-6 text-center mb-n5 d-none d-md-block">
+                    <img class="img-fluid mt-5" style="height: 250px;" src="{{asset('assets/img/newsletter.png')}}">
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Testimonial Section End -->
+    </div>
+    <!-- Newsletter End -->
 
-    <!-- Counter Section Begin -->
-    <section class="counter">
-        <div class="container">
-            <div class="counter__content">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item">
-                            <div class="counter__item__text">
-                                <img src="{{asset('assets/img/icons/ci-1.png')}}" alt="">
-                                <h2 class="counter_num">230</h2>
-                                <p>Compled Projects</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item second__item">
-                            <div class="counter__item__text">
-                                <img src="{{asset('assets/img/icons/ci-2.png')}}" alt="">
-                                <h2 class="counter_num">1068</h2>
-                                <p>Happy clients</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item third__item">
-                            <div class="counter__item__text">
-                                <img src="{{asset('assets/img/icons/ci-3.png')}}" alt="">
-                                <h2 class="counter_num">230</h2>
-                                <p>Perspective clients</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="counter__item four__item">
-                            <div class="counter__item__text">
-                                <img src="{{asset('assets/img/icons/ci-4.png')}}" alt="">
-                                <h2 class="counter_num">230</h2>
-                                <p>Compled Projects</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Counter Section End -->
 
-    <!-- Team Section Begin -->
-    <section class="team spad set-bg" data-setbg="{{asset('assets/img/team-bg.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title team__title">
-                        <span>Nice to meet</span>
-                        <h2>OUR Team</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item set-bg" data-setbg="{{asset('assets/img/team/team-1.jpg')}}">
-                        <div class="team__item__text">
-                            <h4>AMANDA STONE</h4>
-                            <p>Videographer</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item team__item--second set-bg" data-setbg="{{asset('assets/img/team/team-2.jpg')}}">
-                        <div class="team__item__text">
-                            <h4>AMANDA STONE</h4>
-                            <p>Videographer</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item team__item--third set-bg" data-setbg="{{asset('assets/img/team/team-3.jpg')}}">
-                        <div class="team__item__text">
-                            <h4>AMANDA STONE</h4>
-                            <p>Videographer</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item team__item--four set-bg" data-setbg="{{asset('assets/img/team/team-4.jpg')}}">
-                        <div class="team__item__text">
-                            <h4>AMANDA STONE</h4>
-                            <p>Videographer</p>
-                            <div class="team__item__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 p-0">
-                    <div class="team__btn">
-                        <a href="#" class="primary-btn">Meet Our Team</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team Section End -->
+    <!-- Team Start -->
+    @include('w3soft.team')
+    <!-- Team End -->
 
-    @endsection
+
+@endsection

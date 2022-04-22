@@ -1,179 +1,131 @@
 @extends('layouts.master')
+@section('hero')
+    <div class="col-12 text-center">
+        <h1 class="text-white animated zoomIn">Project</h1>
+        <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Project</li>
+            </ol>
+        </nav>
+    </div>
+@endsection
 @section('content')
 
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option spad set-bg" data-setbg="{{asset('assets/img/breadcrumb-bg.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>About us</h2>
-                        <div class="breadcrumb__links">
-                            <a href="#">Home</a>
-                            <span>About</span>
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Portfolio Start -->
+    <div class="container-xxl py-5">
+        <div class="container px-lg-5">
+            <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="position-relative d-inline text-primary ps-4">Our Projects</h6>
+                <h2 class="mt-2">Recently Launched Projects</h2>
+            </div>
+            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-5" id="portfolio-flters">
+                        <li class="btn px-3 pe-4 active" data-filter="*">All</li>
+                        <li class="btn px-3 pe-4" data-filter=".first">Design</li>
+                        <li class="btn px-3 pe-4" data-filter=".second">Development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
+                    <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="{{asset('assets/img/portfolio-1.jpg')}}" alt="">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-light" href="{{asset('assets/img/portfolio-1.jpg')}}" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                            <div class="mt-auto">
+                                <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
+                                <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.3s">
+                    <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="{{asset('assets/img/portfolio-2.jpg')}}" alt="">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-light" href="{{asset('assets/img/portfolio-2.jpg')}}" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                            <div class="mt-auto">
+                                <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
+                                <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.6s">
+                    <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="{{asset('assets/img/portfolio-3.jpg')}}" alt="">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-light" href="{{asset('assets/img/portfolio-3.jpg')}}" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                            <div class="mt-auto">
+                                <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
+                                <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.1s">
+                    <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="{{asset('assets/img/portfolio-4.jpg')}}" alt="">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-light" href="{{asset('assets/img/portfolio-4.jpg')}}" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                            <div class="mt-auto">
+                                <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
+                                <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.3s">
+                    <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="{{asset('assets/img/portfolio-5.jpg')}}" alt="">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-light" href="{{asset('assets/img/portfolio-5.jpg')}}" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                            <div class="mt-auto">
+                                <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
+                                <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
+                    <div class="position-relative rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="{{asset('assets/img/portfolio-6.jpg')}}" alt="">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-light" href="{{asset('assets/img/portfolio-6.jpg')}}" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                            <div class="mt-auto">
+                                <small class="text-white"><i class="fa fa-folder me-2"></i>Web Design</small>
+                                <a class="h5 d-block text-white mt-1 mb-0" href="">Project Name</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
+    <!-- Portfolio End -->
 
-    <!-- Portfolio Section Begin -->
-    <section class="portfolio spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="portfolio__filter">
-                        <li class="active" data-filter="*">All</li>
-                        <li data-filter=".branding">Branding</li>
-                        <li data-filter=".digital-marketing">Digital marketing</li>
-                        <li data-filter=".web">Web</li>
-                        <li data-filter=".photography">Photography</li>
-                        <li data-filter=" .ecommerce">eCommerce</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio__gallery">
-                <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-1.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <ul>
-                                <li>eCommerce</li>
-                                <li>Magento</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-2.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <span>Photography</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix web">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-3.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <ul>
-                                <li>eCommerce</li>
-                                <li>Magento</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix photography">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-4.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <ul>
-                                <li>eCommerce</li>
-                                <li>Magento</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix ecommerce">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-5.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <span>Photography</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-6.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <ul>
-                                <li>eCommerce</li>
-                                <li>Magento</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix web">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-7.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <ul>
-                                <li>eCommerce</li>
-                                <li>Magento</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix photography">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-8.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <span>Photography</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix ecommerce">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="{{asset('assets/img/portfolio/portfolio-9.jpg')}}">
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                        <div class="portfolio__item__text">
-                            <h4>VIP Auto Tires & Service</h4>
-                            <ul>
-                                <li>eCommerce</li>
-                                <li>Magento</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="pagination__option">
-                        <a href="#" class="arrow__pagination left__arrow"><span class="arrow_left"></span> Prev</a>
-                        <a href="#" class="number__pagination">1</a>
-                        <a href="#" class="number__pagination">2</a>
-                        <a href="#" class="arrow__pagination right__arrow">Next <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Portfolio Section End -->
 
-    @endsection
+@endsection

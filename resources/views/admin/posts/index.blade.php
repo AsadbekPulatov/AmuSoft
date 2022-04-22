@@ -17,12 +17,13 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered text-center">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Титул</th>
                             <th scope="col">Текст</th>
+                            <th scope="col">Картинка</th>
                             <th scope="col">Время</th>
                             <th scope="col">Просмотрено</th>
                             <th scope="col">Действие</th>
@@ -34,7 +35,10 @@
                             <th scope="row" class="col-1">{{$post->id}}</th>
                             <td>{{$post->title}}</td>
                             <td>{{$post->description}}</td>
-                            <td>{{$post->img}}</td>
+                            <td>
+                                <img src="{{ asset('assets/img/post/'.$post->img) }}" alt="" class="text-center w-50">
+                            </td>
+                            <td>{{$post->created_at}}</td>
                             <td>{{$post->viewed}}</td>
                             <td class="col-2">
                                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">

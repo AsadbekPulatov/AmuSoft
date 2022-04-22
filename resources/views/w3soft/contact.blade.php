@@ -1,91 +1,84 @@
 @extends('layouts.master')
+@section('hero')
+    <div class="col-12 text-center">
+        <h1 class="text-white animated zoomIn">Contact Us</h1>
+        <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+            </ol>
+        </nav>
+    </div>
+@endsection
 @section('content')
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option spad set-bg" data-setbg="{{asset('assets/img/breadcrumb-bg.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Contact us</h2>
-                        <div class="breadcrumb__links">
-                            <a href="#">Home</a>
-                            <span>Contact</span>
-                        </div>
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
+    <!-- Full Screen Search End -->
 
-    <!-- Contact Widget Section Begin -->
-    <section class="contact-widget spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
-                    <div class="contact__widget__item">
-                        <div class="contact__widget__item__icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="contact__widget__item__text">
-                            <h4>Address</h4>
-                            <p>Los Angeles Gournadi, 1230 Bariasl</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
-                    <div class="contact__widget__item">
-                        <div class="contact__widget__item__icon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="contact__widget__item__text">
-                            <h4>Hotline</h4>
-                            <p>1-677-124-44227 • 1-688-356-66889</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-md-6 col-md-3">
-                    <div class="contact__widget__item">
-                        <div class="contact__widget__item__icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="contact__widget__item__text">
-                            <h4>Email</h4>
-                            <p>Support@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Widget Section End -->
 
-    <!-- Call To Action Section Begin -->
-    <section class="contact spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="contact__map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798902705!2d-74.25986790365917!3d40.697670067823786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1596152431947!5m2!1sen!2sbd"
-                            height="450" style="border:0;"></iframe>
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="position-relative d-inline text-primary ps-4">Contact Us</h6>
+                        <h2 class="mt-2">Contact For Any Query</h2>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="contact__form">
-                        <h3>Get in touch</h3>
-                        <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Message"></textarea>
-                            <button type="submit" class="site-btn">Send Message</button>
+                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Call To Action Section End -->
+    </div>
+    <!-- Contact End -->
 
-    @endsection
+
+@endsection

@@ -1,125 +1,110 @@
 @extends('layouts.master')
+@section('hero')
+    <div class="col-12 text-center">
+        <h1 class="text-white animated zoomIn">Service</h1>
+        <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Service</li>
+            </ol>
+        </nav>
+    </div>
+@endsection
 @section('content')
 
-    <!-- Breadcrumb Begin -->
-    <div class="breadcrumb-option spad set-bg" data-setbg="{{asset('assets/img/breadcrumb-bg.jpg')}}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Our Sevices</h2>
-                        <div class="breadcrumb__links">
-                            <a href="#">Home</a>
-                            <span>Services</span>
-                        </div>
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb End -->
+    <!-- Full Screen Search End -->
 
-    <!-- Services Section Begin -->
-    <section class="services-page spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="{{asset('assets/img/icons/si-2.png')}}" alt="">
-                        </div>
-                        <h4>Scriptwriting and editing</h4>
-                        <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="{{asset('assets/img/icons/si-1.png')}}" alt="">
-                        </div>
-                        <h4>Motion graphics</h4>
-                        <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="{{asset('assets/img/icons/si-2.png')}}" alt="">
-                        </div>
-                        <h4>Scriptwriting and editing</h4>
-                        <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="{{asset('assets/img/icons/si-3.png')}}" alt="">
-                        </div>
-                        <h4>Video distribution</h4>
-                        <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="{{asset('assets/img/icons/si-4.png')}}" alt="">
-                        </div>
-                        <h4>Video hosting</h4>
-                        <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="services__item">
-                        <div class="services__item__icon">
-                            <img src="{{asset('assets/img/icons/si-4.png')}}" alt="">
-                        </div>
-                        <h4>Video hosting</h4>
-                        <p>Whether you’re halfway through the editing process, or you haven’t even started, our post
-                            production services can put the finishing touches.</p>
-                    </div>
-                </div>
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container px-lg-5">
+            <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>
+                <h2 class="mt-2">What Solutions We Provide</h2>
             </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
-
-    <!-- Call To Action Section Begin -->
-    <section class="callto sp__callto">
-        <div class="container">
-            <div class="callto__services spad set-bg" data-setbg="{{asset('assets/img/calltos-bg.jpg')}}">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-10 text-center">
-                        <div class="callto__text">
-                            <h2>CREATE AWESOME VIDEOS WITH WIDEO’S POWERFUL FEATURES</h2>
-                            <p>Wideo combines all the features you need to easily create professional videos and
-                                presentations</p>
-                            <a href="#">Start your stories</a>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon flex-shrink-0">
+                            <i class="fa fa-home fa-2x"></i>
                         </div>
+                        <h5 class="mb-3">SEO Optimization</h5>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Call To Action Section End -->
-
-    <!-- Logo Begin -->
-    <div class="logo spad">
-        <div class="container">
-            <div class="logo__carousel owl-carousel">
-                <a href="#" class="logo__item"><img src="{{asset('assets/img/logo/logo-1.png')}}" alt=""></a>
-                <a href="#" class="logo__item"><img src="{{asset('assets/img/logo/logo-2.png')}}" alt=""></a>
-                <a href="#" class="logo__item"><img src="{{asset('assets/img/logo/logo-3.png')}}" alt=""></a>
-                <a href="#" class="logo__item"><img src="{{asset('assets/img/logo/logo-4.png')}}" alt=""></a>
-                <a href="#" class="logo__item"><img src="{{asset('assets/img/logo/logo-5.png')}}" alt=""></a>
-                <a href="#" class="logo__item"><img src="{{asset('assets/img/logo/logo-6.png')}}" alt=""></a>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon flex-shrink-0">
+                            <i class="fa fa-home fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Web Design</h5>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon flex-shrink-0">
+                            <i class="fa fa-home fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Social Media Marketing</h5>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon flex-shrink-0">
+                            <i class="fa fa-home fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Email Marketing</h5>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon flex-shrink-0">
+                            <i class="fa fa-home fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">PPC Advertising</h5>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon flex-shrink-0">
+                            <i class="fa fa-home fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">App Development</h5>
+                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                        <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Logo End -->
+    <!-- Service End -->
 
-    @endsection
+
+@endsection
