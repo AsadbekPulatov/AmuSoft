@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\MassageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,3 +60,4 @@ Route::resource('users', UserController::class);
 Route::resource('categories', CategoryController::class);
 Route::resource('projects', ProjectController::class);
 Route::resource('abouts',AboutController::class);
+Route::resource('massage',MassageController::class);

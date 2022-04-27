@@ -14,12 +14,12 @@
                         <p>Новости</p>
                     </a>
                 </li>
-{{--                <li class="nav-item {{  request()->routeIs('messages.index') ? 'active' : '' }}">--}}
-{{--                    <a href="{{route('admin.messages.index')}}">--}}
-{{--                        <i class="fas fa-envelope"></i>--}}
-{{--                        <p>Сообщении</p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item {{  request()->routeIs('massage.index') ? 'active' : '' }}">
+                    <a href="{{route('massage.index')}}">
+                        <i class="fas fa-envelope"></i>
+                        <p>Сообщении</p>
+                    </a>
+                </li>
                 <li class="nav-item {{  request()->routeIs('abouts.index') ? 'active' : '' }}">
                     <a href="{{route('abouts.index')}}">
                         <i class="fas fa-building"></i>
