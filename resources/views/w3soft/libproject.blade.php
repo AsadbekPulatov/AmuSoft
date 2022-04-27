@@ -17,7 +17,7 @@
         <div class="row g-4 portfolio-container">
             @foreach($projects as $project)
 
-                <div class="col-lg-4 col-md-6 portfolio-item n{{ $project->category->id }} wow zoomIn" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item n{{ $project->category->id }} wow zoomIn" data-wow-delay="0.{{ $projects->count() - $project->id + 1 }}s">
                     <div class="position-relative rounded overflow-hidden">
                         <img class="img-fluid w-100" src="{{asset('assets/img/project/'.$project->img)}}" alt="">
                         <div class="portfolio-overlay">

@@ -31,9 +31,27 @@ class ViewController extends Controller
     }
     public   function  about(){
         $about=About::OrderBy('id','DESC')->get();
+        $projects = Project::OrderBy('id', 'DESC')->get();
         return view('w3soft.about',[
             'route'=>'about',
-            'abouts' => $about
-            ]);
+            'abouts' => $about,
+            'projects' => $projects,
+        ]);
+    }
+
+    public function contact(){
+        $projects = Project::OrderBy('id', 'DESC')->get();
+        return view('w3soft.contact',[
+            'route' => 'contact',
+            'projects' => $projects,
+        ]);
+    }
+
+    public function services(){
+        $projects = Project::OrderBy('id', 'DESC')->get();
+        return view('w3soft.services',[
+            'route' => 'services',
+            'projects' => $projects,
+        ]);
     }
 }

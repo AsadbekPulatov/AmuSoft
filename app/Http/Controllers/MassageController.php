@@ -56,6 +56,8 @@ class MassageController extends Controller
      */
     public function show(Massage $massage)
     {
+        $massage->activity = 0;
+        $massage->save();
         return view('admin.massage.show',[
             'massage'=>$massage
         ]);

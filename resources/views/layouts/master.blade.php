@@ -105,24 +105,27 @@
                 <div class="col-md-6 col-lg-3">
                     <h5 class="text-white mb-4">Project Gallery</h5>
                     <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-1.jpg') }}" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-2.jpg') }}" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-3.jpg') }}" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-4.jpg') }}" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-5.jpg') }}" alt="Image">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-6.jpg') }}" alt="Image">
-                        </div>
+                        @foreach($projects as $key => $project)
+                            @if($key > 5) @break @endif
+                            <div class="col-4">
+                                <img class="img-fluid" src="{{ asset('assets/img/project/'.$project->img) }}" alt="Image">
+                            </div>
+                        @endforeach
+{{--                        <div class="col-4">--}}
+{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-2.jpg') }}" alt="Image">--}}
+{{--                        </div>--}}
+{{--                        <div class="col-4">--}}
+{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-3.jpg') }}" alt="Image">--}}
+{{--                        </div>--}}
+{{--                        <div class="col-4">--}}
+{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-4.jpg') }}" alt="Image">--}}
+{{--                        </div>--}}
+{{--                        <div class="col-4">--}}
+{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-5.jpg') }}" alt="Image">--}}
+{{--                        </div>--}}
+{{--                        <div class="col-4">--}}
+{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-6.jpg') }}" alt="Image">--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">

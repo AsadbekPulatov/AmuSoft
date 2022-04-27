@@ -7,6 +7,7 @@
     <link rel="icon" href="{{asset('/asset/img/icon.ico')}}" type="image/x-icon"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
     <script src="{{asset('/asset/js/core/jquery.3.2.1.min.js')}}"></script>
     <!-- Fonts and icons -->

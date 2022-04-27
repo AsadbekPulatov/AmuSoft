@@ -19,23 +19,10 @@ use App\Http\Controllers\MassageController;
 */
 
 Route::get('/', [ViewController::class, 'home'])->name('index');
-
 Route::get('/about', [ViewController::class,'about'])->name('about');
-
 Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio');
-
-Route::get('/services', function () {
-    return view('w3soft.services',[
-        'route' => 'services'
-    ]);
-})->name('services');
-
-Route::get('/contact', function () {
-    return view('w3soft.contact',[
-        'route' => 'contact'
-    ]);
-})->name('contact');
-
+Route::get('/services', [ViewController::class, 'services'])->name('services');
+Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
 Route::get('/blog', function () {
     return view('w3soft.blog',[
         'route' => 'blog'
@@ -55,9 +42,9 @@ Auth::routes([
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('posts',\App\Http\Controllers\PostController::class);
-Route::resource('users', UserController::class);
-Route::resource('categories', CategoryController::class);
-Route::resource('projects', ProjectController::class);
-Route::resource('abouts',AboutController::class);
-Route::resource('massage',MassageController::class);
+Route::resource('posts',\App\Http\Controllers\PostController::class)->middleware('auth');
+Route::resource('users', UserController::class)->middleware('auth');
+Route::resource('categories', CategoryController::class)->middleware('auth');
+Route::resource('projects', ProjectController::class)->middleware('auth');
+Route::resource('abouts',AboutController::class)->middleware('auth');
+Route::resource('massage',MassageController::class)->middleware('auth');

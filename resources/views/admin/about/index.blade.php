@@ -5,13 +5,13 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-9"><h1 class="card-title">Новости</h1></div>
+                    <div class="col-9"><h1 class="card-title">Команда</h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('abouts.create')}}">
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span>
-                            Добавить новости
+                            Добавить команда
                         </a>
                     </div>
                 </div>
@@ -21,17 +21,17 @@
 
                         <thead>
                         <tr>
-                            <th  scope="col" >ID</th>
-                            <th  scope="col" >facebook</th>
-                            <th  scope="col" >Mail</th>
-                            <th  scope="col" >Instagram</th>
-                            <th  scope="col" >Telegram</th>
-                            <th  scope="col" >Name</th>
-                            <th  scope="col" >Job</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Facebook</th>
+                            <th scope="col">Mail</th>
+                            <th scope="col">Instagram</th>
+                            <th scope="col">Telegram</th>
+                            <th scope="col">Имя</th>
+                            <th scope="col">Профессия</th>
 {{--                            <th >rasm</th>--}}
 {{--                            <th >yaratilgan vaqt</th>--}}
 {{--                            <th >korganlar soni</th>--}}
-                            <th  scope="col">Amallar</th>
+                            <th scope="col">Действие</th>
 
                         </tr>
                         </thead>
@@ -62,7 +62,7 @@
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm"><span class="btn-label">
                                         <i class="fa fa-trash"></i>
-                                                <i class="bi bi-trash-fill"></i>
+{{--                                                <i class="bi bi-trash-fill"></i>--}}
                                     </span></button>
                                     </form>
                                 </td>

@@ -10,7 +10,7 @@
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span>
-                            Добавить Проекты
+                            Добавить проекты
                         </a>
                     </div>
                 </div>
