@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="description_ru">twitter</label>
+                            <label for="description_ru">Mail</label>
                             <input  class="form-control"  name="twitter" id="description_ru" rows="10" value=" {{$abouts->twitter}}">
                         </div>
                         <div class="form-group">

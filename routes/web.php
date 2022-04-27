@@ -19,11 +19,7 @@ use App\Http\Controllers\ViewController;
 
 Route::get('/', [ViewController::class, 'home'])->name('index');
 
-Route::get('/about', function () {
-    return view('w3soft.about',[
-        'route' => 'about'
-    ]);
-})->name('about');
+Route::get('/about', [ViewController::class,'about'])->name('about');
 
 Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio');
 

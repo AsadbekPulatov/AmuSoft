@@ -22,11 +22,11 @@
                         <tr>
                             <th >ID</th>
                             <th >facebook</th>
-                            <th >Twitter</th>
+                            <th >Mail</th>
                             <th >Instagram</th>
                             <th >Telegram</th>
                             <th >Name</th>
-                            <th >lavozimi</th>
+                            <th >Job</th>
                             <th >rasm</th>
 {{--                            <th >yaratilgan vaqt</th>--}}
 {{--                            <th >korganlar soni</th>--}}
