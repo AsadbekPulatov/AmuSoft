@@ -21,12 +21,12 @@
                         <p>Сообщении</p>
                     </a>
                 </li>
-{{--                <li class="nav-item {{  request()->routeIs('admin.office.index') ? 'active' : '' }}">--}}
-{{--                    <a href="{{route('admin.office.index')}}">--}}
-{{--                        <i class="fas fa-building"></i>--}}
-{{--                        <p>Офисы</p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item {{  request()->routeIs('abouts.index') ? 'active' : '' }}">
+                    <a href="{{route('abouts.index')}}">
+                        <i class="fas fa-building"></i>
+                        <p>Команда</p>
+                    </a>
+                </li>
                 {{--<li class="nav-item {{  request()->routeIs('admin.solution.index') ? 'active' : '' }}">
                     <a href="{{route('admin.solution.index')}}">
                         <i class="fas fa-cog"></i>

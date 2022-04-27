@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,3 +70,4 @@ Route::resource('posts',\App\Http\Controllers\PostController::class);
 Route::resource('users', UserController::class);
 Route::resource('categories', CategoryController::class);
 Route::resource('projects', ProjectController::class);
+Route::resource('abouts',AboutController::class);
