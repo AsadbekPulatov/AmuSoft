@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\AboutController;
-
+use App\Http\Controllers\ViewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,11 +17,7 @@ use App\Http\Controllers\AboutController;
 |
 */
 
-Route::get('/', function () {
-    return view('w3soft.index',[
-        'route' => 'index'
-    ]);
-})->name('index');
+Route::get('/', [ViewController::class, 'home'])->name('index');
 
 Route::get('/about', function () {
     return view('w3soft.about',[
@@ -29,11 +25,7 @@ Route::get('/about', function () {
     ]);
 })->name('about');
 
-Route::get('/portfolio', function () {
-    return view('w3soft.portfolio',[
-        'route' => 'portfolio'
-    ]);
-})->name('portfolio');
+Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio');
 
 Route::get('/services', function () {
     return view('w3soft.services',[
