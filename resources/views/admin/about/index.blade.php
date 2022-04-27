@@ -17,20 +17,21 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered text-cente ">
+                    <table class="table table-bordered text-center w-100">
+
                         <thead>
                         <tr>
-                            <th >ID</th>
-                            <th >facebook</th>
-                            <th >Mail</th>
-                            <th >Instagram</th>
-                            <th >Telegram</th>
-                            <th >Name</th>
-                            <th >Job</th>
-                            <th >rasm</th>
+                            <th  scope="col" >ID</th>
+                            <th  scope="col" >facebook</th>
+                            <th  scope="col" >Mail</th>
+                            <th  scope="col" >Instagram</th>
+                            <th  scope="col" >Telegram</th>
+                            <th  scope="col" >Name</th>
+                            <th  scope="col" >Job</th>
+{{--                            <th >rasm</th>--}}
 {{--                            <th >yaratilgan vaqt</th>--}}
 {{--                            <th >korganlar soni</th>--}}
-                            <th >Amallar</th>
+                            <th  scope="col">Amallar</th>
 
                         </tr>
                         </thead>
@@ -44,9 +45,9 @@
                                 <td>{{$about->telegram}}</td>
                                 <td>{{$about->name}}</td>
                                 <td>{{$about->position}}</td>
-                                <td>
-                                    <img src="{{ asset('assets/img/about_img/'.$about->image) }}"  alt="" class="text-center w-100">
-                                </td>
+{{--                                <td>--}}
+{{--                                    <img src="{{ asset('assets/img/about_img/'.$about->image) }}"  alt="" class="text-center w-100">--}}
+{{--                                </td>--}}
 {{--                                <td>{{$about->created_at}}</td>--}}
 {{--                                <td>{{$about->viewed}}</td>--}}
                                 <td class="col-2">
