@@ -57,7 +57,7 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Home</b></a>
                     <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>About</b></a>
-                    <a href="{{ route('services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Service</b></a>
+                    <a href="{{ route('Services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Service</b></a>
                     <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Project</b></a>
                     <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Contact</b></a>
                 </div>

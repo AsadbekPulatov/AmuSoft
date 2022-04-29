@@ -26,12 +26,12 @@
                         <p>Команда</p>
                     </a>
                 </li>
-                {{--<li class="nav-item {{  request()->routeIs('admin.solution.index') ? 'active' : '' }}">
-                    <a href="{{route('admin.solution.index')}}">
+                <li class="nav-item {{  request()->routeIs('services.index') ? 'active' : '' }}">
+                    <a href="{{route('services.index')}}">
                         <i class="fas fa-cog"></i>
-                        <p>Решения</p>
+                        <p>Сервисы</p>
                     </a>
-                </li>--}}
+                </li>
                 <li class="nav-item {{  request()->routeIs('projects.index') ? 'active' : '' }}">
                     <a href="{{route('projects.index')}}">
                         <i class="fas fa-project-diagram"></i>

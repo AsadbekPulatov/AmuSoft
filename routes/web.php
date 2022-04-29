@@ -21,7 +21,7 @@ use App\Http\Controllers\MassageController;
 Route::get('/', [ViewController::class, 'home'])->name('index');
 Route::get('/about', [ViewController::class,'about'])->name('about');
 Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio');
-Route::get('/services', [ViewController::class, 'services'])->name('services');
+Route::get('/Services', [ViewController::class, 'services'])->name('Services');
 Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
 Route::get('/blog', function () {
     return view('w3soft.blog',[
@@ -48,3 +48,4 @@ Route::resource('categories', CategoryController::class)->middleware('auth');
 Route::resource('projects', ProjectController::class)->middleware('auth');
 Route::resource('abouts',AboutController::class)->middleware('auth');
 Route::resource('massage',MassageController::class)->middleware('auth');
+Route::resource('services',\App\Http\Controllers\ServiceController::class)->middleware('auth');
