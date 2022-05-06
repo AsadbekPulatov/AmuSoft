@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="img">Добавьте рисунок <b><i>РАЗМЕР РИСУНОК:(600x300)</i></b></label>
+                            <label for="img">Добавьте рисунок <b><i>РАЗМЕР РИСУНОК:(100x100)</i></b></label>
                             <input type="file" name="img" class="form-control" id="img">
                         </div>
 

@@ -1,10 +1,11 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SaveServiceRequest;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends Controller
 {
@@ -79,7 +80,9 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        //
+        return view('admin.services.form',[
+            'service' => $service
+        ]);
     }
 
     /**
@@ -89,9 +92,17 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update(SaveServiceRequest $request, Service $service)
     {
-        //
+        $img="service-".$service->id.".jpg";
+        $path='assets/img/service/';
+        $request->img->move($path,$img);
+        $service->update([
+            'title'=>$request['title'],
+            'description'=>$request['description'],
+            'img'=>$img
+        ]);
+        return redirect()->route('services.index');
     }
 
     /**
@@ -102,6 +113,11 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
-        //
+        $img=$service->img;
+        if (File::exists(public_path('assets/img/service/'.$img))){
+            File::delete(public_path('assets/img/service/'.$img));
+        }
+        $service->delete();
+        return  redirect()->route('services.index');
     }
 }

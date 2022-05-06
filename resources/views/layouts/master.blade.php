@@ -83,9 +83,9 @@
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3">
                     <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>110.Al-Khorazmiy street.Urgench city</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+998 900900971</p>
+                    <p><i class="fa fa-envelope me-3"></i>w3soft@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -111,21 +111,6 @@
                                 <img class="img-fluid" src="{{ asset('assets/img/project/'.$project->img) }}" alt="Image">
                             </div>
                         @endforeach
-{{--                        <div class="col-4">--}}
-{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-2.jpg') }}" alt="Image">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-4">--}}
-{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-3.jpg') }}" alt="Image">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-4">--}}
-{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-4.jpg') }}" alt="Image">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-4">--}}
-{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-5.jpg') }}" alt="Image">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-4">--}}
-{{--                            <img class="img-fluid" src="{{ asset('assets/img/portfolio-6.jpg') }}" alt="Image">--}}
-{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -141,20 +126,7 @@
         <div class="container px-lg-5">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

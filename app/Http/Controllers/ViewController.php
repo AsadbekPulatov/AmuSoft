@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Category;
 use App\Models\Project;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -13,11 +14,13 @@ class ViewController extends Controller
         $categories = Category::all();
         $about=About::OrderBy('id','DESC')->get();
         $projects = Project::OrderBy('id', 'DESC')->get();
+        $services = Service::Orderby('id','DESC')->get();
         return view('w3soft.index',[
             'route' => 'index',
             'categories' => $categories,
             'projects' => $projects,
-            'abouts'=>$about
+            'abouts'=>$about,
+            'services'=>$services
         ]);
     }
     public function portfolio(){
@@ -49,9 +52,11 @@ class ViewController extends Controller
 
     public function services(){
         $projects = Project::OrderBy('id', 'DESC')->get();
+        $services = Service::OrderBy('id','DESC')->get();
         return view('w3soft.services',[
             'route' => 'services',
             'projects' => $projects,
+            'services' => $services
         ]);
     }
 }
