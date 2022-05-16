@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>W3soft</title>
+    <title>AmuSoft</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -47,7 +47,7 @@
     <div class="container-xxl position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-search me-2"></i>W3<span class="fs-5">Soft</span></h1>
+                <h1 class="m-0"><i class="fa fa-search me-2"></i>A<span class="fs-5">mu</span>S<span class="fs-5">oft</span></h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -85,21 +85,21 @@
                     <h5 class="text-white mb-4">Get In Touch</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>110.Al-Khorazmiy street.Urgench city</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+998 900900971</p>
-                    <p><i class="fa fa-envelope me-3"></i>w3soft@gmail.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>AmuSoft@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h5 class="text-white mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="{{route('about')}}">About Us</a>
+                    <a class="btn btn-link" href="{{route('Services')}}">Service</a>
+                    <a class="btn btn-link" href="{{route('portfolio')}}">Project</a>
+                    <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
                     <a class="btn btn-link" href="">Career</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -128,7 +128,7 @@
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        Designed By <a class="border-bottom" href="http://amusoft.uz">AmuSoft</a>
                     </div>
                 </div>
             </div>

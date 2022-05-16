@@ -3,13 +3,6 @@
     <div class="col-12 text-center">
         <h1 class="text-white animated zoomIn">Contact Us</h1>
         <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
-            </ol>
-        </nav>
     </div>
 @endsection
 @section('content')
@@ -38,7 +31,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="position-relative d-inline text-primary ps-4">Contact Us</h6>
+{{--                        <h6 class="position-relative d-inline text-primary ps-4">Contact Us</h6>--}}
                         <h2 class="mt-2">Contact For Any Query</h2>
                     </div>
                     <div class="wow fadeInUp" data-wow-delay="0.3s">

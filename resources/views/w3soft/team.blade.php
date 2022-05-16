@@ -23,7 +23,7 @@
         <div class="container-xxl py-5">
             <div class="container px-lg-5">
                 <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="position-relative d-inline text-primary ps-4">Our Team</h6>
+{{--                    <h6 class="position-relative d-inline text-primary ps-4">Our Team</h6>--}}
                     <h2 class="mt-2">Meet Our Team Members</h2>
                 </div>
                 <div class="row g-4">
@@ -38,9 +38,10 @@
                                     <a class="btn btn-square text-primary bg-white my-1" href="https://facebook.com/{{$about->facebook}}"><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square text-primary bg-white my-1" href="mailto://{{$about->twitter}}"><i class="fas fa-envelope"></i></a>
                                     <a class="btn btn-square text-primary bg-white my-1" href="https://instagram.com/{{$about->instagram}}"><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href="https://youtube.com/{{$about->youtube}}"><i class="fab fa-youtube"></i></a>
                                     <a class="btn btn-square text-primary bg-white my-1" href="https://t.me/{{$about->telegram}}"><i class="fab fa-telegram"></i></a>
                                 </div>
-                                <img class="img-fluid rounded w-100" src="{{ asset('assets/img/about_img/'.$about->image) }}" alt="">
+                                <img class="img-fluid rounded " style=" width: 80%; height: 400px" src="{{ asset('assets/img/about_img/'.$about->image) }}" alt="">
                             </div>
                             <div class="px-4 py-3">
                                 <h5 class="fw-bold m-0">{{$about->name}}</h5>

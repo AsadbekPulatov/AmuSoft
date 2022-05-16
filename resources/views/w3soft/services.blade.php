@@ -3,13 +3,6 @@
     <div class="col-12 text-center">
         <h1 class="text-white animated zoomIn">Service</h1>
         <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Service</li>
-            </ol>
-        </nav>
     </div>
 @endsection
 @section('content')

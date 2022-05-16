@@ -4,7 +4,7 @@
         <h1 class="text-white mb-4 animated zoomIn">All in one SEO tool need to grow your business rapidly</h1>
         <p class="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
         <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free Quote</a>
-        <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+        <a href=" {{route('contact')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
     </div>
     <div class="col-lg-6 text-center text-lg-start">
         <img class="img-fluid" src="{{ asset('assets/img/hero.png') }}" alt="">
@@ -36,7 +36,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="section-title position-relative mb-4 pb-2">
-                        <h6 class="position-relative text-primary ps-4">About Us</h6>
+                        <!--<h6 class="position-relative text-primary ps-4">About Us</h6>-->
                         <h2 class="mt-2">The best SEO solution with 10 years of experience</h2>
                     </div>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
@@ -55,7 +55,8 @@
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
