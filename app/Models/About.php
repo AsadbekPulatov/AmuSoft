@@ -9,5 +9,5 @@ class About extends Model
 {
     use HasFactory;
     protected $table='abouts';
-    protected  $fillable=['facebook','twitter','instagram','telegram','name','position','image'];
+    protected  $fillable=['facebook','email','instagram','telegram','name','position','image'];
 }

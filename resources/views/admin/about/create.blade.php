@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label for="twitter">Mail</label>
-                            <input class="form-control" type="text" name="twitter" id="twitter" rows="10">
+                            <input class="form-control" type="email" name="email" id="twitter" rows="10">
                         </div>
                         <div class="form-group">
                             <label for="instagram">Instagram</label>

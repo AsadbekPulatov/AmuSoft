@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label for="description_ru">Mail</label>
-                            <input  class="form-control"  name="twitter" id="description_ru" rows="10" value=" {{$abouts->twitter}}">
+                            <input  class="form-control"  type="email" name="email" id="description_ru" rows="10" value=" {{$abouts->email}}">
                         </div>
                         <div class="form-group">
                             <label for="description_ru">instagram</label>

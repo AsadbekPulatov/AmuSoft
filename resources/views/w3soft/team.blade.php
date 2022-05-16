@@ -36,7 +36,7 @@
                             <div class="d-flex">
                                 <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
                                     <a class="btn btn-square text-primary bg-white my-1" href="https://facebook.com/{{$about->facebook}}"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href="mailto://{{$about->twitter}}"><i class="fas fa-envelope"></i></a>
+                                    <a class="btn btn-square text-primary bg-white my-1" href="mailto://{{$about->email}}"><i class="fas fa-envelope"></i></a>
                                     <a class="btn btn-square text-primary bg-white my-1" href="https://instagram.com/{{$about->instagram}}"><i class="fab fa-instagram"></i></a>
                                     <a class="btn btn-square text-primary bg-white my-1" href="https://youtube.com/{{$about->youtube}}"><i class="fab fa-youtube"></i></a>
                                     <a class="btn btn-square text-primary bg-white my-1" href="https://t.me/{{$about->telegram}}"><i class="fab fa-telegram"></i></a>

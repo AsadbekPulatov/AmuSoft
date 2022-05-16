@@ -46,7 +46,7 @@ class AboutController extends Controller
 
         $request->validate([
             'facebook'=>'required',
-            'twitter'=>'required',
+            'email'=>'required',
             'instagram'=>'required',
             'telegram'=>'required',
             'name'=>'required',
@@ -61,7 +61,7 @@ class AboutController extends Controller
 
         About::create([
             'facebook'=>$request['facebook'],
-            'twitter'=>$request['twitter'],
+            'email'=>$request['email'],
             'instagram'=>$request['instagram'],
             'telegram'=>$request['telegram'],
             'name'=>$request['name'],
@@ -106,7 +106,7 @@ class AboutController extends Controller
 
         $request->validate([
             'facebook'=>'required',
-            'twitter'=>'required',
+            'email'=>'required',
             'instagram'=>'required',
             'telegram'=>'required',
             'name'=>'required',
@@ -121,7 +121,7 @@ class AboutController extends Controller
 
        $about->update([
             'facebook'=>$request['facebook'],
-            'twitter'=>$request['twitter'],
+            'email'=>$request['email'],
             'instagram'=>$request['instagram'],
             'telegram'=>$request['telegram'],
             'name'=>$request['name'],

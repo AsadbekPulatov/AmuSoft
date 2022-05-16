@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
             $table->string('facebook');
-            $table->string('twitter');
+            $table->string('email');
             $table->string('instagram');
             $table->string('telegram');
             $table->string('name');
