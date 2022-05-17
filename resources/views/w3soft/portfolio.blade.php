@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('hero')
     <div class="col-12 text-center">
-        <h1 class="text-white animated zoomIn">Project</h1>
+        <h1 class="text-white animated zoomIn">Loyiha</h1>
         <hr class="bg-white mx-auto mt-0" style="width: 90px;">
     </div>
 @endsection
@@ -16,7 +16,7 @@
                 </div>
                 <div class="modal-body d-flex align-items-center justify-content-center">
                     <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                        <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Qidiruv kalit so'zini kiriting">
                         <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
                     </div>
                 </div>

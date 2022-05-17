@@ -2,12 +2,12 @@
     <div class="container px-lg-5">
         <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
 {{--            <h6 class="position-relative d-inline text-primary ps-4">Our Projects</h6>--}}
-            <h2 class="mt-2">Recently Launched Projects</h2>
+                <h2 class="mt-2">Yaqinda ishga tushirilgan loyihalar</h2>
         </div>
         <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-12 text-center">
                 <ul class="list-inline mb-5" id="portfolio-flters">
-                    <li class="btn px-3 pe-4 active" data-filter="*">All</li>
+                    <li class="btn px-3 pe-4 active" data-filter="*">Hammasi</li>
                     @foreach($categories as $category)
                         <li class="btn px-3 pe-4" data-filter=".n{{ $category->id }}">{{ $category->name }}</li>
                     @endforeach

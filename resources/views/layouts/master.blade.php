@@ -37,7 +37,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">Yuklanmoqda...</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -55,11 +55,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Home</b></a>
-                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>About</b></a>
-                    <a href="{{ route('Services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Service</b></a>
-                    <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Project</b></a>
-                    <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Contact</b></a>
+                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Uy sahifasi</b></a>
+                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Haqida</b></a>
+                    <a href="{{ route('Services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmat</b></a>
+                    <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Loyiha</b></a>
+                    <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Aloqa</b></a>
+                    <a href="{{ route('blog') }}" class="nav-item nav-link @if($route=='blog') active @endif"><b>Yangiliklar</b></a>
+
                 </div>
                 <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
             </div>
@@ -82,9 +84,9 @@
         <div class="container py-5 px-lg-5">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>110.Al-Khorazmiy street.Urgench city</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+998 900900971</p>
+                    <h5 class="text-white mb-4">Aloqa qilish</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Urganch shahri Al-Xorazmiy ko'chkasi 110-uy</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+998 977913883</p>
                     <p><i class="fa fa-envelope me-3"></i>AmuSoft@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
@@ -95,15 +97,16 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="text-white mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="{{route('about')}}">About Us</a>
-                    <a class="btn btn-link" href="{{route('Services')}}">Service</a>
-                    <a class="btn btn-link" href="{{route('portfolio')}}">Project</a>
-                    <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
-                    <a class="btn btn-link" href="">Career</a>
+                    <h5 class="text-white mb-4">Ommabop havola</h5>
+                    <a class="btn btn-link" href="{{route('about')}}">Biz haqimizda</a>
+                    <a class="btn btn-link" href="{{route('Services')}}">Xizmat</a>
+                    <a class="btn btn-link" href="{{route('portfolio')}}">Loyiha</a>
+{{--                    <a class="btn btn-link" href="{{route('')}}">Loyiha</a>--}}
+                    <a class="btn btn-link" href="{{route('contact')}}">Biz bilan bog'lanish</a>
+                    <a class="btn btn-link" href="">Karyera</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="text-white mb-4">Project Gallery</h5>
+                    <h5 class="text-white mb-4">Loyiha galereyasi</h5>
                     <div class="row g-2">
                         @foreach($projects as $key => $project)
                             @if($key > 5) @break @endif
@@ -114,10 +117,10 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <h5 class="text-white mb-4">Axborot byulleteni</h5>
                     <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
                     <div class="position-relative w-100 mt-3">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Emailingiz" style="height: 48px;">
                         <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
                     </div>
                 </div>
@@ -127,8 +130,8 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                        Designed By <a class="border-bottom" href="http://amusoft.uz">AmuSoft</a>
+                        &copy; <a class="border-bottom" href="#">Saytingiz nomi</a>, Barcha huquqlar himoyalangan.
+                        tomonidan ishlab chiqilgan<a class="border-bottom" href="http://amusoft.uz">AmuSoft</a>
                     </div>
                 </div>
             </div>

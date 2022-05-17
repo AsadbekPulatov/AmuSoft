@@ -23,11 +23,12 @@ Route::get('/about', [ViewController::class,'about'])->name('about');
 Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio');
 Route::get('/Services', [ViewController::class, 'services'])->name('Services');
 Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
-Route::get('/blog', function () {
-    return view('w3soft.blog',[
-        'route' => 'blog'
-    ]);
-})->name('blog');
+Route::get('/blog', [ViewController::class, 'blog'])->name('blog');
+//Route::get('/blog', function () {
+//    return view('w3soft.blog',[
+//        'route' => 'blog'
+//    ]);
+//})->name('blog');
 
 Route::get('/blog-details', function () {
     return view('w3soft.blog-details',[

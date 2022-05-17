@@ -21,12 +21,12 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Титул</th>
-                            <th scope="col">Текст</th>
-                            <th scope="col">Картинка</th>
-                            <th scope="col">Время</th>
-                            <th scope="col">Просмотрено</th>
-                            <th scope="col">Действие</th>
+                            <th scope="col">Sarlavha</th>
+                            <th scope="col">Matn</th>
+                            <th scope="col">Rasm</th>
+                            <th scope="col">vaqt</th>
+                            <th scope="col">Ko'rildi</th>
+                            <th scope="col">Harakat</th>
                         </tr>
                         </thead>
                         <tbody>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Category;
+use App\Models\Post;
 use App\Models\Project;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -57,6 +58,17 @@ class ViewController extends Controller
             'route' => 'services',
             'projects' => $projects,
             'services' => $services
+        ]);
+    }
+    public function blog(){
+        $projects = Project::OrderBy('id', 'DESC')->get();
+//        $services = Service::OrderBy('id','DESC')->get();
+        $blog= Post::OrderBy('id','DESC')->get();
+        return view('w3soft.blog',[
+            'route' => 'blod',
+            'projects' => $projects,
+//            'services' => $services,
+            'blogs'=>$blog
         ]);
     }
 }

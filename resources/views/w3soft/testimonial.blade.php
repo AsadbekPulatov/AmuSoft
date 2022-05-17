@@ -7,7 +7,7 @@
                     </div>
                     <div class="modal-body d-flex align-items-center justify-content-center">
                         <div class="input-group" style="max-width: 600px;">
-                            <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
+                            <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Qidiruv kalit so'zini kiriting">
                             <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
                         </div>
                     </div>
@@ -27,8 +27,8 @@
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-1.jpg') }}" style="width: 50px; height: 50px;">
                             <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="text-white mb-1">Mijoz nomi</h6>
+                                <small>Kasb-hunar</small>
                             </div>
                         </div>
                     </div>
@@ -38,8 +38,8 @@
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-2.jpg') }}" style="width: 50px; height: 50px;">
                             <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="text-white mb-1">Mijoz nomi</h6>
+                                <small>Kasb-hunar</small>
                             </div>
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-3.jpg') }}" style="width: 50px; height: 50px;">
                             <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="text-white mb-1">Mijoz nomi</h6>
+                                <small>Kasb-hunar</small>
                             </div>
                         </div>
                     </div>
@@ -60,8 +60,8 @@
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-4.jpg') }}" style="width: 50px; height: 50px;">
                             <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
+                                <h6 class="text-white mb-1">Mijoz nomi</h6>
+                                <small>Kasb-hunar</small>
                             </div>
                         </div>
                     </div>
