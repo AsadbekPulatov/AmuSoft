@@ -48,5 +48,5 @@ Route::resource('users', UserController::class)->middleware('auth');
 Route::resource('categories', CategoryController::class)->middleware('auth');
 Route::resource('projects', ProjectController::class)->middleware('auth');
 Route::resource('abouts',AboutController::class)->middleware('auth');
-Route::resource('massage',MassageController::class)->middleware('auth');
+Route::resource('massage',MassageController::class);
 Route::resource('services',\App\Http\Controllers\ServiceController::class)->middleware('auth');

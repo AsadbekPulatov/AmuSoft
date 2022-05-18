@@ -26,9 +26,9 @@
     <!-- Full Screen Search End -->
 
 
-    <!-- Service Start -->
-    @include('w3soft.libservice')
-    <!-- Service End -->
+    <!-- Blog Start -->
+    @include('w3soft.libblog')
+    <!-- Blog End -->
 
 
 @endsection
