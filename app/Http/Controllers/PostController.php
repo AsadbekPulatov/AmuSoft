@@ -18,7 +18,7 @@ class PostController extends Controller
 //        abort('404');
         $post=Post::Orderby('id','desc')->get();
 
-        return  view('admin.posts.index',['blogs'=>$post]);
+        return  view('admin.posts.index',['posts'=>$post]);
     }
 
     /**
