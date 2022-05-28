@@ -34,6 +34,8 @@
 
 
 
+
+
                         <div class="team-item">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">

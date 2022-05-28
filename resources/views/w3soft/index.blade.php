@@ -2,9 +2,9 @@
 @section('hero')
     <div class="col-lg-6 text-center text-lg-start">
         <h1 class="text-white mb-4 animated zoomIn">Hammasi bitta SEO vositasida biznesingizni jadal rivojlantirish uchun kerak</h1>
-        <p class="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
+        <p class="text-white pb-3 animated zoomIn">Biz bilan samarali hamkorlikda sifatli loyihalar</p>
         <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free Quote</a>
-        <a href=" {{route('contact')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+        <a href=" {{route('contact')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Aloqa</a>
     </div>
     <div class="col-lg-6 text-center text-lg-start">
         <img class="img-fluid" src="{{ asset('assets/img/hero.png') }}" alt="">
@@ -39,7 +39,7 @@
                         <!--<h6 class="position-relative text-primary ps-4">About Us</h6>-->
                         <h2 class="mt-2">10 yillik tajribaga ega eng yaxshi SEO yechimi</h2>
                     </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                        <p class="mb-4">Bizni Jamoamiz tajribali o'z ishing ustalaridan iborat bizga har qanday loyiha bo'yicha murojat qilishingiz mumkin</p>
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Mukofot sovrindori</h6>
@@ -52,11 +52,11 @@
                     </div>
                     <div class="d-flex align-items-center mt-4">
                         <a class="btn btn-primary rounded-pill px-4 me-3" href="">Ko'proq o'qish</a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://facebook.com/bekmurodkhujamuratov"><i class="fab fa-facebook-f"></i></a>
+                        {{--                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>--}}
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://instagram.com/bekmurodkhujamuratov"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-light me-3" style="font-size: 2rem" href="https://github.com/Bekmurod3388"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://t.me/Bekmurod3388"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -74,11 +74,9 @@
             <div class="row align-items-center" style="height: 250px;">
                 <div class="col-12 col-md-6">
                     <h3 class="text-white">Boshlash uchun tayyor</h3>
-                    <small class="text-white">Diam elitr est dolore at sanctus nonumy.</small>
+                    <small class="text-white">Faqat siz uchun</small>
                     <div class="position-relative w-100 mt-3">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Elektron pochtangizni kiriting" style="height: 48px;">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                    </div>
+                      </div>
                 </div>
                 <div class="col-md-6 text-center mb-n5 d-none d-md-block">
                     <img class="img-fluid mt-5" style="height: 250px;" src="{{asset('assets/img/newsletter.png')}}">

@@ -35,7 +35,7 @@
 {{--                        <h6 class="position-relative text-primary ps-4">About Us</h6>--}}
                         <h2 class="mt-2">10 yillik tajribaga ega eng yaxshi SEO yechimi</h2>
                     </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <p class="mb-4">Bizni Jamoamiz tajribali o'z ishing ustalaridan iborat bizga har qanday loyiha bo'yicha murojat qilishingiz mumkin</p>
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Mukofot sovrindori</h6>
@@ -48,11 +48,13 @@
                     </div>
                     <div class="d-flex align-items-center mt-4">
                         <a class="btn btn-primary rounded-pill px-4 me-3" href="">Ko'proq o'qish</a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://facebook.com/bekmurodkhujamuratov"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://github.com/Bekmurod3388"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://instagram.com/bekmurodkhujamuratov"><i class="fab fa-instagram"></i></a>
+{{--                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-youtube"></i></a>--}}
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://t.me/Bekmurod3388"><i class="fab fa-telegram"></i></a>
+
+
                     </div>
                 </div>
                 <div class="col-lg-6">

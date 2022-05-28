@@ -89,11 +89,12 @@
                     <p><i class="fa fa-phone-alt me-3"></i>+998 977913883</p>
                     <p><i class="fa fa-envelope me-3"></i>AmuSoft@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/Bekmurod3388"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://facebook.com/bekmurodkhujamuratov"><i class="fab fa-facebook-f"></i></a>
+{{--                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>--}}
+                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/bekmurodkhujamuratov"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/Bekmurod3388"><i class="fab fa-telegram"></i></a>
+
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -118,11 +119,11 @@
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h5 class="text-white mb-4">Axborot byulleteni</h5>
-                    <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                    <p>Biz bilan bog'laning</p>
                     <div class="position-relative w-100 mt-3">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Emailingiz" style="height: 48px;">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                    </div>
+{{--                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Emailingiz" style="height: 48px;">--}}
+                    <a href="{{route('contact')}}" class="btn btn-link">Aloqa</a>
+                       </div>
                 </div>
             </div>
         </div>
