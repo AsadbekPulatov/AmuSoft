@@ -1,10 +1,12 @@
 @extends('layouts.master')
 @section('hero')
     <div class="col-lg-6 text-center text-lg-start">
-        <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free Quote</a>
         <h1 class="text-white mb-4 animated zoomIn">Hammasi bitta SEO vositasida biznesingizni jadal rivojlantirish uchun kerak</h1>
         <p class="text-white pb-3 animated zoomIn">Biz bilan samarali hamkorlikda sifatli loyihalar</p>
+
+        <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free Quote</a>
      <a href=" {{route('contact')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Aloqa</a>
+
     </div>
     <div class="col-lg-6 text-center text-lg-start">
         <img class="img-fluid" src="{{ asset('assets/img/hero.png') }}" alt="">
