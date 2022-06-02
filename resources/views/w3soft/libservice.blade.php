@@ -4,12 +4,12 @@
             {{--            <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>--}}
             <h2 class="mt-2">Servislar</h2>
         </div>
+        {{--                            <i class="fa fa-home fa-2x"></i>--}}
         <div class="row g-4">
             @foreach($services as $service)
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                         <div class="service-icon flex-shrink-0">
-                            {{--                            <i class="fa fa-home fa-2x"></i>--}}
                             <img src="{{asset('assets/img/service/'.$service->img)}}" alt="" class="w-75">
                         </div>
                         <h5 class="mb-3">{{$service->title}}</h5>
