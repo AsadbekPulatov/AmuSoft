@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('hero')
     <div class="col-12 text-center">
-        <h1 class="text-white animated zoomIn">Loyiha</h1>
+        <h1 class="text-white animated zoomIn">Loyihalar</h1>
         <hr class="bg-white mx-auto mt-0" style="width: 90px;">
     </div>
 @endsection

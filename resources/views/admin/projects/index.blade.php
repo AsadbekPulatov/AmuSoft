@@ -16,7 +16,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered text-center">
+                    <table class="table table-bordered text-center table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -28,9 +28,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($projects as $project)
+                        @foreach($projects as $key => $project)
                             <tr>
-                                <td class="col-1">{{$project->id}}</td>
+                                <td class="col-1">{{$key+1}}</td>
                                 <td>{{$project->name}}</td>
                                 <td>{{$project->category->name}}</td>
                                 <td>

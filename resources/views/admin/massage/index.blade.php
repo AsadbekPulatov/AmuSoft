@@ -10,7 +10,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered text-center">
+                    <table class="table table-bordered table-hover text-center">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -23,9 +23,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($massages as $massage)
+                        @foreach($massages as $key => $massage)
                             <tr>
-                                <th scope="row" class="col-1">{{$massage->id}}</th>
+                                <th scope="row" class="col-1">{{$key+1}}</th>
                                 <td>{{$massage->name}}</td>
                                 <td>{{$massage->email}}</td>
 

@@ -17,7 +17,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered text-center w-100">
+                    <table class="table table-bordered table-hover text-center w-100">
 
                         <thead>
                         <tr>
@@ -36,9 +36,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($abouts as $about)
+                        @foreach($abouts as $key => $about)
                             <tr>
-                                <th scope="row" class="col-1">{{$about->id}}</th>
+                                <th scope="row" class="col-1">{{$key+1}}</th>
                                 <td>  <a href="{{$about->facebook}}"><i class="bi bi-facebook" style="font-size: 1.8rem"></i></a></td>
                                 <td> <a href="{{$about->email}}"><i class="fas fa-envelope " style="font-size: 1.8rem"></i></a></td>
                                 <td> <a href="{{$about->instagram}}" ><i class="bi bi-instagram" style="font-size: 1.8rem"></i></a></td>

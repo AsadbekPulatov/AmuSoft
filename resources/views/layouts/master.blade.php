@@ -55,13 +55,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Uy sahifasi</b></a>
-                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Haqida</b></a>
-                    <a href="{{ route('Services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmat</b></a>
-                    <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Loyiha</b></a>
-                    <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Aloqa</b></a>
+                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Bosh sahifa</b></a>
                     <a href="{{ route('blog') }}" class="nav-item nav-link @if($route=='blog') active @endif"><b>Yangiliklar</b></a>
-
+                    <a href="{{ route('Services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmatlar</b></a>
+                    <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Loyihalar</b></a>
+                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Biz haqimizda</b></a>
+                    <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Bog'lanish</b></a>
                 </div>
                 <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
             </div>
@@ -85,7 +84,7 @@
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3">
                     <h5 class="text-white mb-4">Aloqa qilish</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Urganch shahri Al-Xorazmiy ko'chkasi 110-uy</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Urganch shahri Al-Xorazmiy ko'chasi 110-uy</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+998 977913883</p>
                     <p><i class="fa fa-envelope me-3"></i>AmuSoft@gmail.com</p>
                     <div class="d-flex pt-2">
@@ -100,11 +99,11 @@
                 <div class="col-md-6 col-lg-3">
                     <h5 class="text-white mb-4">Ommabop havola</h5>
                     <a class="btn btn-link" href="{{route('about')}}">Biz haqimizda</a>
-                    <a class="btn btn-link" href="{{route('Services')}}">Xizmat</a>
-                    <a class="btn btn-link" href="{{route('portfolio')}}">Loyiha</a>
-{{--                    <a class="btn btn-link" href="{{route('')}}">Loyiha</a>--}}
+                    <a class="btn btn-link" href="{{ route('blog') }}">Yangiliklar</a>
+                    <a class="btn btn-link" href="{{route('Services')}}">Xizmatlar</a>
+                    <a class="btn btn-link" href="{{route('portfolio')}}">Loyihalar</a>
+                    {{--                    <a class="btn btn-link" href="{{route('')}}">Loyiha</a>--}}
                     <a class="btn btn-link" href="{{route('contact')}}">Biz bilan bog'lanish</a>
-                    <a class="btn btn-link" href="">Karyera</a>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <h5 class="text-white mb-4">Loyiha galereyasi</h5>
@@ -131,8 +130,8 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Saytingiz nomi</a>, Barcha huquqlar himoyalangan.
-                        tomonidan ishlab chiqilgan<a class="border-bottom" href="http://amusoft.uz">AmuSoft</a>
+                        &copy; Barcha huquqlar himoyalangan.
+                        <a class="border-bottom" href="http://amusoft.uz">AmuSoft</a> tomonidan ishlab chiqilgan
                     </div>
                 </div>
             </div>

@@ -19,12 +19,12 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item n{{ $project->category->id }} wow zoomIn" data-wow-delay="0.{{ $projects->count() - $project->id + 1 }}s">
                     <div class="position-relative rounded overflow-hidden">
-                        <img class="img-fluid w-100" src="{{asset('assets/img/project/'.$project->img)}}" alt="">
+                        <img class="img-fluid" src="{{asset('assets/img/project/'.$project->img)}}" alt="" style="width: 400px; height: 200px;">
                         <div class="portfolio-overlay">
                             <a class="btn btn-light" href="{{asset('assets/img/project/'.$project->img)}}" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
                             <div class="mt-auto">
                                 <small class="text-white"><i class="fa fa-folder me-2"></i>{{ $project->category->name }}</small>
-                                <a class="h5 d-block text-white mt-1 mb-0" href="{{ $project->url }}">{{ $project->name }}</a>
+                                <a class="h5 d-block text-white mt-1 mb-0" target="_blank" href="{{ $project->url }}">{{ $project->name }}</a>
                             </div>
                         </div>
                     </div>

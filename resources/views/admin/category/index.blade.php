@@ -17,23 +17,25 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-hover text-center">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Титул</th>
+                            <th scope="col">Категория</th>
                             <th scope="col">Действие</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($categories as $category)
+                        @foreach($categories as $key => $category)
                             <tr>
-                                <td>{{$category->id}}</td>
+                                <td>{{$key+1}}</td>
                                 <td>{{$category->name}}</td>
                                 <td>
                                     <form action="{{ route('categories.destroy',[ 'category' => $category->id ]) }}" method="POST">
                                     <a class="btn btn-warning btn-sm" href="{{ route('categories.edit', ['category' => $category->id]) }}">
-                                        <i class="fa fa-pen"></i>
+                                        <span class="btn-label">
+                                            <i class="fa fa-pen"></i>
+                                        </span>
                                     </a>
                                      @csrf
                                      @method('DELETE')

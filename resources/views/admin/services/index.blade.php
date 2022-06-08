@@ -16,7 +16,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered text-center">
+                    <table class="table table-bordered text-center table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -28,9 +28,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($services as $service)
+                        @foreach($services as $key => $service)
                             <tr>
-                                <td class="col-1">{{$service->id}}</td>
+                                <td class="col-1">{{$key+1}}</td>
                                 <td>{{$service->title}}</td>
                                 <td>{{$service->description}}</td>
                                 <td>

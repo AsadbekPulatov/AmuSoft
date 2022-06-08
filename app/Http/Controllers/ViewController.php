@@ -65,7 +65,7 @@ class ViewController extends Controller
 //        $services = Service::OrderBy('id','DESC')->get();
         $blog= Post::OrderBy('id','DESC')->get();
         return view('w3soft.blog',[
-            'route' => 'blod',
+            'route' => 'blog',
             'projects' => $projects,
 //            'services' => $services,
             'blogs'=>$blog

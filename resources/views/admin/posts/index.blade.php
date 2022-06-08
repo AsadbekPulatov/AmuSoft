@@ -17,22 +17,22 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                        <table class="table table-bordered text-center">
+                        <table class="table table-bordered text-center table-hover">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Sarlavha</th>
-                            <th scope="col">Matn</th>
-                            <th scope="col">Rasm</th>
-                            <th scope="col">vaqt</th>
-                            <th scope="col">Ko'rildi</th>
-                            <th scope="col">Harakat</th>
+                            <th scope="col">Заголовок</th>
+                            <th scope="col">Описание</th>
+                            <th scope="col">Фото</th>
+                            <th scope="col">Время</th>
+                            <th scope="col">Посмотреть</th>
+                            <th scope="col">Действие</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($posts as $post)
+                        @foreach($posts as $key => $post)
                         <tr>
-                            <th scope="row" class="col-1">{{$post->id}}</th>
+                            <th scope="row" class="col-1">{{$key+1}}</th>
                             <td>{{$post->title}}</td>
                             <td>{{$post->description}}</td>
                             <td>
