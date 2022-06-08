@@ -47,8 +47,8 @@
     <div class="container-xxl position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-search me-2"></i>A<span class="fs-5">mu</span>S<span class="fs-5">oft</span></h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
+{{--                <h1 class="m-0"><i class="fa fa-search me-2"></i>A<span class="fs-5">mu</span>S<span class="fs-5">oft</span></h1>--}}
+               <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -82,7 +82,7 @@
     <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5 px-lg-5">
             <div class="row g-5">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                     <h5 class="text-white mb-4">Aloqa qilish</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>Urganch shahri Al-Xorazmiy ko'chasi 110-uy</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+998 977913883</p>
@@ -96,7 +96,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                     <h5 class="text-white mb-4">Ommabop havola</h5>
                     <a class="btn btn-link" href="{{route('about')}}">Biz haqimizda</a>
                     <a class="btn btn-link" href="{{ route('blog') }}">Yangiliklar</a>
@@ -105,18 +105,18 @@
                     {{--                    <a class="btn btn-link" href="{{route('')}}">Loyiha</a>--}}
                     <a class="btn btn-link" href="{{route('contact')}}">Biz bilan bog'lanish</a>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <h5 class="text-white mb-4">Loyiha galereyasi</h5>
-                    <div class="row g-2">
-                        @foreach($projects as $key => $project)
-                            @if($key > 5) @break @endif
-                            <div class="col-4">
-                                <img class="img-fluid" src="{{ asset('assets/img/project/'.$project->img) }}" alt="Image">
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
+{{--                <div class="col-md-6 col-lg-3">--}}
+{{--                    <h5 class="text-white mb-4">Loyiha galereyasi</h5>--}}
+{{--                    <div class="row g-2">--}}
+{{--                        @foreach($projects as $key => $project)--}}
+{{--                            @if($key > 5) @break @endif--}}
+{{--                            <div class="col-4">--}}
+{{--                                <img class="img-fluid" src="{{ asset('assets/img/project/'.$project->img) }}" alt="Image" style="height: 100px;">--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                <div class="col-md-6 col-lg-4">
                     <h5 class="text-white mb-4">Axborot byulleteni</h5>
                     <p>Biz bilan bog'laning</p>
                     <div class="position-relative w-100 mt-3">

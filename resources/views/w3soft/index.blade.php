@@ -57,7 +57,7 @@
                         <a class="btn btn-outline-primary btn-square me-3" href="https://facebook.com/bekmurodkhujamuratov"><i class="fab fa-facebook-f"></i></a>
                         {{--                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>--}}
                         <a class="btn btn-outline-primary btn-square me-3" href="https://instagram.com/bekmurodkhujamuratov"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-light me-3" style="font-size: 2rem" href="https://github.com/Bekmurod3388"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://github.com/Bekmurod3388"><i class="fab fa-github"></i></a>
                         <a class="btn btn-outline-primary btn-square me-3" href="https://t.me/Bekmurod3388"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>

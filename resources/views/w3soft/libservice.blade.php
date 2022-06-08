@@ -2,7 +2,7 @@
     <div class="container px-lg-5">
         <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
             {{--            <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>--}}
-            <h2 class="mt-2">Servislar</h2>
+            <h2 class="mt-2">Xizmatlar</h2>
         </div>
         {{--                            <i class="fa fa-home fa-2x"></i>--}}
         <div class="row g-4">

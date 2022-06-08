@@ -17,7 +17,7 @@
 
                                 <h5 class="mt-3 " style="color: white">{{$blog->title}}</h5>
                                                         <p  style="color: white">{{$blog->description}}</p>
-                                <a class="mt-5 blogs" style="background: white;width: 30%;padding: 4%;border-radius: 50%;"  href="">Ko'rish</a>
+                                <a class="mt-5 blogs" style="background: white;width: 100%; padding: 2%;border-radius: 10%;"  href="">Ko'rish</a>
 
                             </div>
 {{--                            <a class="mt-5 " style="background: green;width: 30%;padding: 2%;border-radius: 50%"  href="">Ko'rish</a>--}}
