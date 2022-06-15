@@ -71,4 +71,15 @@ class ViewController extends Controller
             'blogs'=>$blog
         ]);
     }
+
+    public function singlepage(Request $request){
+        $id = $request->id;
+//        dd($id);
+        $posts = Post::find($id);
+//        dd($posts);
+        return view('w3soft.singlepage',[
+            'route' => 'singlepage',
+            'posts' => $posts,
+        ]);
+    }
 }
