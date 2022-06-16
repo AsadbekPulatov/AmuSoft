@@ -18,5 +18,5 @@
             <img src="{{asset('assets/img/post/'.$posts->img)}}" style="width: 500px">
         </div>
     </div>
-
+    </div>
 @endsection
