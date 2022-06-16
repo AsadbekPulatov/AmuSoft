@@ -71,4 +71,15 @@ class ViewController extends Controller
             'blogs'=>$blog
         ]);
     }
+    public function course(){
+        $projects = Project::OrderBy('id', 'DESC')->get();
+//        $services = Service::OrderBy('id','DESC')->get();
+        $blog= Post::OrderBy('id','DESC')->get();
+        return view('w3soft.course',[
+            'route' => 'course',
+            'projects' => $projects,
+//            'services' => $services,
+            'blogs'=>$blog
+        ]);
+    }
 }

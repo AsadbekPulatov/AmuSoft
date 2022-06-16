@@ -44,6 +44,12 @@
                         <p>Категория</p>
                     </a>
                 </li>
+                <li class="nav-item {{  request()->routeIs('courses.index') ? 'active' : '' }}">
+                    <a href="{{route('courses.index')}}">
+                        <i class="fas fa-folder-open"></i>
+                        <p>Курсы</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

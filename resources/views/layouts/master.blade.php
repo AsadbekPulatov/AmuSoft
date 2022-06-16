@@ -59,6 +59,7 @@
                     <a href="{{ route('blog') }}" class="nav-item nav-link @if($route=='blog') active @endif"><b>Yangiliklar</b></a>
                     <a href="{{ route('Services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmatlar</b></a>
                     <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Loyihalar</b></a>
+                    <a href="{{ route('course') }}" class="nav-item nav-link @if($route=='course') active @endif"><b>Kurslar</b></a>
                     <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Biz haqimizda</b></a>
                     <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Bog'lanish</b></a>
                 </div>

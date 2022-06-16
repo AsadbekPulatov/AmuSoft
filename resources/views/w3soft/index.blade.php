@@ -4,7 +4,7 @@
         <h1 class="text-white mb-4 animated zoomIn">Hammasi bitta SEO vositasida biznesingizni jadal rivojlantirish uchun kerak</h1>
         <p class="text-white pb-3 animated zoomIn">Biz bilan samarali hamkorlikda sifatli loyihalar</p>
 
-        <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free Quote</a>
+        <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Bepul takliflar</a>
      <a href=" {{route('contact')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Aloqa</a>
 
     </div>
@@ -30,7 +30,6 @@
         </div>
     </div>
     <!-- Full Screen Search End -->
-
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -100,7 +99,7 @@
 
 
     <!-- Testimonial Start -->
-    @include('w3soft.testimonial')
+{{--    @include('w3soft.testimonial')--}}
     <!-- Testimonial End -->
 
 

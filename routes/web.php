@@ -7,6 +7,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\MassageController;
+use App\Http\Controllers\CourseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,7 @@ Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio'
 Route::get('/Services', [ViewController::class, 'services'])->name('Services');
 Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
 Route::get('/blog', [ViewController::class, 'blog'])->name('blog');
+Route::get('/course', [ViewController::class, 'course'])->name('course');
 //Route::get('/blog', function () {
 //    return view('w3soft.blog',[
 //        'route' => 'blog'
@@ -50,3 +52,4 @@ Route::resource('projects', ProjectController::class)->middleware('auth');
 Route::resource('abouts',AboutController::class)->middleware('auth');
 Route::resource('massage',MassageController::class);
 Route::resource('services',\App\Http\Controllers\ServiceController::class)->middleware('auth');
+Route::resource('courses', CourseController::class)->middleware('auth');
