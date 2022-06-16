@@ -119,7 +119,7 @@ class AboutController extends Controller
         $path="assets/img/about_img/";
         $request->image->move($path,$img);
 
-       $about->update([
+        $about->update([
             'facebook'=>$request['facebook'],
             'email'=>$request['email'],
             'instagram'=>$request['instagram'],

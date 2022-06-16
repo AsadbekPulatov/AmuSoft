@@ -20,7 +20,6 @@
                         </div>
                     @endif
 
-
                     <form action="{{route('abouts.store')}}" method="POST" accept-charset="UTF-8"
                           enctype="multipart/form-data">
                         @csrf
@@ -31,7 +30,7 @@
 
                         <div class="form-group">
                             <label for="twitter">Mail</label>
-                            <input class="form-control" type="email" name="email" id="twitter" rows="10">
+                            <input class="form-control" type="text" name="email" id="twitter" rows="10">
                         </div>
                         <div class="form-group">
                             <label for="instagram">Instagram</label>
