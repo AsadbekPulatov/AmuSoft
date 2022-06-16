@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -35,7 +36,8 @@
 <body>
 <div class="container-xxl bg-white p-0">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Yuklanmoqda...</span>
         </div>
@@ -47,23 +49,27 @@
     <div class="container-xxl position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
-{{--                <h1 class="m-0"><i class="fa fa-search me-2"></i>A<span class="fs-5">mu</span>S<span class="fs-5">oft</span></h1>--}}
-               <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo">
+                {{--                <h1 class="m-0"><i class="fa fa-search me-2"></i>A<span class="fs-5">mu</span>S<span class="fs-5">oft</span></h1>--}}
+                <img src="{{ asset('assets/img/logo.svg') }}" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Bosh sahifa</b></a>
+                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Bosh
+                            sahifa</b></a>
                     <a href="{{ route('blog') }}" class="nav-item nav-link @if($route=='blog') active @endif"><b>Yangiliklar</b></a>
-                    <a href="{{ route('Services') }}" class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmatlar</b></a>
+                    <a href="{{ route('Services') }}"
+                       class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmatlar</b></a>
                     <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Loyihalar</b></a>
                     <a href="{{ route('course') }}" class="nav-item nav-link @if($route=='course') active @endif"><b>Kurslar</b></a>
-                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Biz haqimizda</b></a>
+                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Biz
+                            haqimizda</b></a>
                     <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Bog'lanish</b></a>
                 </div>
-                <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"
+                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
             </div>
         </nav>
         <div class="container-xxl py-5 bg-primary hero-header mb-5">
@@ -79,7 +85,7 @@
 
     @yield('content')
 
-<!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5 px-lg-5">
             <div class="row g-5">
@@ -89,41 +95,33 @@
                     <p><i class="fa fa-phone-alt me-3"></i>+998 977913883</p>
                     <p><i class="fa fa-envelope me-3"></i>AmuSoft@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://github.com/Bekmurod3388"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://facebook.com/bekmurodkhujamuratov"><i class="fab fa-facebook-f"></i></a>
-{{--                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>--}}
-                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/bekmurodkhujamuratov"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://t.me/Bekmurod3388"><i class="fab fa-telegram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/Bekmurod3388"><i
+                                class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://facebook.com/bekmurodkhujamuratov"><i
+                                class="fab fa-facebook-f"></i></a>
+                        {{--                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>--}}
+                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/bekmurodkhujamuratov"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/Bekmurod3388"><i
+                                class="fab fa-telegram"></i></a>
 
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-2">
                     <h5 class="text-white mb-4">Ommabop havola</h5>
                     <a class="btn btn-link" href="{{route('about')}}">Biz haqimizda</a>
                     <a class="btn btn-link" href="{{ route('blog') }}">Yangiliklar</a>
                     <a class="btn btn-link" href="{{route('Services')}}">Xizmatlar</a>
                     <a class="btn btn-link" href="{{route('portfolio')}}">Loyihalar</a>
-                    {{--                    <a class="btn btn-link" href="{{route('')}}">Loyiha</a>--}}
+                    <a class="btn btn-link" href="{{route('course')}}">Kurslar</a>
                     <a class="btn btn-link" href="{{route('contact')}}">Biz bilan bog'lanish</a>
                 </div>
-{{--                <div class="col-md-6 col-lg-3">--}}
-{{--                    <h5 class="text-white mb-4">Loyiha galereyasi</h5>--}}
-{{--                    <div class="row g-2">--}}
-{{--                        @foreach($projects as $key => $project)--}}
-{{--                            @if($key > 5) @break @endif--}}
-{{--                            <div class="col-4">--}}
-{{--                                <img class="img-fluid" src="{{ asset('assets/img/project/'.$project->img) }}" alt="Image" style="height: 100px;">--}}
-{{--                            </div>--}}
-{{--                        @endforeach--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-                <div class="col-md-6 col-lg-4">
-                    <h5 class="text-white mb-4">Axborot byulleteni</h5>
-                    <p>Biz bilan bog'laning</p>
-                    <div class="position-relative w-100 mt-3">
-{{--                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Emailingiz" style="height: 48px;">--}}
-                    <a href="{{route('contact')}}" class="btn btn-link">Aloqa</a>
-                       </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.9423360673563!2d60.629394215036505!3d41.57049259258736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfcec63d012a49%3A0xa2280e571ee2fa3e!2z0KPRgNCz0LXQvdGH0YHQutC40Lkg0YTQuNC70LjQsNC7INCi0LDRiNC60LXQvdGC0YHQutC-0LPQviDRg9C90LjQstC10YDRgdC40YLQtdGC0LAg0LjQvdGE0L7RgNC80LDRhtC40L7QvdC90YvRhSDRgtC10YXQvdC-0LvQvtCz0LjQuSDQuNC80LXQvdC4INCc0YPRhdCw0LzQvNCw0LTQsCDQkNC70Ywt0KXQvtGA0LXQt9C80Lg!5e0!3m2!1sru!2s!4v1655407533276!5m2!1sru!2s"
+                        width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -139,7 +137,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>

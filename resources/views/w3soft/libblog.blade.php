@@ -16,7 +16,7 @@
                             <div class="mt-auto">
 
                                 <h5 class="mt-3 " style="color: white">{{$blog->title}}</h5>
-                                                        <p  style="color: white">{{$blog->description}}</p>
+                                                        <p  style="color: white">{{ \Illuminate\Support\Str::limit($blog->description, 50, '...')  }}</p>
                                 <a class="mt-5 blogs" style="background: white;width: 100%; padding: 2%;border-radius: 10%;"  href="{{route('singlepage',['id'=>$blog->id])}}">Ko'rish</a>
 
                             </div>

@@ -54,3 +54,4 @@ Route::resource('abouts',AboutController::class)->middleware('auth');
 Route::resource('massage',MassageController::class);
 Route::resource('services',\App\Http\Controllers\ServiceController::class)->middleware('auth');
 Route::resource('courses', CourseController::class)->middleware('auth');
+Route::resource('bookings', \App\Http\Controllers\BookingController::class);

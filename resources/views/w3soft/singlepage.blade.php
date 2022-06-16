@@ -6,7 +6,7 @@
     </div>
 @endsection
 @section('content')
-    <div class="col-lg-4 col-md-6 portfolio-item container  wow zoomIn" data-wow-delay="0.1s" >
+    <div class="col-lg-10 col-md-10 portfolio-item container  wow zoomIn" data-wow-delay="0.1s">
         <div class="row">
             <div class="col-md-6 ">
                 <h1 class="pt-3">{{$posts->title}}</h1>
@@ -14,9 +14,9 @@
                 <p class="mt-3">{{$posts->description}}</p>
             </div>
 
-        <div class="col-md-6">
-            <img src="{{asset('assets/img/post/'.$posts->img)}}" style="width: 500px">
+            <div class="col-md-6">
+                <img src="{{asset('assets/img/post/'.$posts->img)}}" class="h-100" style="width: 500px">
+            </div>
         </div>
-    </div>
     </div>
 @endsection

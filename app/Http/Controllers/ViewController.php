@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Category;
+use App\Models\Course;
 use App\Models\Post;
 use App\Models\Project;
 use App\Models\Service;
@@ -72,14 +73,11 @@ class ViewController extends Controller
         ]);
     }
     public function course(){
-        $projects = Project::OrderBy('id', 'DESC')->get();
-//        $services = Service::OrderBy('id','DESC')->get();
-        $blog= Post::OrderBy('id','DESC')->get();
+        $courses = Course::OrderBy('id', 'DESC')->get();
         return view('w3soft.course',[
             'route' => 'course',
-            'projects' => $projects,
-//            'services' => $services,
-            'blogs'=>$blog
+            'courses' => $courses,
+//            'services' => $services
         ]);
     }
 

@@ -50,6 +50,12 @@
                         <p>Курсы</p>
                     </a>
                 </li>
+                <li class="nav-item {{  request()->routeIs('bookings.index') ? 'active' : '' }}">
+                    <a href="{{route('bookings.index')}}">
+                        <i class="fas fa-folder-open"></i>
+                        <p>Бронировать</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
