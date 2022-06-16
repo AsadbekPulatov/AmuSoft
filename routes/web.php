@@ -25,6 +25,7 @@ Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio'
 Route::get('/Services', [ViewController::class, 'services'])->name('Services');
 Route::get('/contact', [ViewController::class, 'contact'])->name('contact');
 Route::get('/blog', [ViewController::class, 'blog'])->name('blog');
+Route::get('/singlepage/{id?}', [ViewController::class, 'singlepage'])->name('singlepage');
 Route::get('/course', [ViewController::class, 'course'])->name('course');
 //Route::get('/blog', function () {
 //    return view('w3soft.blog',[
