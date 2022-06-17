@@ -71,8 +71,8 @@
         <div class="container px-lg-5">
             <div class="row align-items-center" style="height: 250px;">
                 <div class="col-12 col-md-6">
-                    <h3 class="text-white">Boshlash uchun tayyor</h3>
-                    <small class="text-white"> Faqat siz uchun.</small>
+                    <h3 class="text-white">Professional jamoamiz bilan bir qadam oldindasiz</h3>
+{{--                    <small class="text-white"> Faqat siz uchun.</small>--}}
                 </div>
                 <div class="col-md-6 text-center mb-n5 d-none d-md-block">
                     <img class="img-fluid mt-5" style="height: 250px;" src="{{asset('assets/img/newsletter.png')}}">
