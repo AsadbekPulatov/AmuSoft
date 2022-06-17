@@ -33,8 +33,8 @@
                         @foreach($posts as $key => $post)
                         <tr>
                             <th scope="row" class="col-1">{{$key+1}}</th>
-                            <td>{{$post->title}}</td>
-                            <td>{{$post->description}}</td>
+                            <td>{{$post->title_uz}}</td>
+                            <td>{{$post->description_uz}}</td>
                             <td>
                                 <img src="{{ asset('assets/img/post/'.$post->img) }}" alt="" class="text-center w-50">
                             </td>

@@ -31,8 +31,8 @@
                         @foreach($services as $key => $service)
                             <tr>
                                 <td class="col-1">{{$key+1}}</td>
-                                <td>{{$service->title}}</td>
-                                <td>{{$service->description}}</td>
+                                <td>{{$service->title_uz}}</td>
+                                <td>{{$service->description_uz}}</td>
                                 <td>
                                     <img src="{{asset('assets/img/service/' . $service->img)}}" style="width: 30%" alt="">
                                 </td>

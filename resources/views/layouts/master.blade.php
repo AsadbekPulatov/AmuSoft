@@ -93,7 +93,7 @@
                     <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>
                         @if( $lang == 'uz')    Bog'lanish  @endif
                         @if( $lang == 'ru')    Связь  @endif
-                        @if( $lang == 'en')    Connection  @endif
+                        @if( $lang == 'en')    Contact  @endif
                         </b></a>
                     <div class="dropdown">
 

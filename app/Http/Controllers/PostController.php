@@ -45,8 +45,12 @@ class PostController extends Controller
         $id++;
 
         $post = $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'title_uz' => 'required',
+            'description_uz' => 'required',
+            'title_ru' => 'required',
+            'description_ru' => 'required',
+            'title_en' => 'required',
+            'description_en' => 'required',
             'img' => 'required|image|mimes:jpg,jpeg,png,gif'
         ]);
 
@@ -56,8 +60,12 @@ class PostController extends Controller
 
 
         Post::create([
-            'title'=>$request['title'],
-            'description'=>$request['description'],
+            'title_uz'=>$request['title_uz'],
+            'description_uz'=>$request['description_uz'],
+            'title_ru'=>$request['title_ru'],
+            'description_ru'=>$request['description_ru'],
+            'title_en'=>$request['title_en'],
+            'description_en'=>$request['description_en'],
             'img'=>$img
         ]);
             return redirect()->route('posts.index');
@@ -84,7 +92,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('admin.posts.edit',['posts'=>$post]);
+        return view('admin.posts.edit',[
+            'posts'=>$post
+        ]);
     }
 
     /**
@@ -109,8 +119,12 @@ class PostController extends Controller
 //           'img'=>$img
 //       ]);
        $post->update([
-           'title'=>$request['title'],
-           'description'=>$request['description'],
+           'title_uz'=>$request['title_uz'],
+           'description_uz'=>$request['description_uz'],
+           'title_ru'=>$request['title_ru'],
+           'description_ru'=>$request['description_ru'],
+           'title_en'=>$request['title_en'],
+           'description_en'=>$request['description_en'],
            'img'=>$img
        ]);
        return  redirect()->route('posts.index');
