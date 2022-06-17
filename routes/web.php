@@ -19,6 +19,12 @@ use App\Http\Controllers\CourseController;
 |
 */
 
+
+//Localisation
+
+Route::get('locale/{lang}',[\App\Http\Controllers\LocalizationController::class,'setLang']);
+
+
 Route::get('/', [ViewController::class, 'home'])->name('index');
 Route::get('/about', [ViewController::class,'about'])->name('about');
 Route::get('/portfolio', [ViewController::class, 'portfolio'])->name('portfolio');

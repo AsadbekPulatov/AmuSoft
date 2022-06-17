@@ -9,7 +9,8 @@
                 <ul class="list-inline mb-5" id="portfolio-flters">
                     <li class="btn px-3 pe-4 active" data-filter="*">Hammasi</li>
                     @foreach($categories as $category)
-                        <li class="btn px-3 pe-4" data-filter=".n{{ $category->id }}">{{ $category->name }}</li>
+                        <li class="btn px-3 pe-4" data-filter=".n{{ $category->id }}">
+                            {{ $category->name }}</li>
                     @endforeach
                 </ul>
             </div>
