@@ -176,7 +176,10 @@
         <script>
             Swal.fire({
                 icon: 'success',
-                text: 'Muvaffaqqiyatli bajarildi',
+                @if($lang=='uz') text: 'Kursga yozilish', @endif
+                    @if($lang=='ru') text: 'Записаться на курс', @endif
+                    @if($lang=='en') text: 'Writing in to course', @endif
+                // text: 'Muvaffaqqiyatli bajarildi',
                 confirmButtonText: 'Continue',
             })
         </script>
