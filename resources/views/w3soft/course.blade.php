@@ -117,12 +117,12 @@
                 </div>
                 <div class="card col-7">
                     <div class="card-header d-flex ">
-                        {{$course->category_id}}
+                        {{$course->category->name}}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title"> {{ $course->name }} </h5>
                         <p class="card-text">{{ $course->text }}</p>
-                        <p class="card-text"><b>O'qituvchilar:</b>{{ $course->teacher_id }}</p>
+                        <p class="card-text"><b>O'qituvchilar:</b>{{ $course->teacher->name }}</p>
                         <p class="card-text"><b>Narxi:</b> {{ $course->price }}</p>
                         <p class="card-text"><b>Davomiyligi:</b> {{ $course->time }}</p>
                         <button onclick="store({{ $course->id }})" class="btn btn-primary">Kursga yozilish</button>
