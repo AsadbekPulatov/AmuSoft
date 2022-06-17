@@ -1,7 +1,11 @@
 @extends('layouts.master')
 @section('hero')
     <div class="col-12 text-center">
-        <h1 class="text-white animated zoomIn">Xizmatlar</h1>
+        <h1 class="text-white animated zoomIn">
+            @if( $lang == 'uz')  Xizmatlar  @endif
+            @if( $lang == 'ru')  Сервисы  @endif
+            @if( $lang == 'en')  Services  @endif
+        </h1>
         <hr class="bg-white mx-auto mt-0" style="width: 90px;">
     </div>
 @endsection

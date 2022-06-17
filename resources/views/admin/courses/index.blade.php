@@ -34,8 +34,8 @@
                         @foreach($courses as $key => $course)
                             <tr>
                                 <td class="col-1">{{$key+1}}</td>
-                                <td>{{$course->name}}</td>
-                                <td>{{$course->text}}</td>
+                                <td>{{$course->name_uz}}</td>
+                                <td>{{$course->text_uz}}</td>
                                 <td>{{$course->teacher_id}}</td>
                                 <td>{{$course->category_id}}</td>
                                 <td>{{$course->price}}</td>

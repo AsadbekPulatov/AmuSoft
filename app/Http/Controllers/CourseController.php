@@ -58,8 +58,12 @@ class CourseController extends Controller
         $request->img->move($path,$img);
 
         $course = new Course();
-        $course['name']=$request['name'];
-        $course['text']=$request['text'];
+        $course['name_uz']=$request['name_uz'];
+        $course['text_uz']=$request['text_uz'];
+        $course['name_ru']=$request['name_ru'];
+        $course['text_ru']=$request['text_ru'];
+        $course['name_en']=$request['name_en'];
+        $course['text_en']=$request['text_en'];
         $course['teacher_id']=$request['teacher_id'];
         $course['category_id']=$request['category_id'];
         $course['price']=$request['price'];
@@ -112,8 +116,12 @@ class CourseController extends Controller
         $request->img->move($path,$img);
 
         $course = Course::find($id);
-        $course['name']=$request['name'];
-        $course['text']=$request['text'];
+        $course['name_uz']=$request['name_uz'];
+        $course['text_uz']=$request['text_uz'];
+        $course['name_ru']=$request['name_ru'];
+        $course['text_ru']=$request['text_ru'];
+        $course['name_en']=$request['name_en'];
+        $course['text_en']=$request['text_en'];
         $course['teacher_id']=$request['teacher_id'];
         $course['category_id']=$request['category_id'];
         $course['price']=$request['price'];

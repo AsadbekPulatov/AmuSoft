@@ -24,8 +24,12 @@ class SaveServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'description' => 'required',
+            'title_uz' => 'required',
+            'description_uz' => 'required',
+            'title_ru' => 'required',
+            'description_ru' => 'required',
+            'title_en' => 'required',
+            'description_en' => 'required',
             'img' => 'image',
         ];
     }

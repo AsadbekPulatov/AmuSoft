@@ -1,7 +1,11 @@
 @extends('layouts.master')
 @section('hero')
     <div class="col-12 text-center">
-        <h1 class="text-white animated zoomIn">Kurslar</h1>
+        <h1 class="text-white animated zoomIn">
+            @if($lang=='uz') Kurslar @endif
+            @if($lang=='ru') Курсы @endif
+            @if($lang=='en') Courses @endif
+        </h1>
         <hr class="bg-white mx-auto mt-0" style="width: 90px;">
     </div>
 @endsection
@@ -63,23 +67,43 @@
                     @csrf
                     <input type="hidden" name="course_id" id="course_id">
                     <div class="form-group">
-                        <label for="name">Ism: </label>
-                        <input type="text" name="name" class="form-control mb-3" id="name" placeholder="Ism" required>
+                        <label for="name">
+                           @if($lang=='uz')  Ism: @endif
+                           @if($lang=='ru')  Имя: @endif
+                           @if($lang=='en') Name: @endif
+                        </label>
+                        <input type="text" name="name" class="form-control mb-3" id="name"  required>
                     </div>
                     <div class="form-group">
-                        <label for="surname">Familiya: </label>
-                        <input type="text" name="surname" class="form-control mb-3" id="surname" placeholder="Familiya" required>
+                        <label for="surname">
+                            @if($lang=='uz')  Familiya: @endif
+                            @if($lang=='ru')  Фамилия: @endif
+                            @if($lang=='en')  Surname: @endif
+                        </label>
+                        <input type="text" name="surname" class="form-control mb-3" id="surname"  required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email: </label>
-                        <input type="text" name="email" class="form-control mb-3" id="email" placeholder="Email" required>
+                        <label for="email">
+                            @if($lang=='uz')  Email: @endif
+                            @if($lang=='ru')  Эл. адрес: @endif
+                            @if($lang=='en')  Email: @endif
+                        </label>
+                        <input type="text" name="email" class="form-control mb-3" id="email"  required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Tel raqami: </label>
-                        <input type="text" name="phone" class="form-control mb-3" id="phone" placeholder="Tel raqami" required>
+                        <label for="phone">
+                            @if($lang=='uz')  Tel_raqam: @endif
+                            @if($lang=='ru')  Номер телефона: @endif
+                            @if($lang=='en')  Phone number: @endif
+                        </label>
+                        <input type="text" name="phone" class="form-control mb-3" id="phone"  required>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Saqlash</button>
+                        <button type="submit" class="btn btn-primary">
+                            @if($lang=='uz')  Saqlash @endif
+                            @if($lang=='ru')  Сохранять @endif
+                            @if($lang=='en')  Save @endif
+                        </button>
                     </div>
                 </form>
             </div>
@@ -122,10 +146,26 @@
                     <div class="card-body">
                         <h5 class="card-title"> {{ $course->name }} </h5>
                         <p class="card-text">{{ $course->text }}</p>
-                        <p class="card-text"><b>O'qituvchilar:</b>{{ $course->teacher->name }}</p>
-                        <p class="card-text"><b>Narxi:</b> {{ $course->price }}</p>
-                        <p class="card-text"><b>Davomiyligi:</b> {{ $course->time }}</p>
-                        <button onclick="store({{ $course->id }})" class="btn btn-primary">Kursga yozilish</button>
+                        <p class="card-text"><b>
+                                @if($lang=='uz')  O'qituvchilar: @endif
+                                @if($lang=='ru')  Учителя: @endif
+                                @if($lang=='en')  Teachers: @endif
+                            </b>{{ $course->teacher->name }}</p>
+                        <p class="card-text"><b>
+                                @if($lang=='uz')  Narxi: @endif
+                                @if($lang=='ru')  Цена: @endif
+                                @if($lang=='en')  Price:: @endif
+                            </b> {{ $course->price }}</p>
+                        <p class="card-text"><b>
+                                @if($lang=='uz')  Davomiyligi: @endif
+                                @if($lang=='ru')  Продолжительность: @endif
+                                @if($lang=='en')  Time: @endif
+                            </b> {{ $course->time }}</p>
+                        <button onclick="store({{ $course->id }})" class="btn btn-primary">
+                            @if($lang=='uz')   Kursga yozilish @endif
+                            @if($lang=='ru')  Записаться на курс @endif
+                            @if($lang=='en')  Writing in to course @endif
+                        </button>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,6 @@ class Service extends Model
 {
     use HasFactory, SoftDeletes;
     protected $fillable = [
-        'title','description','img'
+        'title_uz','description_uz','title_ru','description_ru','title_en','description_en','img'
     ];
 }

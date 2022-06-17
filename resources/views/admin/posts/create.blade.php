@@ -52,6 +52,7 @@
                             <label for="description">Текст(EN)</label>
                             <textarea class="form-control" name="description_en"  id="description" rows="10">{{old('description_en')}}</textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="img">Добавьте рисунок </label>
                             <input type="file" name="img" class="form-control" id="img">

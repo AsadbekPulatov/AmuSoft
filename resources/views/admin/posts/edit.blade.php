@@ -21,7 +21,8 @@
                     @endif
 
 
-                    <form action="{{route('posts.update',$posts)}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+                    <form action="{{route('posts.update',$posts)}}" method="POST" accept-charset="UTF-8"
+                          enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                     <div class="form-group">
@@ -54,10 +55,10 @@
 
                         <div class="form-group">
                             <label for="img">Добавьте рисунок <b><i>РАЗМЕР РИСУНОК:(600x300)</i></b></label>
-                        <input type="file" name="img" class="form-control" id="img">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Сохранить</button>
-                    <input type="reset" class="btn btn-danger" value="Очистить">
+                            <input type="file" name="img" class="form-control" id="img">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                        <input type="reset" class="btn btn-danger" value="Очистить">
                     </form>
                 </div>
             </div>
