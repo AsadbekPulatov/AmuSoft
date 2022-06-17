@@ -28,13 +28,29 @@
                             @method('PUT')
                         @endif
                         <div class="form-group">
-                            <label for="title">Сервис</label>
-                            <input type="text" name="title" class="form-control" id="title" placeholder="Сервис" value="{{$service->title}}">
+                            <label for="title_uz">Сервис UZ</label>
+                            <input type="text" name="title_uz" class="form-control" id="title_uz" placeholder="Сервис UZ" value="{{$service->title_uz}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Oписание UZ</label>
+                            <textarea name="description_uz" class="form-control" id="description" placeholder="Oписание UZ" rows="10">{{$service->description_uz}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="title_ru">Сервис RU</label>
+                            <input type="text" name="title_ru" class="form-control" id="title_ru" placeholder="Сервис ru" value="{{$service->title_ru}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Oписание RU</label>
+                            <textarea name="description_ru" class="form-control" id="description" placeholder="Oписание RU" rows="10">{{$service->description_ru}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Сервис EN</label>
+                            <input type="text" name="title_en" class="form-control" id="title_en" placeholder="Сервис en" value="{{$service->title_en}}">
                         </div>
 
                         <div class="form-group">
-                            <label for="description">Oписание</label>
-                            <textarea name="description" class="form-control" id="description" placeholder="Oписание" rows="10">{{$service->description}}</textarea>
+                            <label for="description">Oписание EN</label>
+                            <textarea name="description_en" class="form-control" id="description" placeholder="Oписание EN" rows="10">{{$service->description_en}}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -50,3 +66,4 @@
         </div>
     </div>
 @endsection
+

@@ -25,14 +25,35 @@
                           enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="header_ru">Титу</label>
-                            <input type="text" name="title" class="form-control" id="header_ru" placeholder="Титул">
+                            <label for="header">Титу UZ</label>
+                            <input type="text" name="title_uz" class="form-control" id="header" placeholder="Титул UZ" >
                         </div>
 
                         <div class="form-group">
-                            <label for="description">Текст</label>
-                            <textarea class="form-control" name="description" id="description" rows="10"></textarea>
+                            <label for="description">Текст UZ</label>
+                            <textarea class="form-control" name="description_uz" id="description" rows="10"></textarea>
                         </div>
+
+                        <div class="form-group">
+                            <label for="header">Титу RU</label>
+                            <input type="text" name="title_ru" class="form-control" id="header_ru" placeholder="Титул RU" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Текст RU</label>
+                            <textarea class="form-control" name="description_ru" id="description" rows="10"  ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="header_ru">Титу EN</label>
+                            <input type="text" name="title_en" class="form-control" id="header" placeholder="Титул EN" >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Текст EN</label>
+                            <textarea class="form-control" name="description_en" id="description" rows="10"></textarea>
+                        </div>
+
 
                         <div class="form-group">
                             <label for="img">Добавьте рисунок </label>
