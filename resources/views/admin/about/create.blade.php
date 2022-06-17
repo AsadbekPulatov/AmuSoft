@@ -20,33 +20,34 @@
                         </div>
                     @endif
 
+
                     <form action="{{route('abouts.store')}}" method="POST" accept-charset="UTF-8"
                           enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="facebook">Facebook</label>
-                            <input type="text" name="facebook" class="form-control" id="facebook" >
+                            <input type="text" name="facebook" class="form-control" value="{{old('facebook')}}" id="facebook" >
                         </div>
 
                         <div class="form-group">
                             <label for="twitter">Mail</label>
-                            <input class="form-control" type="text" name="email" id="twitter" rows="10">
+                            <input class="form-control" type="text" name="email" id="twitter" value="{{old('email')}}" rows="10">
                         </div>
                         <div class="form-group">
                             <label for="instagram">Instagram</label>
-                            <input class="form-control" type="text" name="instagram" id="instagram" rows="10">
+                            <input class="form-control" type="text" name="instagram" value="{{old('instagram')}}" id="instagram" rows="10">
                         </div>
                         <div class="form-group">
                             <label for="Telegram">Telegram</label>
-                            <input class="form-control" name="telegram" type="text" id="Telegram" rows="10">
+                            <input class="form-control" name="telegram" type="text" value="{{old('telegram')}}" id="Telegram" rows="10">
                         </div>
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input class="form-control" name="name"  type="text" id="name" rows="10">
+                            <input class="form-control" name="name" value="{{old('name')}}"  type="text" id="name" rows="10">
                         </div>
                         <div class="form-group">
                             <label for="lavozim">Kasbi</label>
-                            <input class="form-control" name="position" type="text" id="lavozim" rows="10">
+                            <input class="form-control" name="position"  value="{{old('position')}}"  type="text" id="lavozim" rows="10">
                         </div>
 
                         <div class="form-group">

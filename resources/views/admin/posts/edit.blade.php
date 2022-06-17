@@ -25,40 +25,34 @@
                           enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
+                    <div class="form-group">
+                        <label for="header_ru">Титул(UZ)</label>
+                        <input type="text" name="title_uz" class="form-control" id="header_ru" placeholder="Титул UZ" value="{{$posts->title_uz}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description_ru">Текст (UZ)</label>
+                        <textarea  class="form-control"  name="description_uz" id="description_ru" rows="10">{{$posts->description_uz}}</textarea>
+                    </div>
                         <div class="form-group">
-                            <label for="title_uz">Титул(UZ)</label>
-                            <input type="text" name="title_uz" class="form-control" id="title_uz" placeholder="Титул(UZ)"
-                                   value="{{$posts->title_uz}}">
+                            <label for="header_ru">Титул(Ру)</label>
+                            <input type="text" name="title_ru" class="form-control" id="header_ru" placeholder="Титул RU" value="{{$posts->title_ru}}">
                         </div>
 
                         <div class="form-group">
-                            <label for="description_ru">Текст (UZ)</label>
-                            <textarea class="form-control" name="description_uz" id="description_uz"
-                                      rows="10">{{$posts->description_uz}}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="header_ru">Титул(RU)</label>
-                            <input type="text" name="title_ru" class="form-control" id="header_ru" placeholder="Титул"
-                                   value="{{$posts->title_ru}}">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="description_ru">Текст (RU)</label>
-                            <textarea class="form-control" name="description_ru" id="description_ru"
-                                      rows="10">{{$posts->description_ru}}</textarea>
+                            <label for="description_ru">Текст (Ру)</label>
+                            <textarea  class="form-control"  name="description_ru" id="description_ru" rows="10">{{$posts->description_ru}}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="header_ru">Титул(EN)</label>
-                            <input type="text" name="title_en" class="form-control" id="header_ru" placeholder="Титул EN"
-                                   value="{{$posts->title_en}}">
+                            <input type="text" name="title_en" class="form-control" id="header_ru" placeholder="Титул EN" value="{{$posts->title_en}}">
                         </div>
 
                         <div class="form-group">
                             <label for="description_ru">Текст (EN)</label>
-                            <textarea class="form-control" name="description_en" id="description_en"
-                                      rows="10">{{$posts->description_en}}</textarea>
+                            <textarea  class="form-control"  name="description_en"  id="description_ru" rows="10">{{$posts->description_en}}</textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="img">Добавьте рисунок <b><i>РАЗМЕР РИСУНОК:(600x300)</i></b></label>
                             <input type="file" name="img" class="form-control" id="img">
