@@ -24,8 +24,12 @@ class CourseRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'text' => 'required',
+            'name_uz' => 'required',
+            'text_uz' => 'required',
+            'name_ru' => 'required',
+            'text_ru' => 'required',
+            'name_en' => 'required',
+            'text_en' => 'required',
             'teacher_id' => 'required',
             'category_id' => 'required',
             'price' => 'required',

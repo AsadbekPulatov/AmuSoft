@@ -28,13 +28,33 @@
                             @method('PUT')
                         @endif
                         <div class="form-group">
-                            <label for="name">Имя</label>
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Имя" value="{{$course->name}}">
+                            <label for="name_uz">Имя(UZ)</label>
+                            <input type="text" name="name_uz" class="form-control" id="name_uz" placeholder="Имя(UZ)" value="{{$course->name_uz}}">
                         </div>
 
                         <div class="form-group">
-                            <label for="text">Текст</label>
-                            <input type="text" name="text" class="form-control" id="text" placeholder="Текст" value="{{$course->text}}">
+                            <label for="text_uz">Текст(UZ)</label>
+                            <input type="text" name="text_uz" class="form-control" id="text_uz" placeholder="Текст(UZ)" value="{{$course->text_uz}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name_ru">Имя(RU)</label>
+                            <input type="text" name="name_ru" class="form-control" id="name_ru" placeholder="Имя(RU)" value="{{$course->name_ru}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text_ru">Текст(RU)</label>
+                            <input type="text" name="text_ru" class="form-control" id="text_ru" placeholder="Текст(RU)" value="{{$course->text_ru}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name_en">Имя(EN)</label>
+                            <input type="text" name="name_en" class="form-control" id="name_en" placeholder="Имя(EN)" value="{{$course->name_en}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text_en">Текст(EN)</label>
+                            <input type="text" name="text_en" class="form-control" id="text_en" placeholder="Текст(EN)" value="{{$course->text_en}}">
                         </div>
 
                         <div class="form-group">
