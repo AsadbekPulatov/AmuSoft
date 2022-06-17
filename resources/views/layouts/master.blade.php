@@ -107,9 +107,9 @@
                         @endif
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="locale/uz"><img src="{{asset('asset/img/uz.png')}}" alt="" class="w-25 fa-fa flg">  UZ  </a></li>
-                        <li><a class="dropdown-item" href="locale/ru"><img src="{{asset('asset/img/ru.jpg')}}" alt="" class="w-25 fa-fa flg">  RU </a></li>
-                        <li><a class="dropdown-item" href="locale/en"><img src="{{asset('asset/img/en.jpg')}}" alt="" class="w-25 fa-fa flg">  EN </a></li>
+                        <li><a class="dropdown-item" href="{{ route('language', ['lang' => 'uz']) }}"><img src="{{asset('asset/img/uz.png')}}" alt="" class="w-25 fa-fa flg">  UZ  </a></li>
+                        <li><a class="dropdown-item" href="{{ route('language', ['lang' => 'ru']) }}"><img src="{{asset('asset/img/ru.jpg')}}" alt="" class="w-25 fa-fa flg">  RU </a></li>
+                        <li><a class="dropdown-item" href="{{ route('language', ['lang' => 'en']) }}"><img src="{{asset('asset/img/en.jpg')}}" alt="" class="w-25 fa-fa flg">  EN </a></li>
                     </ul>
                     </div>
 

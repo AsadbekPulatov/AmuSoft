@@ -22,7 +22,7 @@ use App\Http\Controllers\CourseController;
 
 //Localisation
 
-Route::get('locale/{lang}',[\App\Http\Controllers\LocalizationController::class,'setLang']);
+Route::get('locale/{lang}',[\App\Http\Controllers\LocalizationController::class,'setLang'])->name('language');
 
 
 Route::get('/', [ViewController::class, 'home'])->name('index');
