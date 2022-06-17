@@ -37,12 +37,12 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="section-title position-relative mb-4 pb-2">
 {{--                        <h6 class="position-relative text-primary ps-4">About Us</h6>--}}
-                        <h2 class="mt-2">10 yillik tajribaga ega eng yaxshi SEO yechimi</h2>
+                        <h2 class="mt-2">10 yillik tajribaga ega mutaxasislar</h2>
                     </div>
                     <p class="mb-4">Bizni Jamoamiz tajribali o'z ishing ustalaridan iborat bizga har qanday loyiha bo'yicha murojat qilishingiz mumkin</p>
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Mukofot sovrindori</h6>
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Mukammal proyektlar</h6>
                             <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional xodimlar</h6>
                         </div>
                         <div class="col-sm-6">
@@ -75,8 +75,8 @@
         <div class="container px-lg-5">
             <div class="row align-items-center" style="height: 250px;">
                 <div class="col-12 col-md-6">
-                    <h3 class="text-white">Boshlash uchun tayyor</h3>
-                    <small class="text-white"> Faqat siz uchun.</small>
+                    <h3 class="text-white">Professional jamoamiz bilan bir qadam oldindasiz</h3>
+{{--                    <small class="text-white"> Faqat siz uchun.</small>--}}
                 </div>
                 <div class="col-md-6 text-center mb-n5 d-none d-md-block">
                     <img class="img-fluid mt-5" style="height: 250px;" src="{{asset('assets/img/newsletter.png')}}">

@@ -1,11 +1,8 @@
 @extends('layouts.master')
 @section('hero')
     <div class="col-lg-6 text-center text-lg-start">
-        <h1 class="text-white mb-4 animated zoomIn">Hammasi bitta SEO vositasida biznesingizni jadal rivojlantirish uchun kerak</h1>
-        <p class="text-white pb-3 animated zoomIn">Biz bilan samarali hamkorlikda sifatli loyihalar</p>
-
-        <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Bepul takliflar</a>
-     <a href=" {{route('contact')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Aloqa</a>
+        <h1 class="text-white mb-4 animated zoomIn">Biz bilan o'z biznesingizni yanada rivojlantiring</h1>
+        <p class="text-white pb-3 animated zoomIn">Professional jamoamiz bunda sizga eng mukammal yechimlarni taklif qiladi!</p>
 
     </div>
     <div class="col-lg-6 text-center text-lg-start">
@@ -38,12 +35,12 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="section-title position-relative mb-4 pb-2">
                         <!--<h6 class="position-relative text-primary ps-4">About Us</h6>-->
-                        <h2 class="mt-2">10 yillik tajribaga ega eng yaxshi SEO yechimi</h2>
+                        <h2 class="mt-2">10 yillik tajribaga ega mutaxasislar</h2>
                     </div>
                         <p class="mb-4">Bizni Jamoamiz tajribali o'z ishing ustalaridan iborat bizga har qanday loyiha bo'yicha murojat qilishingiz mumkin</p>
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Mukofot sovrindori</h6>
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Mukammal proyektlar</h6>
                             <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional xodimlar</h6>
                         </div>
                         <div class="col-sm-6">
@@ -52,7 +49,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mt-4">
-                        <a class="btn btn-primary rounded-pill px-4 me-3" href="">Ko'proq o'qish</a>
+                        <a class="btn btn-primary rounded-pill px-4 me-3" href="{{route('about')}}">Ko'proq o'qish</a>
                         <a class="btn btn-outline-primary btn-square me-3" href="https://facebook.com/bekmurodkhujamuratov"><i class="fab fa-facebook-f"></i></a>
                         {{--                        <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>--}}
                         <a class="btn btn-outline-primary btn-square me-3" href="https://instagram.com/bekmurodkhujamuratov"><i class="fab fa-instagram"></i></a>
@@ -74,8 +71,8 @@
         <div class="container px-lg-5">
             <div class="row align-items-center" style="height: 250px;">
                 <div class="col-12 col-md-6">
-                    <h3 class="text-white">Boshlash uchun tayyor</h3>
-                    <small class="text-white">Faqat siz uchun</small>
+                    <h3 class="text-white">Professional jamoamiz sizga o'z xizmatlarini taklif etadi</h3>
+
                     <div class="position-relative w-100 mt-3">
                       </div>
                 </div>
