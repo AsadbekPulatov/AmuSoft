@@ -24,7 +24,7 @@
         <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
             <h2 class="mt-2">
                 @if($lang=='uz')Jamoamiz a'zolari bilan tanishing @endif
-                @if($lang=='ru')Познакомьтесь с членами нашей команды @endif
+                @if($lang=='ru')Познакомьтесь с нашей команды @endif
                 @if($lang=='en')Meet our team members @endif
             </h2>
         </div>
