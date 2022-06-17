@@ -171,6 +171,16 @@
             </div>
         </div>
     @endforeach
+    @if(session('success'))
+
+        <script>
+            Swal.fire({
+                icon: 'success',
+                text: 'Muvaffaqqiyatli bajarildi',
+                confirmButtonText: 'Continue',
+            })
+        </script>
+    @endif
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");

@@ -48,7 +48,7 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Ismingiz">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Ismingiz" required>
                                         <label for="name">
                                           @if($lang=='uz') Ismingiz @endif
                                           @if($lang=='ru') Ваше имя @endif
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Emailingiz">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Emailingiz" required>
                                         <label for="email">
                                            @if($lang=='uz') Email @endif
                                            @if($lang=='ru') Эл. адрес @endif
@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="title" id="subject" placeholder="Mavzu...">
+                                        <input type="text" class="form-control" name="title" id="subject" placeholder="Mavzu..." required>
                                         <label for="subject">
                                            @if($lang=='uz') Mavzu @endif
                                            @if($lang=='ru') Предмет @endif
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Bu yerda xabar qoldiring" name="massage" id="message" style="height: 150px"></textarea>
+                                        <textarea class="form-control" placeholder="Bu yerda xabar qoldiring" name="massage" id="message" style="height: 150px" required></textarea>
                                         <label for="message">
                                            @if($lang=='uz') Xabar @endif
                                            @if($lang=='ru') Сообщение @endif
@@ -102,5 +102,14 @@
     </div>
     <!-- Contact End -->
 
+    @if(session('success'))
 
+        <script>
+            Swal.fire({
+                icon: 'success',
+                text: 'Muvaffaqqiyatli bajarildi',
+                confirmButtonText: 'Continue',
+            })
+        </script>
+    @endif
 @endsection

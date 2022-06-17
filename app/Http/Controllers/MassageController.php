@@ -45,7 +45,7 @@ class MassageController extends Controller
             'massage'=>'required'
         ]);
         Massage::create($massage);
-        return  redirect()->route('contact');
+        return  redirect()->route('contact')->with('success', 'created');
     }
 
     /**
