@@ -25,15 +25,33 @@
                           enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="header_ru">Титу</label>
-                            <input type="text" name="title" class="form-control" id="header_ru" placeholder="Титул">
+                            <label for="header_ru">Титу(UZ)</label>
+                            <input type="text" name="title_uz" class="form-control" value="{{old('title_uz')}}" id="header_ru" placeholder="Титул UZ">
                         </div>
 
                         <div class="form-group">
-                            <label for="description">Текст</label>
-                            <textarea class="form-control" name="description" id="description" rows="10"></textarea>
+                            <label for="description">Текст(UZ)</label>
+                            <textarea class="form-control" name="description_uz"  id="description" rows="10">{{old('description_uz')}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="header_ru">Титу(RU)</label>
+                            <input type="text" name="title_ru" class="form-control" value="{{old('title_ru')}}" id="header_ru" placeholder="Титул RU">
                         </div>
 
+                        <div class="form-group">
+                            <label for="description">Текст(RU)</label>
+                            <textarea class="form-control" name="description_ru"  id="description" rows="10">{{old('description_ru')}}</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="header_ru">Титу(EN)</label>
+                            <input type="text" name="title_en" class="form-control" value="{{old('title_en')}}" id="header_ru" placeholder="Титул EN">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Текст(EN)</label>
+                            <textarea class="form-control" name="description_en"  id="description" rows="10">{{old('description_en')}}</textarea>
+                        </div>
                         <div class="form-group">
                             <label for="img">Добавьте рисунок </label>
                             <input type="file" name="img" class="form-control" id="img">
