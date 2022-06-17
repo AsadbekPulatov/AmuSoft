@@ -4,7 +4,7 @@
         <h1 class="text-white animated zoomIn">
            @if($lang=='uz') Biz bilan bog'lanish @endif
                @if($lang=='ru') Cвяжитесь с нами @endif
-               @if($lang=='en') Conact Us @endif
+               @if($lang=='en') Contact Us @endif
         </h1>
         <hr class="bg-white mx-auto mt-0" style="width: 90px;">
     </div>
@@ -89,7 +89,7 @@
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">
                                        @if($lang=='uz') Xabar yuborish @endif
-                                       @if($lang=='ru') Послать сообщение @endif
+                                       @if($lang=='ru') Отправить сообщение @endif
                                        @if($lang=='en') Send a message @endif
                                     </button>
                                 </div>
