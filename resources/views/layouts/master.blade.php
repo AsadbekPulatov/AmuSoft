@@ -39,7 +39,9 @@
     <div id="spinner"
          class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Yuklanmoqda...</span>
+            <span class="sr-only"> @if( $lang == 'uz') Yuklanmoqda @endif...</span>
+            <span class="sr-only"> @if( $lang == 'ru') Загрузка @endif...</span>
+            <span class="sr-only"> @if( $lang == 'en') Loading @endif...</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -59,17 +61,40 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>
                           @if($lang=="uz")  Bosh sahifa @endif
-                          @if($lang=="ru")  Glavniy @endif
+                          @if($lang=="ru")  Главная  @endif
                           @if($lang=="en")  Home @endif
                         </b></a>
-                    <a href="{{ route('blog') }}" class="nav-item nav-link @if($route=='blog') active @endif"><b>Yangiliklar</b></a>
+                    <a href="{{ route('blog') }}" class="nav-item nav-link @if($route=='blog') active @endif"><b>
+                            @if( $lang == 'uz') Yangiliklar  @endif
+                            @if( $lang == 'ru') Новости  @endif
+                            @if( $lang == 'en') News  @endif
+                        </b></a>
                     <a href="{{ route('Services') }}"
-                       class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmatlar</b></a>
-                    <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>Loyihalar</b></a>
-                    <a href="{{ route('course') }}" class="nav-item nav-link @if($route=='course') active @endif"><b>Kurslar</b></a>
-                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Biz
-                            haqimizda</b></a>
-                    <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Bog'lanish</b></a>
+                       class="nav-item nav-link @if($route=='services') active @endif"><b>
+                          @if( $lang == 'uz')  Xizmatlar  @endif
+                          @if( $lang == 'ru')  Сервисы  @endif
+                          @if( $lang == 'en')  Services  @endif
+                        </b></a>
+                    <a href="{{ route('portfolio') }}" class="nav-item nav-link @if($route=='portfolio') active @endif"><b>
+                        @if( $lang == 'uz')    Loyihalar  @endif
+                        @if( $lang == 'ru')    Проекты  @endif
+                        @if( $lang == 'en')    Projects  @endif
+                        </b></a>
+                    <a href="{{ route('course') }}" class="nav-item nav-link @if($route=='course') active @endif"><b>
+                        @if( $lang == 'uz')    Kurslar @endif
+                        @if( $lang == 'ru')  Курсы   @endif
+                        @if( $lang == 'en')    Courses @endif
+                        </b></a>
+                    <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>
+                        @if( $lang == 'uz')    Biz haqimizda  @endif
+                        @if( $lang == 'ru')    O нас  @endif
+                        @if( $lang == 'en')    About us  @endif
+                        </b></a>
+                    <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>
+                        @if( $lang == 'uz')    Bog'lanish  @endif
+                        @if( $lang == 'ru')    Связь  @endif
+                        @if( $lang == 'en')    Connection  @endif
+                        </b></a>
                     <div class="dropdown">
 
                     <a class="btn nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -111,8 +136,16 @@
         <div class="container py-5 px-lg-5">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-4">
-                    <h5 class="text-white mb-4">Aloqa qilish</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Urganch shahri Al-Xorazmiy ko'chasi 110-uy</p>
+                    <h5 class="text-white mb-4">
+                    @if( $lang == 'uz')    Biz bilan bog'lanish  @endif
+                    @if( $lang == 'ru')    Cвяжитесь с нами  @endif
+                    @if( $lang == 'en')    Contact us  @endif
+                    </h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>
+                     @if( $lang == 'uz')   Urganch shahri Al-Xorazmiy ko'chasi 110-uy  @endif
+                     @if( $lang == 'ru')   Ул. Аль-Хорезми 110, Ургенч  @endif
+                     @if( $lang == 'en')   110 Al-Khwarizmi Street, Urgench  @endif
+                    </p>
                     <p><i class="fa fa-phone-alt me-3"></i>+998 977913883</p>
                     <p><i class="fa fa-envelope me-3"></i>AmuSoft@gmail.com</p>
                     <div class="d-flex pt-2">
@@ -129,13 +162,41 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-2">
-                    <h5 class="text-white mb-4">Ommabop havola</h5>
-                    <a class="btn btn-link" href="{{route('about')}}">Biz haqimizda</a>
-                    <a class="btn btn-link" href="{{ route('blog') }}">Yangiliklar</a>
-                    <a class="btn btn-link" href="{{route('Services')}}">Xizmatlar</a>
-                    <a class="btn btn-link" href="{{route('portfolio')}}">Loyihalar</a>
-                    <a class="btn btn-link" href="{{route('course')}}">Kurslar</a>
-                    <a class="btn btn-link" href="{{route('contact')}}">Biz bilan bog'lanish</a>
+                    <h5 class="text-white mb-4">
+                    @if( $lang == 'uz')    Ommabop havola  @endif
+                    @if( $lang == 'ru')    Популярная ссылка  @endif
+                    @if( $lang == 'en')    Popular link  @endif
+                    </h5>
+                    <a class="btn btn-link" href="{{route('about')}}">
+                    @if( $lang == 'uz')    Biz haqimizda  @endif
+                    @if( $lang == 'ru')    O нас  @endif
+                    @if( $lang == 'en')    About us  @endif
+                    </a>
+                    <a class="btn btn-link" href="{{ route('blog') }}">
+                    @if( $lang == 'uz')    Yangiliklar  @endif
+                    @if( $lang == 'ru')    Новости  @endif
+                    @if( $lang == 'en')    News  @endif
+                    </a>
+                    <a class="btn btn-link" href="{{route('Services')}}">
+                       @if($lang =='uz') Xizmatlar  @endif
+                       @if($lang =='ru') Сервисы  @endif
+                       @if($lang =='en') Services   @endif
+                    </a>
+                    <a class="btn btn-link" href="{{route('portfolio')}}">
+                      @if( $lang == 'uz')  Loyihalar  @endif
+                      @if( $lang == 'ru')  Проекты   @endif
+                      @if( $lang == 'en')  Projects   @endif
+                    </a>
+                    <a class="btn btn-link" href="{{route('course')}}">
+                      @if( $lang == 'uz')  Kurslar @endif
+                      @if( $lang == 'ru')  Курсы @endif
+                      @if( $lang == 'en')  Courses  @endif
+                    </a>
+                    <a class="btn btn-link" href="{{route('contact')}}">
+                    @if( $lang == 'uz')    Biz bilan bog'lanish  @endif
+                    @if( $lang == 'ru')   Cвяжитесь с нами   @endif
+                    @if( $lang == 'en')    Contact us  @endif
+                    </a>
                 </div>
 
                 <div class="col-md-6 col-lg-6">
@@ -150,8 +211,13 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; Barcha huquqlar himoyalangan.
-                        <a class="border-bottom" href="http://amusoft.uz">AmuSoft</a> tomonidan ishlab chiqilgan
+                     @if( $lang == 'uz')   &copy; Barcha huquqlar himoyalangan. @endif
+                     @if( $lang == 'ru')   &copy; Все права защищены. @endif
+                     @if( $lang == 'en')   &copy; All rights reserved. @endif
+                        <a class="border-bottom" href="http://amusoft.uz">AmuSoft</a>
+                     @if( $lang == 'uz')   tomonidan ishlab chiqilgan  @endif
+                     @if( $lang == 'ru')   разработано   @endif
+                     @if( $lang == 'en')  developed by  @endif
                     </div>
                 </div>
             </div>
