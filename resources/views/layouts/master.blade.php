@@ -57,8 +57,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>Bosh
-                            sahifa</b></a>
+                    <a href="{{ route('index') }}" class="nav-item nav-link @if($route=='index') active @endif"><b>
+                          @if($lang=="uz")  Bosh sahifa @endif
+                          @if($lang=="ru")  Glavniy @endif
+                          @if($lang=="en")  Home @endif
+                        </b></a>
                     <a href="{{ route('blog') }}" class="nav-item nav-link @if($route=='blog') active @endif"><b>Yangiliklar</b></a>
                     <a href="{{ route('Services') }}"
                        class="nav-item nav-link @if($route=='services') active @endif"><b>Xizmatlar</b></a>
@@ -67,9 +70,27 @@
                     <a href="{{ route('about') }}" class="nav-item nav-link @if($route=='about') active @endif"><b>Biz
                             haqimizda</b></a>
                     <a href="{{ route('contact') }}" class="nav-item nav-link @if($route=='contact') active @endif"><b>Bog'lanish</b></a>
+                    <div class="dropdown">
+
+                    <a class="btn nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        @if($lang=="uz")
+                            UZ
+                        @endif @if($lang=="ru")
+                            RU
+                        @endif @if($lang=="en")
+                            EN
+                        @endif
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="locale/uz">UZ</a></li>
+                        <li><a class="dropdown-item" href="locale/ru">RU</a></li>
+                        <li><a class="dropdown-item" href="locale/en">EN</a></li>
+                    </ul>
+                    </div>
+
                 </div>
-                <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"
-                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+
+
             </div>
         </nav>
         <div class="container-xxl py-5 bg-primary hero-header mb-5">
