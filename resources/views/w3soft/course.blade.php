@@ -171,6 +171,19 @@
             </div>
         </div>
     @endforeach
+    @if(session('success'))
+
+        <script>
+            Swal.fire({
+                icon: 'success',
+                @if($lang=='uz') text: 'Kursga yozilish', @endif
+                    @if($lang=='ru') text: 'Записаться на курс', @endif
+                    @if($lang=='en') text: 'Writing in to course', @endif
+                // text: 'Muvaffaqqiyatli bajarildi',
+                confirmButtonText: 'Continue',
+            })
+        </script>
+    @endif
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");

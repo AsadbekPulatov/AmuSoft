@@ -45,7 +45,7 @@ class BookingController extends Controller
         $booking['email'] = $request['email'];
         $booking['phone'] = $request['phone'];
         $booking->save();
-        return redirect()->route('course');
+        return redirect()->route('course')->with('success', 'created');
     }
 
     /**
