@@ -208,7 +208,7 @@
                 <div class="col-md-6 col-lg-6">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.9423360673563!2d60.629394215036505!3d41.57049259258736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfcec63d012a49%3A0xa2280e571ee2fa3e!2z0KPRgNCz0LXQvdGH0YHQutC40Lkg0YTQuNC70LjQsNC7INCi0LDRiNC60LXQvdGC0YHQutC-0LPQviDRg9C90LjQstC10YDRgdC40YLQtdGC0LAg0LjQvdGE0L7RgNC80LDRhtC40L7QvdC90YvRhSDRgtC10YXQvdC-0LvQvtCz0LjQuSDQuNC80LXQvdC4INCc0YPRhdCw0LzQvNCw0LTQsCDQkNC70Ywt0KXQvtGA0LXQt9C80Lg!5e0!3m2!1sru!2s!4v1655407533276!5m2!1sru!2s"
-                        width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        height="300" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
