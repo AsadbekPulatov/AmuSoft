@@ -25,6 +25,22 @@
                           enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control" name="name" value="{{old('name')}}"  type="text" id="name" rows="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Текст(UZ)</label>
+                            <textarea class="form-control" name="text_uz"  id="description" rows="10">{{old('text_uz')}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Текст(RU)</label>
+                            <textarea class="form-control" name="text_ru"  id="description" rows="10">{{old('text_ru')}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Текст(EN)</label>
+                            <textarea class="form-control" name="text_en"  id="description" rows="10">{{old('text_en')}}</textarea>
+                        </div>
+                        <div class="form-group">
                             <label for="facebook">Facebook</label>
                             <input type="text" name="facebook" class="form-control" value="{{old('facebook')}}" id="facebook" >
                         </div>
@@ -41,10 +57,7 @@
                             <label for="Telegram">Telegram</label>
                             <input class="form-control" name="telegram" type="text" value="{{old('telegram')}}" id="Telegram" rows="10">
                         </div>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input class="form-control" name="name" value="{{old('name')}}"  type="text" id="name" rows="10">
-                        </div>
+
                         <div class="form-group">
                             <label for="lavozim">Kasbi</label>
                             <input class="form-control" name="position"  value="{{old('position')}}"  type="text" id="lavozim" rows="10">
