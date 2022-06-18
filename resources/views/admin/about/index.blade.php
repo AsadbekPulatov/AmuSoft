@@ -31,7 +31,7 @@
 {{--                            <th >rasm</th>--}}
 {{--                            <th >yaratilgan vaqt</th>--}}
 {{--                            <th >korganlar soni</th>--}}
-                            <th scope="col">Text(UZ)</th>
+                            <th scope="col">Текст(UZ)</th>
                             <th scope="col">Действие</th>
 
                         </tr>

@@ -29,19 +29,23 @@
                             <input class="form-control" name="name" value="{{$abouts->name}}"  type="text" id="name" rows="10">
                         </div>
                         <div class="form-group">
+                            <label for="description_ru">Профессия</label>
+                            <input  class="form-control"  name="position" id="description_ru" value=" {{$abouts->position}}">
+                        </div>
+                        <div class="form-group">
                             <label for="description">Текст(UZ)</label>
-                            <textarea class="form-control" name="text_uz"  id="description" rows="10">{{$abouts->text_uz}}</textarea>
+                            <textarea class="form-control" name="text_uz"  id="description" rows="5">{{$abouts->text_uz}}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="description">Текст(RU)</label>
-                            <textarea class="form-control" name="text_ru"  id="description" rows="10">{{$abouts->text_ru}}</textarea>
+                            <textarea class="form-control" name="text_ru"  id="description" rows="5">{{$abouts->text_ru}}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="description">Текст(EN)</label>
-                            <textarea class="form-control" name="text_en"  id="description" rows="10">{{$abouts->text_en}}</textarea>
+                            <textarea class="form-control" name="text_en"  id="description" rows="5">{{$abouts->text_en}}</textarea>
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">facebook</label>
+                            <label for="header_ru">Github</label>
                             <input type="text" name="facebook" class="form-control" id="header_ru" placeholder="Титул" value="{{$abouts->facebook}}">
                         </div>
 
@@ -50,7 +54,7 @@
                             <input  class="form-control"  type="text" name="email" id="description_ru" rows="10" value=" {{$abouts->email}}">
                         </div>
                         <div class="form-group">
-                            <label for="description_ru">instagram</label>
+                            <label for="description_ru">Instagram</label>
                             <input  class="form-control"  name="instagram" id="description_ru" rows="10" value=" {{$abouts->instagram}}">
                         </div>
                         <div class="form-group">
@@ -59,10 +63,7 @@
                         </div>
 
 
-                        <div class="form-group">
-                            <label for="description_ru">Текст (Ру)</label>
-                            <input  class="form-control"  name="position" id="description_ru" rows="10" value=" {{$abouts->position}}">
-                        </div>
+
 
 
 

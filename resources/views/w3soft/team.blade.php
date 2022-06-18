@@ -23,58 +23,67 @@
     <div class="container px-lg-5">
         <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
             <h2 class="mt-2">
-{{--                @if($lang=='uz')--}}
+                @if($lang=='uz')
                     Jamoamiz a'zolari bilan tanishing
-{{--                @endif--}}
-{{--                @if($lang=='ru')--}}
+                @endif
+                @if($lang=='ru')
                     Познакомьтесь с нашей команды
-{{--                @endif--}}
-{{--                @if($lang=='en')--}}
+                @endif
+                @if($lang=='en')
                     Meet our team members
-{{--                @endif--}}
+                @endif
             </h2>
         </div>
         <div class="row g-4 justify-content-center">
-            <div class="card">
-                <div class="card-header">
-                    <img src="{{asset('assets/img/about_img/images-1.jpg')}}" alt="rover"/>
-                </div>
-                <div class="card-body">
+            @foreach($abouts as $about)
+                <div class="card">
+                    <div class="card-header">
+                        <img src="{{asset('assets/img/about_img/'.$about->image)}}" alt="rover"/>
+                    </div>
+                    <div class="card-body">
 
-                    <span class="tag tag-teal">Technology</span>
-                    <h4>
-                        @if($lang=='uz')
-                            Ism:
-                        @endif
-                    </h4>
-                    <p>
-                        An exploration into the truck's polarising design
-                    </p>
-                    <div class="user">
-                        <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" --}}
-                             style="width: 75px;">
-{{--                            @if($about->facebook != 'none')--}}
-                                <a class="btn btn-square text-primary bg-white my-1"
-                                   href="https://facebook.com/{{$about->facebook}}"><i
-                                        class="fab fa-facebook-f"></i></a>
-{{--                            @endif--}}
-{{--                            @if($about->email!='none')--}}
-                                <a class="btn btn-square text-primary bg-white my-1"
-                                   href="mailto://{{$about->email}}"><i class="fas fa-envelope"></i></a>
-{{--                            @endif--}}
-{{--                            @if($about->instagram!='none')--}}
-                                <a class="btn btn-square text-primary bg-white my-1"
-                                   href="https://instagram.com/{{$about->instagram}}"><i
-                                        class="fab fa-instagram"></i></a>
-{{--                            @endif--}}
-{{--                            @if($about->telegram!='none')--}}
-                                <a class="btn btn-square text-primary bg-white my-1"
-                                   href="https://t.me/{{$about->telegram}}"><i class="fab fa-telegram"></i></a>
-{{--                            @endif--}}
+                        <span class="tag tag-teal">{{ $about->position }}</span>
+                        <h4>
+                            {{ $about->name }}
+                        </h4>
+                        <p>
+                            @if($lang=='uz')
+                                {{ $about->text_uz }}
+                            @endif
+                            @if($lang=='ru')
+                                {{ $about->text_ru }}
+                            @endif
+                            @if($lang=='en')
+                                {{ $about->text_en }}
+                            @endif
+                        </p>
+                        <div class="user">
+                            <div class="d-flex align-items-center mt-4">
+                                @if($about->email != 'none')
+                                    <a class="btn btn-outline-primary btn-square me-3"
+                                       href="mailto://{{$about->email}}"><i
+                                            class="fas fa-envelope"></i></a>
+                                @endif
+                                @if($about->instagram != 'none')
+                                    <a class="btn btn-outline-primary btn-square me-3"
+                                       href="https://instagram.com/{{$about->instagram}}"><i
+                                            class="fab fa-instagram"></i></a>
+                                @endif
+                                @if($about->facebook != 'none')
+                                    <a class="btn btn-outline-primary btn-square me-3"
+                                       href="https://github.com/{{ $about->facebook }}"><i
+                                            class="fab fa-github"></i></a>
+                                @endif
+                                @if($about->telegram != 'none')
+                                    <a class="btn btn-outline-primary btn-square me-3"
+                                       href="https://t.me/{{$about->telegram}}"><i
+                                            class="fab fa-telegram"></i></a>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
