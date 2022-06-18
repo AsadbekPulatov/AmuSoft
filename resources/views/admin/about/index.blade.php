@@ -31,6 +31,7 @@
 {{--                            <th >rasm</th>--}}
 {{--                            <th >yaratilgan vaqt</th>--}}
 {{--                            <th >korganlar soni</th>--}}
+                            <th scope="col">Text(UZ)</th>
                             <th scope="col">Действие</th>
 
                         </tr>
@@ -44,6 +45,7 @@
                                 <td> <a href="{{$about->instagram}}" ><i class="bi bi-instagram" style="font-size: 1.8rem"></i></a></td>
                                 <td><a href="{{$about->telegram}}"><i class="bi bi-telegram" style="font-size: 1.8rem"></i></a></td>
                                 <td>{{$about->name}}</td>
+                                <td>{{$about->text_uz}}</td>
                                 <td>{{$about->position}}</td>
 {{--                                <td>--}}
 {{--                                    <img src="{{ asset('assets/img/about_img/'.$about->image) }}"  alt="" class="text-center w-100">--}}

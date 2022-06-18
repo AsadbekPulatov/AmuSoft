@@ -9,7 +9,7 @@ class About extends Model
 {
     use HasFactory;
     protected $table='abouts';
-    protected  $fillable=['facebook','email','instagram','telegram','name','position','image'];
+    protected  $fillable=['text_uz','text_ru','text_en','facebook','email','instagram','telegram','name','position','image'];
 
     public function courses(){
         return $this->hasMany(Course::class);

@@ -20,8 +20,12 @@ return new class extends Migration
             $table->string('instagram');
             $table->string('telegram');
             $table->string('name');
+
             $table->string('position');
             $table->string('image');
+            $table->text('text_uz');
+            $table->text('text_ru');
+            $table->text('text_en');
             $table->timestamps();
         });
     }

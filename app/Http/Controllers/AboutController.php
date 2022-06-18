@@ -51,6 +51,9 @@ class AboutController extends Controller
             'telegram'=>'required',
             'name'=>'required',
             'position'=>'required',
+            'text_uz'=>'required',
+            'text_ru'=>'required',
+            'text_en'=>'required',
             'image'=>'required|image|mimes:jpg,jpeg,png,gif',
         ]);
 
@@ -65,6 +68,9 @@ class AboutController extends Controller
             'instagram'=>$request['instagram'],
             'telegram'=>$request['telegram'],
             'name'=>$request['name'],
+            'text_uz'=>$request['text_uz'],
+            'text_ru'=>$request['text_ru'],
+            'text_en'=>$request['text_en'],
             'position'=>$request['position'],
             'image'=>$img
         ]);
@@ -110,6 +116,9 @@ class AboutController extends Controller
             'instagram'=>'required',
             'telegram'=>'required',
             'name'=>'required',
+            'text_uz'=>'required',
+            'text_ru'=>'required',
+            'text_en'=>'required',
             'position'=>'required',
             'image'=>'required|image|mimes:jpg,jpeg,png,gif',
         ]);
@@ -125,6 +134,9 @@ class AboutController extends Controller
             'instagram'=>$request['instagram'],
             'telegram'=>$request['telegram'],
             'name'=>$request['name'],
+            'text_uz'=>$request['text_uz'],
+            'text_ru'=>$request['text_ru'],
+            'text_en'=>$request['text_en'],
             'position'=>$request['position'],
             'image'=>$img
         ]);
