@@ -16,7 +16,7 @@
 
     </div>
     <div class="col-lg-6 text-center text-lg-start">
-        <img class="img-fluid" src="{{ asset('assets/img/hero.png') }}" alt="">
+        <img class="img-fluid" src="{{ asset('assets/img/hero2.png') }}" alt="">
     </div>
 @endsection
 @section('content')
