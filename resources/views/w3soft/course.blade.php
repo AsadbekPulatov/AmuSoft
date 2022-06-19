@@ -132,7 +132,7 @@
 
     @foreach($courses as $course)
         <div class="row mb-5">
-            <div class="col-11 container d-flex justify-content-between">
+            <div class="col-11 container ">
                 <div class="row">
                 <div class="card col-lg-5 col-md-5 col-sm-10">
                     <div class="card-body">
