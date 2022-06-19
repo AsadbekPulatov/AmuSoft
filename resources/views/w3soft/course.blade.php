@@ -131,42 +131,65 @@
 
 
     @foreach($courses as $course)
-        <div class="row mb-3">
-            <div class="col-lg-11 col-md-11 container d-flex justify-content-between">
-                <div class="card col-5">
+        <div class="row mb-5">
+            <div class="col-11 container d-flex justify-content-between">
+                <div class="row">
+                <div class="card col-lg-5 col-md-5 col-sm-10">
                     <div class="card-body">
                         <img src="{{ asset('assets/img/course/'.$course->img) }}" alt="rasm"
                              style="height: 300px; width: 100%; margin-right: 2rem">
                     </div>
                 </div>
-                <div class="card col-7">
-                    <div class="card-header d-flex ">
-                        {{$course->category->name}}
+                <div class="card  col-lg-7 col-md-7 col-sm-10">
+                    <div class="card-header d-flex text  text-primary  " style="font-size: 20px;font-weight: 700">
+                        @if($lang=="uz"){{$course->name_uz}} @endif
+                        @if($lang=="ru") {{$course->name_ru}} @endif
+                        @if($lang=="en") {{$course->name_en}} @endif
+
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"> {{ $course->name }} </h5>
-                        <p class="card-text">{{ $course->text }}</p>
-                        <p class="card-text"><b>
-                                @if($lang=='uz')  O'qituvchilar: @endif
-                                @if($lang=='ru')  Учителя: @endif
-                                @if($lang=='en')  Teachers: @endif
-                            </b>{{ $course->teacher->name }}</p>
-                        <p class="card-text"><b>
+
+                        <p class="card-text "> <b class="text " style="color: #4306ab">
+                            @if($lang=="en")  {{ $course->text_en }} @endif
+                            @if($lang=="uz")  {{ $course->text_uz }} @endif
+                            @if($lang=="ru")  {{ $course->text_ru }} @endif
+
+                            </b>
+                        </p>
+                        <hr>
+                        <p class="card-text"><b class="text text-primary">
+                                @if($lang=='uz')  O'qituvchi: @endif
+                                @if($lang=='ru')  Учитель: @endif
+                                @if($lang=='en')  Teacher: @endif
+                            </b> <b class="text text-success">{{ $course->teacher->name }}</b></p>
+
+                        <p class="card-text"><b class="text text-primary">
                                 @if($lang=='uz')  Narxi: @endif
                                 @if($lang=='ru')  Цена: @endif
                                 @if($lang=='en')  Price:: @endif
-                            </b> {{ $course->price }}</p>
-                        <p class="card-text"><b>
+                            </b> <b class="text text-success"> {{ substr($course->price,0,3)}} {{ substr($course->price,3,3) }}
+                                @if($lang=='uz')  so'm @endif
+                                @if($lang=='ru')  сумма @endif
+                                @if($lang=='en')  sum @endif
+                            </b></p>
+                        <p class="card-text"><b class="text text-primary">
                                 @if($lang=='uz')  Davomiyligi: @endif
                                 @if($lang=='ru')  Продолжительность: @endif
                                 @if($lang=='en')  Time: @endif
-                            </b> {{ $course->time }}</p>
+                            </b> <b class="text text-success"> {{ $course->time }}
+                        @if($lang=="uz") oy @endif
+                        @if($lang=="ru") месяц @endif
+                        @if($lang=="en") month @endif
+                            </b>
+                        </p>
+                        <hr>
                         <button onclick="store({{ $course->id }})" class="btn btn-primary">
                             @if($lang=='uz')   Kursga yozilish @endif
                             @if($lang=='ru')  Записаться на курс @endif
                             @if($lang=='en')  Writing in to course @endif
                         </button>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
