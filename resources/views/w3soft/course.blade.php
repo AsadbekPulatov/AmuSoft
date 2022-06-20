@@ -158,9 +158,9 @@
                         </p>
                         <hr>
                         <p class="card-text"><b class="text text-primary">
-                                @if($lang=='uz')  O'qituvchi: @endif
-                                @if($lang=='ru')  Учитель: @endif
-                                @if($lang=='en')  Teacher: @endif
+                                @if($lang=='uz')  Mentor: @endif
+                                @if($lang=='ru')  Ментор: @endif
+                                @if($lang=='en')  Mentor: @endif
                             </b> <b class="text text-success">{{ $course->teacher->name }}</b></p>
 
                         <p class="card-text"><b class="text text-primary">

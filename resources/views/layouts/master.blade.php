@@ -105,11 +105,11 @@
 
                     <a class="btn nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         @if($lang=="uz")
-                            UZ
+                            UZ <img src="{{asset('asset/img/uz.png')}}" alt="" style="width: 40px;" >
                         @endif @if($lang=="ru")
-                            RU
+                            RU <img src="{{asset('asset/img/ru.jpg')}}" alt=""  style="width: 40px;">
                         @endif @if($lang=="en")
-                            EN
+                            EN <img src="{{asset('asset/img/en.jpg')}}" alt="" style="width: 40px;" >
                         @endif
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
