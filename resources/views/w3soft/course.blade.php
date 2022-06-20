@@ -199,7 +199,7 @@
         <script>
             Swal.fire({
                 icon: 'success',
-                @if($lang=='uz') text: 'Kursga yozilish', @endif
+                @if($lang=='uz') text: 'Siz kursga muvaffaqiyatli yozildingiz! Yaqin orada siz bilan bog’lanamiz, e’tiboringiz uchun raxmat!', @endif
                     @if($lang=='ru') text: 'Записаться на курс', @endif
                     @if($lang=='en') text: 'Writing in to course', @endif
                 // text: 'Muvaffaqqiyatli bajarildi',
