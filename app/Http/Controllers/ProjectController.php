@@ -17,7 +17,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::orderBy('id', 'DESC')->get();
-        return view('admin.projects.index',[
+        return view('admin.projects.index', [
             'projects' => $projects
         ]);
     }
@@ -31,7 +31,7 @@ class ProjectController extends Controller
     {
         $project = new Project();
         $categories = Category::all();
-        return view('admin.projects.form',[
+        return view('admin.projects.form', [
             'project' => $project,
             'categories' => $categories
         ]);
@@ -40,22 +40,22 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(SaveProjectRequest $request, Project $project)
     {
-        $post =  Project::OrderBy('id', 'DESC')->first();
+        $post = Project::OrderBy('id', 'DESC')->first();
         if ($post == NULL) $id = 0;
         else $id = $post->id;
         $id++;
 
-        $img="project-".$id.".jpg";
-        $path="assets/img/project/";
-        $request->img->move($path,$img);
+        $img = "project-" . $id . ".jpg";
+        $path = "assets/img/project/";
+        $request->img->move($path, $img);
 
         $project->create([
-           'name' => $request['name'],
+            'name' => $request['name'],
             'category_id' => $request['category'],
             'img' => $img,
             'url' => $request['url']
@@ -67,7 +67,7 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Project  $project
+     * @param \App\Models\Project $project
      * @return \Illuminate\Http\Response
      */
     public function show(Project $project)
@@ -78,13 +78,13 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Project  $project
+     * @param \App\Models\Project $project
      * @return \Illuminate\Http\Response
      */
     public function edit(Project $project)
     {
         $categories = Category::all();
-        return view('admin.projects.form',[
+        return view('admin.projects.form', [
             'project' => $project,
             'categories' => $categories
         ]);
@@ -93,19 +93,20 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Project  $project
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Project $project
      * @return \Illuminate\Http\Response
      */
     public function update(SaveProjectRequest $request, Project $project)
     {
-        $img="project-".$project->id.".jpg";
-        $path="assets/img/project/";
-        $request->img->move($path,$img);
+//        dd($request['category']);
+            $img = "project-" . $project->id . ".jpg";
+            $path = "assets/img/project/";
+            $request->img->move($path, $img);
 
         $project->update([
             'name' => $request['name'],
-            'category' => $request['category'],
+            'category_id' => $request['category'],
             'img' => $img,
             'url' => $request['url']
         ]);
@@ -115,7 +116,7 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Project  $project
+     * @param \App\Models\Project $project
      * @return \Illuminate\Http\Response
      */
     public function destroy(Project $project)

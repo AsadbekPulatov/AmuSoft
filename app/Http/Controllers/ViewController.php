@@ -18,7 +18,7 @@ class ViewController extends Controller
     public function home(){
         $lang=Session::get('locale');
         $categories = Category::all();
-        $about=About::OrderBy('id','DESC')->get();
+        $about=About::OrderBy('id')->get();
         $projects = Project::OrderBy('id', 'DESC')->get();
         $services = Service::Orderby('id','DESC')->get();
         return view('w3soft.index',[
@@ -43,7 +43,7 @@ class ViewController extends Controller
     }
     public   function  about(){
          $lang=Session::get('locale');
-        $about=About::OrderBy('id','DESC')->get();
+        $about=About::OrderBy('id')->get();
         $projects = Project::OrderBy('id', 'DESC')->get();
         return view('w3soft.about',[
             'route'=>'about',
