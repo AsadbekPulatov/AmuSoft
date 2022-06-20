@@ -127,7 +127,6 @@
 
 
     <!-- Service Start -->
-   @include('w3soft.libservice')
     <!-- Service End -->
 
 
