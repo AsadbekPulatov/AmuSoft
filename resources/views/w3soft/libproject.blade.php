@@ -8,21 +8,21 @@
                     @if($lang=='en')Recently launched projects @endif
                 </h2>
         </div>
-        <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-12 text-center">
-                <ul class="list-inline mb-5" id="portfolio-flters">
-                    <li class="btn px-3 pe-4 active" data-filter="*">
-                        @if($lang=='uz')Hammasi @endif
-                        @if($lang=='ru')Это все @endif
-                        @if($lang=='en')That's all @endif
-                    </li>
-                    @foreach($categories as $category)
-                        <li class="btn px-3 pe-4" data-filter=".n{{ $category->id }}">
-                            {{ $category->name }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
+{{--        <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">--}}
+{{--            <div class="col-12 text-center">--}}
+{{--                <ul class="list-inline mb-5" id="portfolio-flters">--}}
+{{--                    <li class="btn px-3 pe-4 active" data-filter="*">--}}
+{{--                        @if($lang=='uz')Hammasi @endif--}}
+{{--                        @if($lang=='ru')Это все @endif--}}
+{{--                        @if($lang=='en')That's all @endif--}}
+{{--                    </li>--}}
+{{--                    @foreach($categories as $category)--}}
+{{--                        <li class="btn px-3 pe-4" data-filter=".n{{ $category->id }}">--}}
+{{--                            {{ $category->name }}</li>--}}
+{{--                    @endforeach--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <div class="row">
             @foreach($projects as $project)
                 <div class="mb-3 col-lg-4 col-md-6 col-sm-12 portfolio-item n{{ $project->category->id }} wow zoomIn" data-wow-delay="0.{{ $projects->count() - $project->id + 1 }}s">
