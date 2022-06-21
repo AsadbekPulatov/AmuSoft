@@ -28,7 +28,7 @@
                                 <td>{{$booking->surname}}</td>
                                 <td>{{$booking->email}}</td>
                                 <td>{{$booking->phone}}</td>
-                                <td>{{$booking->course->name}}</td>
+                                <td>{{$booking->course->name_uz}}</td>
                                 <td class="col-2">
                                     <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST">
 {{--                                        <a class="btn btn-warning btn-sm" href="{{ route('bookings.edit', $booking->id)}}">--}}

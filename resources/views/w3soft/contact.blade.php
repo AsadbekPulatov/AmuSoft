@@ -156,11 +156,11 @@
         <script>
             Swal.fire({
                 icon: 'success',
-                @if($lang=='uz') text: 'Xabar yuborish', @endif
-                    @if($lang=='ru') text: 'Отправить сообщение', @endif
-                    @if($lang=='en') text: 'Send a message', @endif
+                @if($lang=='uz') text: 'Xabar muvaffaqiyatli jo’natildi!', @endif
+                    @if($lang=='ru') text: 'Сообщение успешно отправлено!', @endif
+                    @if($lang=='en') text: 'Message successfully send!', @endif
                 // text: 'Muvaffaqqiyatli bajarildi',
-                confirmButtonText: 'Continue',
+                confirmButtonText: 'Ok',
             })
         </script>
     @endif

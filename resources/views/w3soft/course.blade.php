@@ -166,7 +166,7 @@
                         <p class="card-text"><b class="text text-primary">
                                 @if($lang=='uz')  Narxi: @endif
                                 @if($lang=='ru')  Цена: @endif
-                                @if($lang=='en')  Price:: @endif
+                                @if($lang=='en')  Price: @endif
                             </b> <b class="text text-success"> {{ substr($course->price,0,3)}} {{ substr($course->price,3,3) }}
                                 @if($lang=='uz')  so'm @endif
                                 @if($lang=='ru')  сумма @endif
@@ -199,11 +199,11 @@
         <script>
             Swal.fire({
                 icon: 'success',
-                @if($lang=='uz') text: 'Kursga yozilish', @endif
-                    @if($lang=='ru') text: 'Записаться на курс', @endif
-                    @if($lang=='en') text: 'Writing in to course', @endif
+                @if($lang=='uz') text: 'Siz kursga muvaffaqiyatli yozildingiz! Yaqin orada siz bilan bog’lanamiz, e’tiboringiz uchun raxmat!', @endif
+                    @if($lang=='ru') text: 'Вы успешно записались на курс! Мы свяжемся с вами в ближайшее время, спасибо за внимание!', @endif
+                    @if($lang=='en') text: 'You have successfully enrolled in the course! We\'ll get back to you soon, thank you for your attention!', @endif
                 // text: 'Muvaffaqqiyatli bajarildi',
-                confirmButtonText: 'Continue',
+                confirmButtonText: 'Ok',
             })
         </script>
     @endif

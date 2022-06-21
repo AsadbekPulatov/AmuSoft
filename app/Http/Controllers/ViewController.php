@@ -21,13 +21,15 @@ class ViewController extends Controller
         $about=About::OrderBy('id')->get();
         $projects = Project::OrderBy('id', 'DESC')->get();
         $services = Service::Orderby('id','DESC')->get();
+        $blogs = Post::all();
         return view('w3soft.index',[
             'route' => 'index',
             'categories' => $categories,
             'projects' => $projects,
             'abouts'=>$about,
             'services'=>$services,
-            'lang'=>$lang
+            'lang'=>$lang,
+            'blogs' => $blogs,
         ]);
     }
     public function portfolio(){
