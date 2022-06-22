@@ -34,9 +34,9 @@
                         <tr>
                             <th scope="row" class="col-1">{{$key+1}}</th>
                             <td>{{$post->title_uz}}</td>
-                            <td>{{$post->description_uz}}</td>
+                            <td>{{substr($post->description_uz,0,20)}}</td>
                             <td>
-                                <img src="{{ asset('assets/img/post/'.$post->img) }}" alt="" class="text-center w-50">
+                                <img src="{{ asset('assets/img/post/'.$post->img) }}" alt="" class="text-center w-100">
                             </td>
                             <td>{{$post->created_at}}</td>
                             <td>{{$post->viewed}}</td>

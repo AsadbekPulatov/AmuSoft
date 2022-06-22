@@ -15,39 +15,38 @@
             </h2>
         </div>
 
-        <div class="row g-4 portfolio-container">
-            @foreach($blogs as $blog)
+        <div class="row g-1 ">
+                <div class="row g-1 justify-content-center">
+                    @foreach($blogs as $blog)
+                       <div class="card  col-lg-5 col-sm-11 col-md-5  m-4 " style="box-shadow: 0px 0px 10px 10px #a5a4a4">
+                            <div class="card-header">
+                                <img style="" class="w-100" src="{{asset('assets/img/post/'.$blog->img)}}" alt="AmuSoft"/>
+                            </div>
+                            <div class="card-body">
 
-                <div class="col-lg-4 col-md-6 portfolio-item  wow zoomIn" data-wow-delay="0.1s">
-                    <div class="position-relative rounded overflow-hidden">
-                        <img class="img-fluid w-100 " style="height: 300px"
-                             src="{{asset('assets/img/post/'.$blog->img)}}" alt="">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-light" href="{{asset('assets/img/post/'.$blog->img)}}"
-                               data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
-                            <div class="mt-auto">
-
-                                <h5 class="mt-3 " style="color: white">
-                                    @php
+                                <h4> @php
                                         if ($lang == 'uz')  echo $blog->title_uz;
                                         if ($lang == 'ru')  echo $blog->title_ru;
                                         if ($lang == 'en')  echo $blog->title_en;
                                     @endphp
-                                </h5>
-                                <p style="color: white">
+                                </h4>
+                                <hr>
+                                <p class="text text-dark" style="text-align: justify">
                                     @if ($lang == 'uz')
-                                        {{ \Illuminate\Support\Str::limit($blog->description_uz, 50, '...')  }}
+                                        {{ \Illuminate\Support\Str::limit($blog->description_uz, 400, '...')  }}
                                     @endif
                                     @if ($lang == 'ru')
-                                        {{ \Illuminate\Support\Str::limit($blog->description_ru, 50, '...')  }}
+                                        {{ \Illuminate\Support\Str::limit($blog->description_ru, 400, '...')  }}
                                     @endif
                                     @if ($lang == 'en')
-                                        {{ \Illuminate\Support\Str::limit($blog->description_en, 50, '...')  }}
+                                        {{ \Illuminate\Support\Str::limit($blog->description_en, 400, '...')  }}
                                     @endif
                                 </p>
-                                <a class="mt-5 blogs"
-                                   style="background: white;width: 100%; padding: 2%;border-radius: 10%;"
+                                <hr>
+                                <a class="blogs btn btn-success  btn-lg d-flex justify-content-between"
+                                   style="width: 120px;"
                                    href="{{route('singlepage',['id'=>$blog->id])}}">
+                                    <span class="mr-4">
                                     @if($lang=='uz')
                                         Ko'rish
                                     @endif
@@ -57,15 +56,14 @@
                                     @if($lang=='en')
                                         See
                                     @endif
+                                   </span>
+                                        <i class="bi bi-arrow-bar-right "></i>
                                 </a>
-
                             </div>
-
                         </div>
-
-                    </div>
+                           @endforeach
                 </div>
-            @endforeach
+
         </div>
 
     </div>

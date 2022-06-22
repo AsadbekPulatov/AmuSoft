@@ -183,10 +183,10 @@
                             </b>
                         </p>
                         <hr>
-                        <button onclick="store({{ $course->id }})" class="btn btn-primary">
+                        <button onclick="store({{ $course->id }})" class="btn btn-primary btn-lg" >
                             @if($lang=='uz')   Kursga yozilish @endif
-                            @if($lang=='ru')  Записаться на курс @endif
-                            @if($lang=='en')  Writing in to course @endif
+                            @if($lang=='ru')  Бронировать @endif
+                            @if($lang=='en')  To book @endif
                         </button>
                     </div>
                 </div>
