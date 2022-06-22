@@ -159,7 +159,6 @@
     </div>
     <!-- About End -->
 
-    @foreach($courses as $course)
         <div class="row mb-5">
             <div class="col-11 container ">
                 <div class="row">
@@ -225,7 +224,6 @@
                 </div>
             </div>
         </div>
-    @endforeach
 
 
     <!-- Newsletter Start -->
