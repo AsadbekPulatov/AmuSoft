@@ -46,7 +46,7 @@
                                         </a>
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm"><span class="btn-label">
+                                        <button type="submit" onclick="confirm(' Haqiqatdan ham bu yozuvni o\'chirmoqchimisz ')" class="btn btn-danger btn-sm"><span class="btn-label">
                                         <i class="fa fa-trash"></i>
                                     </span></button>
                                     </form>
