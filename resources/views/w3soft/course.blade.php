@@ -166,7 +166,7 @@
                         <p class="card-text"><b class="text text-primary">
                                 @if($lang=='uz')  Narxi: @endif
                                 @if($lang=='ru')  Цена: @endif
-                                @if($lang=='en')  Price:: @endif
+                                @if($lang=='en')  Price: @endif
                             </b> <b class="text text-success"> {{ substr($course->price,0,3)}} {{ substr($course->price,3,3) }}
                                 @if($lang=='uz')  so'm @endif
                                 @if($lang=='ru')  сумма @endif
@@ -183,10 +183,10 @@
                             </b>
                         </p>
                         <hr>
-                        <button onclick="store({{ $course->id }})" class="btn btn-primary">
+                        <button onclick="store({{ $course->id }})" class="btn btn-primary btn-lg" >
                             @if($lang=='uz')   Kursga yozilish @endif
-                            @if($lang=='ru')  Записаться на курс @endif
-                            @if($lang=='en')  Writing in to course @endif
+                            @if($lang=='ru')  Бронировать @endif
+                            @if($lang=='en')  To book @endif
                         </button>
                     </div>
                 </div>

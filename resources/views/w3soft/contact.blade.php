@@ -158,7 +158,7 @@
                 icon: 'success',
                 @if($lang=='uz') text: 'Xabar muvaffaqiyatli jo’natildi!', @endif
                     @if($lang=='ru') text: 'Сообщение успешно отправлено!', @endif
-                    @if($lang=='en') text: 'Message successfully sent!', @endif
+                    @if($lang=='en') text: 'Message successfully send!', @endif
                 // text: 'Muvaffaqqiyatli bajarildi',
                 confirmButtonText: 'Ok',
             })

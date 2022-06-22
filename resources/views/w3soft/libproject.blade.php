@@ -23,9 +23,10 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="row portfolio-container">
             @foreach($projects as $project)
-                <div class="mb-3 col-lg-4 col-md-6 col-sm-12 portfolio-item n{{ $project->category->id }} wow zoomIn" data-wow-delay="0.{{ $projects->count() - $project->id + 1 }}s">
+                <div class="mb-3 col-lg-4 col-md-6 col-sm-12 portfolio-item n{{ $project->category->id }}
+                 wow zoomIn" data-wow-delay="0.{{ $projects->count() - $project->id + 1 }}s">
                     <div class="position-relative rounded overflow-hidden">
                         <img class="img-fluid" src="{{asset('assets/img/project/'.$project->img)}}" alt="" style="width: 100%; height: 300px;">
                         <div class="portfolio-overlay">

@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="author" content="Amu Soft MChJ">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <meta name="google-site-verification" content="XRKGT7ifCTNLGtaaVKVLrQLffNnYmSRe5A6BvwCfTy4">
     <title>AmuSoft</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+
+    <meta name="description" content="AmuSoft MChJ ning rasmiy veb-sayti.">
+    <meta name="keywords" content="AmuSoft, amusoft , amu soft, ">
+    <meta property="og:title" content="AmuSoft MChJ ning rasmiy veb-sayti.">
+    <meta property="og:description" content="Biz bilan web dasturlashni mukammal darajada o'rganing !">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://amusoft.uz/">
+    <meta property="og:site_name" content="AmuSoft.uz">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="sW_a4RcYM2jrlWkkeDU1bpsWm7jho2UKUvtO3ZPvYQnJNoCOZ3lBDKLYNlIPW1sXrmX8wIv2XGsnySmC9LADZg==">
+    <meta charset="utf-8">
+
+
 
     <!-- Favicon -->
     <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
