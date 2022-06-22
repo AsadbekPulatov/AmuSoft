@@ -22,6 +22,7 @@ class ViewController extends Controller
         $projects = Project::OrderBy('id', 'DESC')->get();
         $services = Service::Orderby('id','DESC')->get();
         $blogs = Post::all();
+        $course = Course::all();
         return view('w3soft.index',[
             'route' => 'index',
             'categories' => $categories,
@@ -30,6 +31,7 @@ class ViewController extends Controller
             'services'=>$services,
             'lang'=>$lang,
             'blogs' => $blogs,
+            'courses'=>$course,
         ]);
     }
     public function portfolio(){
