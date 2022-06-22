@@ -31,7 +31,7 @@
             </div>
 
             <div class="col-md-6">
-                <img src="{{asset('assets/img/post/'.$posts->img)}}" class="h-100" style="width: 500px">
+                <img src="{{asset('assets/img/post/'.$posts->img)}}" class="h-100 w-100" style="width: 500px">
             </div>
         </div>
     </div>
