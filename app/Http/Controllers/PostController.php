@@ -109,24 +109,39 @@ class PostController extends Controller
 
         $id=$post->id;
 //        dd($id);
-        $img="post-".$id.".jpg";
-        $path="assets/img/post/";
-        $request->img->move($path,$img);
+        if($request->hasFile('img')){
+            $img="post-".$id.".jpg";
+            $path="assets/img/post/";
+            $request->img->move($path,$img);
+            $post->update([
+                'title_uz'=>$request['title_uz'],
+                'description_uz'=>$request['description_uz'],
+                'title_ru'=>$request['title_ru'],
+                'description_ru'=>$request['description_ru'],
+                'title_en'=>$request['title_en'],
+                'description_en'=>$request['description_en'],
+                'img'=>$img
+            ]);
+        } else{
+            $post->update([
+                'title_uz'=>$request['title_uz'],
+                'description_uz'=>$request['description_uz'],
+                'title_ru'=>$request['title_ru'],
+                'description_ru'=>$request['description_ru'],
+                'title_en'=>$request['title_en'],
+                'description_en'=>$request['description_en'],
+
+            ]);
+
+        }
+
 
 //        $postt=$request->validate([
 //           'title'=>$request['title'],
 //           'description'=>$request['description'],
 //           'img'=>$img
 //       ]);
-       $post->update([
-           'title_uz'=>$request['title_uz'],
-           'description_uz'=>$request['description_uz'],
-           'title_ru'=>$request['title_ru'],
-           'description_ru'=>$request['description_ru'],
-           'title_en'=>$request['title_en'],
-           'description_en'=>$request['description_en'],
-           'img'=>$img
-       ]);
+
        return  redirect()->route('posts.index');
     }
 
