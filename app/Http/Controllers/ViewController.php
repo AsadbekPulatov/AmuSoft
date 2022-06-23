@@ -10,6 +10,7 @@ use App\Models\Project;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use function Sodium\increment;
 
 class ViewController extends Controller
 {
@@ -107,6 +108,8 @@ class ViewController extends Controller
         $id = $request->id;
 //        dd($id);
         $posts = Post::find($id);
+        $posts->increment('viewed');
+        $posts->save();
 //        dd($posts);
         return view('w3soft.singlepage',[
             'route' => 'singlepage',
