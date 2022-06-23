@@ -79,16 +79,27 @@ class UserController extends Controller
      */
     public function update(SaveUserRequest $request, User $user)
     {
-        $img = 'profile-'.$user->id.'.jpg';
-        $path = 'asset/img/profile/';
-        $request->img->move($path, $img);
+        if($request->hasFile('img')) {
+            $img = 'profile-' . $user->id . '.jpg';
+            $path = 'asset/img/profile/';
+            $request->img->move($path, $img);
+
 //        dd($img);
-        $user->update([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-            'img' => $img
-        ]);
+            $user->update([
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'password' => Hash::make($request['password']),
+                'img' => $img
+            ]);
+        }
+        else{
+            $user->update([
+                'name' => $request['name'],
+                'email' => $request['email'],
+                'password' => Hash::make($request['password']),
+
+            ]);
+        }
         return redirect()->route('users.index');
     }
 

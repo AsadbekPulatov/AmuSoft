@@ -100,16 +100,25 @@ class ProjectController extends Controller
     public function update(SaveProjectRequest $request, Project $project)
     {
 //        dd($request['category']);
+        if($request->hasFile('img')) {
             $img = "project-" . $project->id . ".jpg";
             $path = "assets/img/project/";
             $request->img->move($path, $img);
+            $project->update([
+                'name' => $request['name'],
+                'category_id' => $request['category'],
+                'img' => $img,
+                'url' => $request['url']
+            ]);
+        } else{
+            $project->update([
+                'name' => $request['name'],
+                'category_id' => $request['category'],
 
-        $project->update([
-            'name' => $request['name'],
-            'category_id' => $request['category'],
-            'img' => $img,
-            'url' => $request['url']
-        ]);
+                'url' => $request['url']
+            ]);
+        }
+
         return redirect()->route('projects.index');
     }
 

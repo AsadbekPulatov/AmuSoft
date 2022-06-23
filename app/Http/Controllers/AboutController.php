@@ -120,10 +120,11 @@ class AboutController extends Controller
             'text_ru'=>'required',
             'text_en'=>'required',
             'position'=>'required',
-            'image'=>'required|image|mimes:jpg,jpeg,png,gif',
+            'image'=>'image|mimes:jpg,jpeg,png,gif',
         ]);
 
 //dd($about->id);
+        if($request->hasFile('img')){
         $img="images-".$about->id.".jpg";
         $path="assets/img/about_img/";
         $request->image->move($path,$img);
@@ -139,7 +140,21 @@ class AboutController extends Controller
             'text_en'=>$request['text_en'],
             'position'=>$request['position'],
             'image'=>$img
-        ]);
+        ]);}
+        else{
+            $about->update([
+                'facebook'=>$request['facebook'],
+                'email'=>$request['email'],
+                'instagram'=>$request['instagram'],
+                'telegram'=>$request['telegram'],
+                'name'=>$request['name'],
+                'text_uz'=>$request['text_uz'],
+                'text_ru'=>$request['text_ru'],
+                'text_en'=>$request['text_en'],
+                'position'=>$request['position'],
+
+            ]);
+        }
 
         return redirect()->route('abouts.index');
     }

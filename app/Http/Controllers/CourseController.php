@@ -110,12 +110,14 @@ class CourseController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(CourseRequest $request, $id)
-    {
-        $img="course-".$id.".jpg";
-        $path="assets/img/course/";
-        $request->img->move($path,$img);
+    {     $course = Course::find($id);
+        if($request->hasFile('img')) {
+            $img = "course-" . $id . ".jpg";
+            $path = "assets/img/course/";
+            $request->img->move($path, $img);
+            $course['img']=$img;
+        }
 
-        $course = Course::find($id);
         $course['name_uz']=$request['name_uz'];
         $course['text_uz']=$request['text_uz'];
         $course['name_ru']=$request['name_ru'];
@@ -126,7 +128,6 @@ class CourseController extends Controller
         $course['category_id']=$request['category_id'];
         $course['price']=$request['price'];
         $course['time']=$request['time'];
-        $course['img']=$img;
         $course->save();
         return redirect()->route('courses.index');
     }
