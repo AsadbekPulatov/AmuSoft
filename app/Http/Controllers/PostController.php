@@ -39,10 +39,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post =  Post::OrderBy('id', 'DESC')->first();
-        if ($post == NULL) $id = 0;
-        else $id = $post->id;
-        $id++;
+//        $post =  Post::OrderBy('id', 'DESC')->first();
+//        if ($post == NULL) $id = 0;
+//        else $id = $post->id;
+//        $id++;
+
 
         $post = $request->validate([
             'title_uz' => 'required',
@@ -54,9 +55,9 @@ class PostController extends Controller
             'img' => 'required|image|mimes:jpg,jpeg,png,gif'
         ]);
 
-        $img="post-".$id.".jpg";
-        $path="assets/img/post/";
-        $request->img->move($path,$img);
+        $img = time().'.jpg';
+        $path = 'assets/img/post/';
+        $request->img->move($path, $img);
 
 
         Post::create([
@@ -107,12 +108,13 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
 
-        $id=$post->id;
-//        dd($id);
-        if($request->hasFile('img')){
-            $img="post-".$id.".jpg";
-            $path="assets/img/post/";
-            $request->img->move($path,$img);
+        if ($request->img == NULL) $img = $post->img;
+        else {
+            File::delete(public_path('assets/img/post/'.$post->img));
+            $img = time().'.jpg';
+            $path = 'assets/img/post/';
+            $request->img->move($path, $img);
+        }
             $post->update([
                 'title_uz'=>$request['title_uz'],
                 'description_uz'=>$request['description_uz'],
@@ -122,26 +124,6 @@ class PostController extends Controller
                 'description_en'=>$request['description_en'],
                 'img'=>$img
             ]);
-        } else{
-            $post->update([
-                'title_uz'=>$request['title_uz'],
-                'description_uz'=>$request['description_uz'],
-                'title_ru'=>$request['title_ru'],
-                'description_ru'=>$request['description_ru'],
-                'title_en'=>$request['title_en'],
-                'description_en'=>$request['description_en'],
-
-            ]);
-
-        }
-
-
-//        $postt=$request->validate([
-//           'title'=>$request['title'],
-//           'description'=>$request['description'],
-//           'img'=>$img
-//       ]);
-
        return  redirect()->route('posts.index');
     }
 

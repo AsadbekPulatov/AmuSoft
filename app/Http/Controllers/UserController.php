@@ -6,6 +6,7 @@ use App\Http\Requests\SaveUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -77,29 +78,22 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(SaveUserRequest $request, User $user)
+    public function update(Request $request, User $user)
     {
-        if($request->hasFile('img')) {
-            $img = 'profile-' . $user->id . '.jpg';
+        if ($request->img == NULL) $img = $user->img;
+        else {
+            File::delete(public_path('asset/img/profile/'.$user->img));
+            $img = time().'.jpg';
             $path = 'asset/img/profile/';
             $request->img->move($path, $img);
+        }
 
-//        dd($img);
             $user->update([
                 'name' => $request['name'],
                 'email' => $request['email'],
                 'password' => Hash::make($request['password']),
                 'img' => $img
             ]);
-        }
-        else{
-            $user->update([
-                'name' => $request['name'],
-                'email' => $request['email'],
-                'password' => Hash::make($request['password']),
-
-            ]);
-        }
         return redirect()->route('users.index');
     }
 

@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Http\Requests\CourseRequest;
+use Illuminate\Support\Facades\File;
 
 class CourseController extends Controller
 {
@@ -48,14 +49,9 @@ class CourseController extends Controller
      */
     public function store(CourseRequest $request)
     {
-        $course =  Course::OrderBy('id', 'DESC')->first();
-        if ($course == NULL) $id = 0;
-        else $id = $course->id;
-        $id++;
-
-        $img="course-".$id.".jpg";
-        $path="assets/img/course/";
-        $request->img->move($path,$img);
+        $img = time().'.jpg';
+        $path = 'assets/img/course/';
+        $request->img->move($path, $img);
 
         $course = new Course();
         $course['name_uz']=$request['name_uz'];
@@ -111,12 +107,12 @@ class CourseController extends Controller
      */
     public function update(CourseRequest $request, $id)
     {     $course = Course::find($id);
-        if($request->hasFile('img')) {
-            $img = "course-" . $id . ".jpg";
-            $path = "assets/img/course/";
-            $request->img->move($path, $img);
-            $course['img']=$img;
-        }
+        if ($request->img == NULL) $img = $course->img;
+        else {
+            File::delete(public_path('assets/img/course/'.$course->img));
+            $img = time().'.jpg';
+            $path = 'assets/img/course/';
+            $request->img->move($path, $img);}
 
         $course['name_uz']=$request['name_uz'];
         $course['text_uz']=$request['text_uz'];
@@ -128,6 +124,7 @@ class CourseController extends Controller
         $course['category_id']=$request['category_id'];
         $course['price']=$request['price'];
         $course['time']=$request['time'];
+        $course['img']=$img;
         $course->save();
         return redirect()->route('courses.index');
     }
@@ -138,9 +135,10 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Course $course)
     {
-        Course::find($id)->delete();
+        File::delete(public_path('assets/img/course/'.$course->img));
+        $course->delete();
         return redirect()->route('courses.index');
     }
 }

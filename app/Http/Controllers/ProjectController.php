@@ -45,13 +45,8 @@ class ProjectController extends Controller
      */
     public function store(SaveProjectRequest $request, Project $project)
     {
-        $post = Project::OrderBy('id', 'DESC')->first();
-        if ($post == NULL) $id = 0;
-        else $id = $post->id;
-        $id++;
-
-        $img = "project-" . $id . ".jpg";
-        $path = "assets/img/project/";
+        $img = time().'.jpg';
+        $path = 'assets/img/project/';
         $request->img->move($path, $img);
 
         $project->create([
@@ -99,25 +94,20 @@ class ProjectController extends Controller
      */
     public function update(SaveProjectRequest $request, Project $project)
     {
-//        dd($request['category']);
-        if($request->hasFile('img')) {
-            $img = "project-" . $project->id . ".jpg";
-            $path = "assets/img/project/";
+        if ($request->img == NULL) $img = $project->img;
+        else {
+            File::delete(public_path('assets/img/project/'.$project->img));
+            $img = time().'.jpg';
+            $path = 'assets/img/project/';
             $request->img->move($path, $img);
+        }
+
             $project->update([
                 'name' => $request['name'],
                 'category_id' => $request['category'],
                 'img' => $img,
                 'url' => $request['url']
             ]);
-        } else{
-            $project->update([
-                'name' => $request['name'],
-                'category_id' => $request['category'],
-
-                'url' => $request['url']
-            ]);
-        }
 
         return redirect()->route('projects.index');
     }
@@ -130,6 +120,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        File::delete(public_path('assets/img/project/'.$project->img));
         $project->delete();
         return redirect()->route('projects.index');
     }

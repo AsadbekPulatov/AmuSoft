@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use phpDocumentor\Reflection\Types\Null_;
 
 class AboutController extends Controller
@@ -38,11 +39,11 @@ class AboutController extends Controller
     public function store(Request $request)
     {
 
-        $abouts = About::OrderBy('id', 'desc')->first();
-        if ($abouts == NULL) $id = 0;
-        else
-            $id = $abouts->id;
-        $id++;
+//        $abouts = About::OrderBy('id', 'desc')->first();
+//        if ($abouts == NULL) $id = 0;
+//        else
+//            $id = $abouts->id;
+//        $id++;
 
         $request->validate([
             'facebook' => 'required',
@@ -57,10 +58,13 @@ class AboutController extends Controller
             'image' => 'required|image|mimes:jpg,jpeg,png,gif',
         ]);
 
-
-        $img = "images-" . $id . ".jpg";
-        $path = "assets/img/about_img/";
+        $img = time().'.jpg';
+        $path = 'assets/img/about/';
         $request->image->move($path, $img);
+
+//        $img = "images-" . $id . ".jpg";
+//        $path = "assets/img/about_img/";
+//        $request->image->move($path, $img);
 
         About::create([
             'facebook' => $request['facebook'],
@@ -124,11 +128,18 @@ class AboutController extends Controller
         ]);
 
 //dd($about->id);
-        if ($request->hasFile('image'))
-        {
-            $img = "images-" . $about->id . ".jpg";
-            $path = "assets/img/about_img/";
+//        if ($request->hasFile('image'))
+//        {
+//            $img = "images-" . $about->id . ".jpg";
+//            $path = "assets/img/about_img/";
+//            $request->image->move($path, $img);
+        if ($request->image == NULL) $img = $about->image;
+        else {
+            File::delete(public_path('assets/img/about/'.$about->image));
+            $img = time().'.jpg';
+            $path = 'assets/img/about/';
             $request->image->move($path, $img);
+        }
 
             $about->update([
                 'facebook' => $request['facebook'],
@@ -142,21 +153,6 @@ class AboutController extends Controller
                 'position' => $request['position'],
                 'image' => $img
             ]);
-        } else
-        {
-            $about->update([
-                'facebook' => $request['facebook'],
-                'email' => $request['email'],
-                'instagram' => $request['instagram'],
-                'telegram' => $request['telegram'],
-                'name' => $request['name'],
-                'text_uz' => $request['text_uz'],
-                'text_ru' => $request['text_ru'],
-                'text_en' => $request['text_en'],
-                'position' => $request['position'],
-
-            ]);
-        }
 
         return redirect()->route('abouts.index');
     }
@@ -169,6 +165,7 @@ class AboutController extends Controller
      */
     public function destroy(About $about)
     {
+        File::delete(public_path('assets/img/about/'.$about->img));
         $about->DELETE();
         return redirect()->route('abouts.index');
     }

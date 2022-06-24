@@ -43,14 +43,17 @@ class ServiceController extends Controller
      */
     public function store(SaveServiceRequest $request,Service $service)
     {
-        $post =  Service::OrderBy('id', 'DESC')->first();
-        if ($post == NULL) $id = 0;
-        else $id = $post->id;
-        $id++;
-
-        $img="service-".$id.".jpg";
-        $path="assets/img/service/";
-        $request->img->move($path,$img);
+//        $post =  Service::OrderBy('id', 'DESC')->first();
+//        if ($post == NULL) $id = 0;
+//        else $id = $post->id;
+//        $id++;
+//
+//        $img="service-".$id.".jpg";
+//        $path="assets/img/service/";
+//        $request->img->move($path,$img);
+        $img = time().'.jpg';
+        $path = 'assets/img/service/';
+        $request->img->move($path, $img);
 
         $service->create([
             'title_uz' => $request['title_uz'],
@@ -98,10 +101,13 @@ class ServiceController extends Controller
      */
     public function update(SaveServiceRequest $request, Service $service)
     {
-        if($request->hasFile('img')) {
-        $img="service-".$service->id.".jpg";
-        $path='assets/img/service/';
-        $request->img->move($path,$img);
+        if ($request->img == NULL) $img = $service->img;
+        else {
+            File::delete(public_path('assets/img/service/'.$service->img));
+            $img = time().'.jpg';
+            $path = 'assets/img/service/';
+            $request->img->move($path, $img);
+        }
 
         $service->update([
             'title_uz'=>$request['title_uz'],
@@ -111,18 +117,7 @@ class ServiceController extends Controller
             'title_en' => $request['title_en'],
             'description_en' => $request['description_en'],
             'img'=>$img
-        ]);}
-        else{
-            $service->update([
-                'title_uz'=>$request['title_uz'],
-                'description_uz'=>$request['description_uz'],
-                'title_ru' => $request['title_ru'],
-                'description_ru' => $request['description_ru'],
-                'title_en' => $request['title_en'],
-                'description_en' => $request['description_en'],
-
             ]);
-        }
         return redirect()->route('services.index');
     }
 

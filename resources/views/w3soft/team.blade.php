@@ -38,7 +38,7 @@
             @foreach($abouts as $about)
                 <div class="card">
                     <div class="card-header">
-                        <img src="{{asset('assets/img/about_img/'.$about->image)}}" alt="rover"/>
+                        <img src="{{asset('assets/img/about/'.$about->image)}}" alt="rover"/>
                     </div>
                     <div class="card-body">
 
