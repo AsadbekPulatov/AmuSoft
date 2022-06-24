@@ -18,28 +18,34 @@
                 <div class="card-body">
                     <table class="table table-bordered text-center table-hover">
                         <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Имя</th>
-                                <th scope="col">Категория</th>
-                                <th scope="col">Фото</th>
-                                <th scope="col">Ссылка</th>
-                                <th scope="col">Действие</th>
-                            </tr>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Имя</th>
+                            <th scope="col">Категория</th>
+                            <th scope="col">Фото</th>
+                            <th scope="col">Ссылка</th>
+                            <th scope="col">Действие</th>
+                        </tr>
                         </thead>
                         <tbody>
                         @foreach($projects as $key => $project)
                             <tr>
                                 <td class="col-1">{{$key+1}}</td>
                                 <td>{{$project->name}}</td>
-                                <td>{{$project->category->name}}</td>
                                 <td>
-                                    <img src="{{asset('assets/img/project/' . $project->img)}}" style="width: 30%" alt="">
+                                    @if(isset($project->category->name))
+                                        {{$project->category->name}}
+                                    @endif
                                 </td>
-                                <td><a href="{{ $project->url }}">{{ $project->url }}</a> </td>
+                                <td>
+                                    <img src="{{asset('assets/img/project/' . $project->img)}}" style="width: 30%"
+                                         alt="">
+                                </td>
+                                <td><a href="{{ $project->url }}">{{ $project->url }}</a></td>
                                 <td class="col-2">
                                     <form action="{{ route('projects.destroy', $project->id) }}" method="POST">
-                                        <a class="btn btn-warning btn-sm" href="{{ route('projects.edit', $project->id)}}">
+                                        <a class="btn btn-warning btn-sm"
+                                           href="{{ route('projects.edit', $project->id)}}">
                                             <span class="btn-label">
                                                 <i class="fa fa-pen"></i>
                                             </span>

@@ -105,8 +105,9 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CourseRequest $request, $id)
-    {     $course = Course::find($id);
+    public function update(Request $request, $id)
+    {
+        $course = Course::find($id);
         if ($request->img == NULL) $img = $course->img;
         else {
             File::delete(public_path('assets/img/course/'.$course->img));

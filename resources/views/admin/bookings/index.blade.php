@@ -28,14 +28,18 @@
                                 <td>{{$booking->surname}}</td>
                                 <td>{{$booking->email}}</td>
                                 <td>{{$booking->phone}}</td>
-                                <td>{{$booking->course->name_uz}}</td>
+                                <td>
+                                    @if(isset($booking->course->name_uz))
+                                        {{$booking->course->name_uz}}
+                                    @endif
+                                </td>
                                 <td class="col-2">
                                     <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST">
-{{--                                        <a class="btn btn-warning btn-sm" href="{{ route('bookings.edit', $booking->id)}}">--}}
-{{--                                            <span class="btn-label">--}}
-{{--                                                <i class="fa fa-pen"></i>--}}
-{{--                                            </span>--}}
-{{--                                        </a>--}}
+                                        {{--                                        <a class="btn btn-warning btn-sm" href="{{ route('bookings.edit', $booking->id)}}">--}}
+                                        {{--                                            <span class="btn-label">--}}
+                                        {{--                                                <i class="fa fa-pen"></i>--}}
+                                        {{--                                            </span>--}}
+                                        {{--                                        </a>--}}
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">

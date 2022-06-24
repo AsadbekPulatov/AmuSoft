@@ -82,6 +82,7 @@ class UserController extends Controller
     {
         if ($request->img == NULL) $img = $user->img;
         else {
+            if ($user->img != 'profile.jpg')
             File::delete(public_path('asset/img/profile/'.$user->img));
             $img = time().'.jpg';
             $path = 'asset/img/profile/';

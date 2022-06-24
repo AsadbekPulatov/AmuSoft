@@ -32,7 +32,7 @@
                         <tbody>
                         @foreach($posts as $key => $post)
                         <tr>
-                            <th scope="row" class="col-1">{{$key+1}}</th>
+                            <td class="col-1">{{$key+1}}</td>
                             <td>{{$post->title_uz}}</td>
                             <td>{{substr($post->description_uz,0,20)}}</td>
                             <td>

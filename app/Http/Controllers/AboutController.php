@@ -165,8 +165,8 @@ class AboutController extends Controller
      */
     public function destroy(About $about)
     {
-        File::delete(public_path('assets/img/about/'.$about->img));
-        $about->DELETE();
+        File::delete(public_path('assets/img/about/'.$about->image));
+        $about->delete();
         return redirect()->route('abouts.index');
     }
 }

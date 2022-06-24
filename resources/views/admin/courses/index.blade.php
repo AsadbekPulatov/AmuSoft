@@ -18,17 +18,17 @@
                 <div class="card-body">
                     <table class="table table-bordered text-center table-hover">
                         <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Имя</th>
-                                <th scope="col">Текст</th>
-                                <th scope="col">Учитель</th>
-                                <th scope="col">Категория</th>
-                                <th scope="col">Цена</th>
-                                <th scope="col">Фото</th>
-                                <th scope="col">Время</th>
-                                <th scope="col">Действие</th>
-                            </tr>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Имя</th>
+                            <th scope="col">Текст</th>
+                            <th scope="col">Учитель</th>
+                            <th scope="col">Категория</th>
+                            <th scope="col">Цена</th>
+                            <th scope="col">Фото</th>
+                            <th scope="col">Время</th>
+                            <th scope="col">Действие</th>
+                        </tr>
                         </thead>
                         <tbody>
                         @foreach($courses as $key => $course)
@@ -36,8 +36,16 @@
                                 <td class="col-1">{{$key+1}}</td>
                                 <td>{{$course->name_uz}}</td>
                                 <td>{{$course->text_uz}}</td>
-                                <td>{{$course->teacher_id}}</td>
-                                <td>{{$course->category_id}}</td>
+                                <td>
+                                    @if(isset($course->teacher->name))
+                                        {{$course->teacher->name}}
+                                    @endif
+                                </td>
+                                <td>
+                                    @if(isset($course->category->name))
+                                        {{$course->category->name}}
+                                    @endif
+                                </td>
                                 <td>{{$course->price}}</td>
                                 <td>
                                     <img src="{{asset('assets/img/course/' . $course->img)}}" style="width: 30%" alt="">
@@ -45,7 +53,8 @@
                                 <td>{{$course->time}}</td>
                                 <td class="col-2">
                                     <form action="{{ route('courses.destroy', $course->id) }}" method="POST">
-                                        <a class="btn btn-warning btn-sm" href="{{ route('courses.edit', $course->id)}}">
+                                        <a class="btn btn-warning btn-sm"
+                                           href="{{ route('courses.edit', $course->id)}}">
                                             <span class="btn-label">
                                                 <i class="fa fa-pen"></i>
                                             </span>
