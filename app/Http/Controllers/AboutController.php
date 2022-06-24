@@ -15,8 +15,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $about=About::OrderBy('id','DESC')->get();
-        return  view('admin.about.index',['abouts'=>$about]);
+        $about = About::OrderBy('id', 'DESC')->get();
+        return view('admin.about.index', ['abouts' => $about]);
     }
 
     /**
@@ -26,53 +26,53 @@ class AboutController extends Controller
      */
     public function create()
     {
-        return  view('admin.about.create');
+        return view('admin.about.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
 
-        $abouts=About::OrderBy('id','desc')->first();
-        if($abouts==NULL) $id=0;
+        $abouts = About::OrderBy('id', 'desc')->first();
+        if ($abouts == NULL) $id = 0;
         else
-            $id=$abouts->id;
+            $id = $abouts->id;
         $id++;
 
         $request->validate([
-            'facebook'=>'required',
-            'email'=>'required',
-            'instagram'=>'required',
-            'telegram'=>'required',
-            'name'=>'required',
-            'position'=>'required',
-            'text_uz'=>'required',
-            'text_ru'=>'required',
-            'text_en'=>'required',
-            'image'=>'required|image|mimes:jpg,jpeg,png,gif',
+            'facebook' => 'required',
+            'email' => 'required',
+            'instagram' => 'required',
+            'telegram' => 'required',
+            'name' => 'required',
+            'position' => 'required',
+            'text_uz' => 'required',
+            'text_ru' => 'required',
+            'text_en' => 'required',
+            'image' => 'required|image|mimes:jpg,jpeg,png,gif',
         ]);
 
 
-        $img="images-".$id.".jpg";
-        $path="assets/img/about_img/";
-        $request->image->move($path,$img);
+        $img = "images-" . $id . ".jpg";
+        $path = "assets/img/about_img/";
+        $request->image->move($path, $img);
 
         About::create([
-            'facebook'=>$request['facebook'],
-            'email'=>$request['email'],
-            'instagram'=>$request['instagram'],
-            'telegram'=>$request['telegram'],
-            'name'=>$request['name'],
-            'text_uz'=>$request['text_uz'],
-            'text_ru'=>$request['text_ru'],
-            'text_en'=>$request['text_en'],
-            'position'=>$request['position'],
-            'image'=>$img
+            'facebook' => $request['facebook'],
+            'email' => $request['email'],
+            'instagram' => $request['instagram'],
+            'telegram' => $request['telegram'],
+            'name' => $request['name'],
+            'text_uz' => $request['text_uz'],
+            'text_ru' => $request['text_ru'],
+            'text_en' => $request['text_en'],
+            'position' => $request['position'],
+            'image' => $img
         ]);
 
         return redirect()->route('abouts.index');
@@ -81,7 +81,7 @@ class AboutController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\About  $about
+     * @param \App\Models\About $about
      * @return \Illuminate\Http\Response
      */
     public function show(About $about)
@@ -92,66 +92,68 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\About  $about
+     * @param \App\Models\About $about
      * @return \Illuminate\Http\Response
      */
     public function edit(About $about)
     {
-        return view('admin.about.edit',['abouts'=>$about]);
+        return view('admin.about.edit', ['abouts' => $about]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\About  $about
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\About $about
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, About $about)
     {
 
         $request->validate([
-            'facebook'=>'required',
-            'email'=>'required',
-            'instagram'=>'required',
-            'telegram'=>'required',
-            'name'=>'required',
-            'text_uz'=>'required',
-            'text_ru'=>'required',
-            'text_en'=>'required',
-            'position'=>'required',
-            'image'=>'image|mimes:jpg,jpeg,png,gif',
+            'facebook' => 'required',
+            'email' => 'required',
+            'instagram' => 'required',
+            'telegram' => 'required',
+            'name' => 'required',
+            'text_uz' => 'required',
+            'text_ru' => 'required',
+            'text_en' => 'required',
+            'position' => 'required',
+            'image' => 'image|mimes:jpg,jpeg,png,gif',
         ]);
 
 //dd($about->id);
-        if($request->hasFile('img')){
-        $img="images-".$about->id.".jpg";
-        $path="assets/img/about_img/";
-        $request->image->move($path,$img);
+        if ($request->hasFile('image'))
+        {
+            $img = "images-" . $about->id . ".jpg";
+            $path = "assets/img/about_img/";
+            $request->image->move($path, $img);
 
-        $about->update([
-            'facebook'=>$request['facebook'],
-            'email'=>$request['email'],
-            'instagram'=>$request['instagram'],
-            'telegram'=>$request['telegram'],
-            'name'=>$request['name'],
-            'text_uz'=>$request['text_uz'],
-            'text_ru'=>$request['text_ru'],
-            'text_en'=>$request['text_en'],
-            'position'=>$request['position'],
-            'image'=>$img
-        ]);}
-        else{
             $about->update([
-                'facebook'=>$request['facebook'],
-                'email'=>$request['email'],
-                'instagram'=>$request['instagram'],
-                'telegram'=>$request['telegram'],
-                'name'=>$request['name'],
-                'text_uz'=>$request['text_uz'],
-                'text_ru'=>$request['text_ru'],
-                'text_en'=>$request['text_en'],
-                'position'=>$request['position'],
+                'facebook' => $request['facebook'],
+                'email' => $request['email'],
+                'instagram' => $request['instagram'],
+                'telegram' => $request['telegram'],
+                'name' => $request['name'],
+                'text_uz' => $request['text_uz'],
+                'text_ru' => $request['text_ru'],
+                'text_en' => $request['text_en'],
+                'position' => $request['position'],
+                'image' => $img
+            ]);
+        } else
+        {
+            $about->update([
+                'facebook' => $request['facebook'],
+                'email' => $request['email'],
+                'instagram' => $request['instagram'],
+                'telegram' => $request['telegram'],
+                'name' => $request['name'],
+                'text_uz' => $request['text_uz'],
+                'text_ru' => $request['text_ru'],
+                'text_en' => $request['text_en'],
+                'position' => $request['position'],
 
             ]);
         }
@@ -162,12 +164,12 @@ class AboutController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\About  $about
+     * @param \App\Models\About $about
      * @return \Illuminate\Http\Response
      */
     public function destroy(About $about)
     {
         $about->DELETE();
-        return  redirect()->route('abouts.index');
+        return redirect()->route('abouts.index');
     }
 }

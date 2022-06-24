@@ -171,7 +171,7 @@
                      @if( $lang == 'en')   110 Al-Khwarizmi Street, Urgench  @endif
                     </p>
                     <p><i class="fa fa-phone-alt me-3"></i>+998 977913883</p>
-                    <p><i class="fa fa-envelope me-3"></i>AmuSoft@gmail.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>amusoftuz@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="https://github.com/Bekmurod3388"><i
                                 class="fab fa-github"></i></a>
