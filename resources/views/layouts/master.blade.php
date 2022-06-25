@@ -180,7 +180,7 @@
                         {{--                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>--}}
                         <a class="btn btn-outline-light btn-social" href="https://instagram.com/bekmurodkhujamuratov"><i
                                 class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://t.me/Bekmurod3388"><i
+                        <a class="btn btn-outline-light btn-social" href="https://t.me/AmuSoftuz"><i
                                 class="fab fa-telegram"></i></a>
 
                     </div>
