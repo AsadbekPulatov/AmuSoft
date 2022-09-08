@@ -8,7 +8,7 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table class="table table-bordered text-center table-hover">
+                    <table class="table table-bordered text-center table-hover table-responsive">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -17,6 +17,7 @@
                             <th scope="col">Эл. адрес</th>
                             <th scope="col">Телефон</th>
                             <th scope="col">Курс</th>
+                            <th scope="col">Дата</th>
                             <th scope="col">Действие</th>
                         </tr>
                         </thead>
@@ -33,6 +34,7 @@
                                         {{$booking->course->name_uz}}
                                     @endif
                                 </td>
+                                <td>{{$booking->created_at}}</td>
                                 <td class="col-2">
                                     <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST">
                                         {{--                                        <a class="btn btn-warning btn-sm" href="{{ route('bookings.edit', $booking->id)}}">--}}
