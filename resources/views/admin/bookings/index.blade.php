@@ -7,8 +7,8 @@
                     <div class="col-9"><h1 class="card-title">Бронировать</h1></div>
                 </div>
                 <hr>
-                <div class="card-body">
-                    <table class="table table-bordered text-center table-hover table-responsive">
+                <div class="card-body table-responsive">
+                    <table class="table table-bordered text-center table-hover">
                         <thead>
                         <tr>
                             <th scope="col">#</th>

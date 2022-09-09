@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <table class="table table-bordered text-center table-hover">
                         <thead>
                         <tr>

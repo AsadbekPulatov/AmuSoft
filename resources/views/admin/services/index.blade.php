@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <table class="table table-bordered text-center table-hover">
                         <thead>
                             <tr>
@@ -34,7 +34,7 @@
                                 <td>{{$service->title_uz}}</td>
                                 <td>{{$service->description_uz}}</td>
                                 <td>
-                                    <img src="{{asset('assets/img/service/' . $service->img)}}" style="width: 30%" alt="">
+                                    <img src="{{asset('assets/img/service/' . $service->img)}}" style="width: 50%" alt="">
                                 </td>
 {{--                                <td><a href="{{ $servi->url }}">{{ $project->url }}</a> </td>--}}
                                 <td class="col-2">
