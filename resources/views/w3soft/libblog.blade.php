@@ -20,7 +20,7 @@
                     @foreach($blogs as $blog)
                        <div class="card  col-lg-5 col-sm-11 col-md-5  m-4 " style="box-shadow: 0px 0px 10px 10px #a5a4a4">
                             <div class="card-header">
-                                <img style="" class="w-100" src="{{asset('assets/img/post/'.$blog->img)}}" alt="AmuSoft"/>
+                                <img style="height: 300px" class="w-100" src="{{asset('assets/img/post/'.$blog->img)}}" alt="AmuSoft"/>
                             </div>
                             <div class="card-body">
 
@@ -33,13 +33,13 @@
                                 <hr>
                                 <p class="text text-dark" style="text-align: justify">
                                     @if ($lang == 'uz')
-                                        {{ \Illuminate\Support\Str::limit($blog->description_uz, 400, '...')  }}
+                                        {{ \Illuminate\Support\Str::words($blog->description_uz, 10) }}
                                     @endif
                                     @if ($lang == 'ru')
-                                        {{ \Illuminate\Support\Str::limit($blog->description_ru, 400, '...')  }}
+                                            {{ \Illuminate\Support\Str::words($blog->description_ru, 10) }}
                                     @endif
                                     @if ($lang == 'en')
-                                        {{ \Illuminate\Support\Str::limit($blog->description_en, 400, '...')  }}
+                                            {{ \Illuminate\Support\Str::words($blog->description_en, 10) }}
                                     @endif
                                 </p>
                                 <hr>
