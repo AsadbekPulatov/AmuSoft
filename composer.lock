@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94c8d29a8b898014ffd03b688276d8b2",
+    "content-hash": "ae9bf5dfa04dd5947bfda136e610340a",
     "packages": [
         {
             "name": "brick/math",
@@ -1762,6 +1762,57 @@
                 }
             ],
             "time": "2022-06-09T08:59:12+00:00"
+        },
+        {
+            "name": "napaeduhub/eskiz-sms-client",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NapaEduHub/Eskiz-Sms-Client.git",
+                "reference": "3f9a24cd198bae19ca992061f50a39910f289d34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NapaEduHub/Eskiz-Sms-Client/zipball/3f9a24cd198bae19ca992061f50a39910f289d34",
+                "reference": "3f9a24cd198bae19ca992061f50a39910f289d34",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "illuminate/contracts": "^5.0|^6.0|^7.0|^8.0|^9.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Napa\\R19\\SmsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Sms": "Napa\\R19\\Sms"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Napa\\R19\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "keywords": [
+                "eskiz",
+                "framework",
+                "laravel",
+                "sms"
+            ],
+            "support": {
+                "issues": "https://github.com/NapaEduHub/Eskiz-Sms-Client/issues",
+                "source": "https://github.com/NapaEduHub/Eskiz-Sms-Client/tree/v1.0"
+            },
+            "time": "2020-10-22T14:58:10+00:00"
         },
         {
             "name": "nesbot/carbon",

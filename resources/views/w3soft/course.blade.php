@@ -96,7 +96,7 @@
                             @if($lang=='ru')  Номер телефона: @endif
                             @if($lang=='en')  Phone number: @endif
                         </label>
-                        <input type="text" name="phone" class="form-control mb-3" id="phone"  required>
+                        <input type="text" name="phone" class="form-control mb-3" id="phone"  required placeholder="919846045">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
@@ -203,6 +203,18 @@
                     @if($lang=='ru') text: 'Вы успешно записались на курс! Мы свяжемся с вами в ближайшее время, спасибо за внимание!', @endif
                     @if($lang=='en') text: 'You have successfully enrolled in the course! We\'ll get back to you soon, thank you for your attention!', @endif
                 // text: 'Muvaffaqqiyatli bajarildi',
+                confirmButtonText: 'Ok',
+            })
+        </script>
+    @endif
+    @if(session('error'))
+
+        <script>
+            Swal.fire({
+                icon: 'error',
+                @if($lang=='uz') text: "Telefon raqami noto'g'ri kiritildi. (shu ko'rinishda kiriting: 919846045)", @endif
+                    @if($lang=='ru') text: "Telefon raqami noto'g'ri kiritildi. (shu ko'rinishda kiriting: 919846045)", @endif
+                    @if($lang=='en') text: "Telefon raqami noto'g'ri kiritildi. (shu ko'rinishda kiriting: 919846045)", @endif
                 confirmButtonText: 'Ok',
             })
         </script>
