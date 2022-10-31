@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use Napa\R19\Sms;
 
 class BookingController extends Controller
 {
@@ -38,13 +39,22 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        $booking = new Booking();
-        $booking['course_id'] = $request['course_id'];
-        $booking['name'] = $request['name'];
-        $booking['surname'] = $request['surname'];
-        $booking['email'] = $request['email'];
-        $booking['phone'] = $request['phone'];
-        $booking->save();
+        if (strlen($request['phone']) == 9){
+            $booking = new Booking();
+            $booking['course_id'] = $request['course_id'];
+            $booking['name'] = $request['name'];
+            $booking['surname'] = $request['surname'];
+            $booking['email'] = $request['email'];
+            $booking['phone'] = $request['phone'];
+            $booking->save();
+            $phone = "998".$request['phone'];
+            $name = $request['name'];
+            $message = "Assalomu alaykum hurmatli {$name}! Siz AmuSoft o'quv kursiga ro'yxatdan o'tdingiz. Tez orada operatorlarimiz siz bilan bog'lanishadi!";
+            Sms::send($phone, $message);
+        }
+        else{
+            return redirect()->route('course')->with('error', 'Xatolik');
+        }
         return redirect()->route('course')->with('success', 'created');
     }
 
