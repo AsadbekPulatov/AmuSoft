@@ -96,7 +96,10 @@
                             @if($lang=='ru')  Номер телефона: @endif
                             @if($lang=='en')  Phone number: @endif
                         </label>
-                        <input type="text" name="phone" class="form-control mb-3" id="phone"  required placeholder="919846045">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">+998</span>
+                            <input type="text" name="phone" class="form-control" id="phone" required placeholder="901112233">
+                        </div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">
