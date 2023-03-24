@@ -38,12 +38,23 @@ class MassageController extends Controller
      */
     public function store(Request $request)
     {
-        $massage=$request->validate([
+        $request->validate([
             'name'=>'required',
             'email'=>'required',
             'title'=>'required',
-            'massage'=>'required'
+            'massage'=>'required',
+            'g-recaptcha-response' => 'required|recaptcha',
         ]);
+        $http = strpos($request->massage, 'http');
+        if ($http !== false) {
+            return  redirect()->route('contact')->with('error', 'created');
+        }
+        $massage=[
+            'name'=>htmlspecialchars($request->name),
+            'email'=>htmlspecialchars($request->email),
+            'title'=>htmlspecialchars($request->title),
+            'massage'=>htmlspecialchars($request->massage),
+        ];
         Massage::create($massage);
         return  redirect()->route('contact')->with('success', 'created');
     }

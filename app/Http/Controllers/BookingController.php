@@ -39,13 +39,16 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'g-recaptcha-response' => 'required|recaptcha',
+        ]);
         if (strlen($request['phone']) == 9){
             $booking = new Booking();
-            $booking['course_id'] = $request['course_id'];
-            $booking['name'] = $request['name'];
-            $booking['surname'] = $request['surname'];
-            $booking['email'] = $request['email'];
-            $booking['phone'] = $request['phone'];
+            $booking['course_id'] = htmlspecialchars($request['course_id']);
+            $booking['name'] = htmlspecialchars($request['name']);
+            $booking['surname'] = htmlspecialchars($request['surname']);
+            $booking['email'] = htmlspecialchars($request['email']);
+            $booking['phone'] = htmlspecialchars($request['phone']);
             $booking->save();
             $phone = "998".$request['phone'];
             $name = $request['name'];

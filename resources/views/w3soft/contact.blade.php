@@ -16,6 +16,16 @@
     </div>
 @endsection
 @section('content')
+    <script src="https://www.google.com/recaptcha/enterprise.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+    <script>
+        grecaptcha.enterprise.ready(function() {
+            grecaptcha.enterprise.execute("{{ env('RECAPTCHA_SITE_KEY') }}", {action: 'message'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+                console.log(token)
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
@@ -58,8 +68,9 @@
                         </h2>
                     </div>
                     <div class="wow fadeInUp" data-wow-delay="0.3s">
-                        <form action="{{route('massage.store')}}" method="post">
+                        <form action="{{route('massage.store')}}" method="post" id="MessageForm">
                             @csrf
+                            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -143,6 +154,20 @@
                                     </button>
                                 </div>
                             </div>
+
+
+
+{{--                            <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    {!! \Lunaweb\RecaptchaV3\Facades\RecaptchaV3::field('contact') !!}--}}
+{{--                                    @if ($errors->has('g-recaptcha-response'))--}}
+{{--                                        <span class="help-block">--}}
+{{--                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
+{{--                                    </span>--}}
+{{--                                    @endif--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+
                         </form>
                     </div>
                 </div>
@@ -160,6 +185,18 @@
                     @if($lang=='ru') text: 'Сообщение успешно отправлено!', @endif
                     @if($lang=='en') text: 'Message successfully send!', @endif
                 // text: 'Muvaffaqqiyatli bajarildi',
+                confirmButtonText: 'Ok',
+            })
+        </script>
+    @endif
+    @if(session('error'))
+
+        <script>
+            Swal.fire({
+                icon: 'error',
+                @if($lang=='uz') text: 'Reklama yuborish mumkin emas!', @endif
+                    @if($lang=='ru') text: 'Не могу отправить рекламу!', @endif
+                    @if($lang=='en') text: "Can't send ads!", @endif
                 confirmButtonText: 'Ok',
             })
         </script>

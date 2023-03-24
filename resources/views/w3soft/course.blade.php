@@ -55,6 +55,16 @@
         }
     </style>
 
+    <script src="https://www.google.com/recaptcha/enterprise.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+    <script>
+        grecaptcha.enterprise.ready(function() {
+            grecaptcha.enterprise.execute("{{ env('RECAPTCHA_SITE_KEY') }}", {action: 'bookings'}).then(function(token) {
+                // Add your logic to submit to your backend server here.
+                console.log(token)
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -65,6 +75,7 @@
             <div class="container p-5 border">
                 <form action="{{ route('bookings.store') }}" method="post">
                     @csrf
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
                     <input type="hidden" name="course_id" id="course_id">
                     <div class="form-group">
                         <label for="name">
